@@ -1,0 +1,1375 @@
+#+TITLE: Fabrikarium - Projet Bionico
+#+DATE: <2016-11-06 dim.>
+#+AUTHOR: Christophe Schockaert pour Flossmanuals Francophone (CC-BY-SA 4.0)
+#+EMAIL: Christophe.Schockaer@createcnix.eu
+#+KEYWORDS: Prothèse,commande électronique, Bionico, Bionicohand, Fablab
+#+DESCRIPTION: Hackathon sur la fabrication d'une prothèse de main commandée électroniquement
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:{} arch:headline author:t c:nil
+#+OPTIONS: creator:comment d:nil date:t e:t email:nil f:t inline:t num:t p:nil
+#+OPTIONS: pri:nil stat:t tags:not-in-toc tasks:t tex:t timestamp:t toc:t
+#+OPTIONS: todo:t |:t
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.3.3)
+#+EXCLUDE_TAGS: noexport
+#+LANGUAGE: fr
+#+SELECT_TAGS: export
+#+OPTIONS: html-postamble:auto html-preamble:t tex:t
+#+HTML_CONTAINER: div
+#+HTML_DOCTYPE: <!DOCTYPE html>
+#+HTML_HEAD:
+#+HTML_HEAD_EXTRA:
+#+HTML_INCLUDE_SCRIPTS:
+#+HTML_INCLUDE_STYLE:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+INFOJS_OPT:
+
+* Contexte
+:PROPERTIES:
+:ID:       201ee7a5-060b-4743-927f-0e11a2faec9b
+:END:
+[[https://bionico.org][Bionico]] est un projet de prothèse de main à commande électronique, dite
+"prothèse myoélectrique", conçu pour être réalisé à partir de matériaux
+accessibles pour une fabrication personnelle.
+
+Ce projet s'inspire de projets /Open Source/ autour de la réalisation de
+mains commandées électroniquement, notamment [[http://www.openbionics.com/][OpenBionics]] et [[http://exiii.jp/handiii-eng.html][Hackberry]], et
+s'appuie sur ce qui se fait dans l'industrie médicale.
+
+Un /hackathon/, le /Fabrikarium/ a lieu à Toulouse du 19 au 21
+octobre 2016. Il est organisé par *[[http://myhumankit.org][My Human Kit]]* et *[[http://www.airbusgroup.com][Airbus Group]]* qui
+réunissent des acteurs d'horizons et compétences diverses dans le but
+d'étudier, concevoir, prototyper, expérimenter et progresser techniquement
+sur une série de projets visant à dépasser les handicaps en proposant des
+solutions accessibles à fabriquer soi-même.
+
+Pour répondre au besoin de documentation des projets, une équipe de
+/docsprinteurs/ a été mise en place par *[[https://www.flossmanualsfr.net/][Flossmanuals Francophone]]*.
+
+L'objectif de cette documentation est de rendre compte des méthodes de
+réalisations des projets adressés au cours de ce /hackathon/, de sorte à
+péréniser le savoir-faire et transmettre de quoi les perpétuer.
+
+Dans cette optique, une partie des tâches du travail documentaire est
+d'une part de vérifier que la documentation existante est suffisamment
+explicite, pour la compléter si besoin et d'autre part, de documenter les
+nouveautés ainsi que rapporter les avancées en R&D. C'est l'objet de ce
+contenu.
+
+Le présent texte a été rédigé par Christophe Schockaert
+(http://createcnix.eu) pour [[https://www.flossmanualsfr.net/][Flossmanuals Francophone]]. Il est placé sous
+licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons "CC BY-SA 4.0"]], de même que toutes les images et
+videos accompagnant la rédaction du manuel.
+
+* Le projet "Bionicohand"
+** Présentation
+Les prothèses médicales sont des équipements élaborés, réalisés par des
+entreprises spécialisées, mettant souvent en oeuvre des technologies de
+pointe. Leur coût est dès lors très élevé. S'il est pris en charge par la
+sécurité sociale dans nos pays, il ne l'est pas partout.
+
+Chaque membre que la médecine s'efforce de remplacer possède des
+caractéristiques propres. Le projet "[[http://bionico.org][Bionicohand]]" se réfère à la main,
+dans une approche mécanisée, commandée électroniquement, pour offrir au
+patient une expérience de la préhension en remplacement de son membre
+manquant.
+
+Jusqu'à l'émergence d'ateliers d'amateurs sur la fabrication de mains de
+robot, l'idée de réaliser une prothèse de main à bas coût était presque
+inconcevable. Cependant, ces expérimentations viennent changer la donne,
+et, de la main de robot, des projets ont donné naissance à des projets
+pour une prothèse de main. C'est là qu'intervient la "[[http://bionico.org][Bionicohand]]".
+
+Un tel projet fait intervenir des domaines de compétences très variées,
+médicales, ergonomiques, techniques et artistiques. L'écoute des besoins
+du patient et de ses désirs sont également au coeur du sujet. C'est donc
+une approche multi-disciplinaire.
+
+La main de l'être humain présente des caractéristiques très spécifiques,
+qui n'existent pas telles quelles dans le monde animal.
+
+Elle a également la particularité d'être difficile à reproduire.
+
+En conséquence, quelques soient les prouesses d'ingénierie et les
+connaissances médicales mises-en-oeuvre, il faut garder beaucoup
+d'humilité pour aborder un tel projet: il ne sera jamais possible de
+reconstruire une main telle qu'elle a été façonnée par la nature.
+
+La première question à se poser lors de la confection d'une prothèse est
+de déterminer son utilité.
+
+Pour une prothèse de jambe, l'usage essentiel paraît relativement facile,
+il s'agit de pouvoir tenir en station debout et de se déplacer le plus
+aisément possible.
+
+Pour une prothèse de main, il y a des myriades de possibilités, il va donc
+falloir caratériser son usage.
+
+La première facette, c'est celle de la prothèse esthétique:
+
+#+CAPTION: Présentation d'une prothèse de main esthétique
+#+attr_html: :width 70% :align center
+[[file:images/20161019_001.jpg][file:medias/01_Presentation_projet/20161019_001.jpg]]
+
+#+CAPTION: Présentation d'une prothèse de main esthétique
+#+attr_html: :width 70% :align center
+[[file:images/20161019_002.jpg][file:medias/01_Presentation_projet/20161019_002.jpg]]
+
+#+CAPTION: Prothèse de main esthétique, vue intérieure de sa composition
+#+attr_html: :width 70% :align center
+[[file:images/20161019_004.jpg][file:medias/01_Presentation_projet/20161019_004.jpg]]
+
+#+CAPTION: Prothèse de main esthétique
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_005.jpg]]
+
+#+CAPTION: Prothèse de main esthétique, vue de l'emboîture
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_006.jpg]]
+
+
+Leur prix va de 10k€ à 15k€, tout le travail est artisanal, sur mesure, y
+compris pour la coloration. Cela peut aller très loin, vous pouvez
+distinguer sur les photos jusqu'aux poils et la couleur des vaisseaux
+sanguins.
+
+Les patients ont souvent des attentes, le travail de l'ergonome est de se
+rapprocher le plus possible, pourtant tout ne sera pas parfait. Par
+exemple, le corps change de couleur selon la saison, avec le bronzage, ou
+même simplement entre changements de température. Au niveau mécanique, la
+prothèse aura des limitations aussi. Le patient va donc devoir accepter
+les limites dans la réalisation d'une prothèse.
+
+
+Vient alors la question technique: comment concevoir une prothèse ?
+
+L'élément essentiel de la prothèse est l'emboîture. C'est sa structure, sa
+fondation, il est important qu'elle soit confortable et adaptée à la
+morphologie de la personne.
+
+#+CAPTION: Présentation de l'importance de l'emboîture
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/01_Presentation_projet/20161019_021.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+
+Le point de départ sera un moulage en plâtre, dans un premier un négatif
+sera obtenu (il sera à l'envers pour l'obtention de la prothèse), duquel
+sera créé un positif. Ce moulage doit être fin pour s'adapter parfaitement
+au corps de la personne.
+
+Il faut également travailler le système de fixation. En observant le
+coude, en le palpant, nous pouvons observer trois pointes osseuses. 
+
+Il y a le coude proprement dit, puis 2 épines sur le côté.  Ce sont des
+zones très sensibles, qu'il va falloir décharger au maximum pour éviter
+d'y mettre une pression.
+
+Pour le système de fixation, c'est une pince qui sera utilisée, en
+réalisant un accrochage en forme de fourche d'un côté du coude, puis un
+troisième accrochage qui viendra fermer la fixation.
+
+Ce maintien tient très bien, par contre, il n'est pas possible de
+l'enlever. Or, c'est une opération fréquemment nécessaire.
+
+Par ailleurs, la médecine n'est pas une science exacte. L'os n'obéit pas
+aux mêmes règles mécaniques qu'une structure métallique et des vis. L'os
+est quelque chose de vivant, il change en permanence. 
+
+En effet, l'os est entouré d'une espèce de sac qui perméabilise le passage
+des ostéophytes responsables de la production du calcium qui conduit l'os
+à pousser. Si ce sac n'est plus présent, l'os va continuer de pousser,
+donc il faut y remédier.
+
+De plus, les moignons ont tendance à changer de volume selon les
+conditions de l'environnement ou de l'organisme. Il faut également pouvoir
+gérer les variations de volume chez le patient.
+
+C'est le corps de l'emboîture qui sera en contact direct avec le moignon.
+
+L'objectif principal dans la confection de la prothèse va être de veiller
+à la répartition de pression. Il faudra éviter que des hyper-pressions
+apparaissent à certains endroits, ce qui signifierait un manque de
+pression ailleurs. Si le maintien est trop mou, ce n'est pas bon non plus.
+
+Dans la main présentée ci-dessous, il apparaît (photo du milieu) qu'il y a
+une partie rigide pour le corps de la main, une partie souple au niveau de
+la main, et une autre partie partiellement souple au niveau de la jonction
+entre la main et le poignet pour apporter une certaine flexibilité.
+
+#+CAPTION: Prothèse de main esthétique, vue du dessus, avec aperçu de la fabrication
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_090.jpg]]
+
+#+CAPTION: Prothèse de main esthétique, fabrication intérieure
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_088.jpg]]
+
+#+CAPTION: Prothèse de main esthétique, vue de l'emboîture
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_089.jpg]]
+
+
+Le budget pour une telle prothèse peut aller jusqu'à 30.000 €. Sa durée de
+vie d'une telle prothèse est de 3 à 5 ans, ensuite il faut la
+renouveler. Ces coûts sont entièrement pris en charge par la sécurité
+sociale.
+
+La conception de la prothèse dépend également de l'endroit où elle sera
+fixée. Aujourd'hui, les chirurgiens s'adressent de plus en plus souvent
+aux prothésistes afin de déterminer le meilleur endroit pour
+l'amputation. Ainsi, le choix dépendra à la fois des critères médicaux et
+des critères mécaniques pour le prothésite, sachant que pour lui, la
+situation la plus facile à gérer, est celle où l'amputation a lieu entre
+le tiers-moyen et le tiers-long.
+
+La prothèse pourra avoir plusieurs fonctions. Esthétique ou utilitaire,
+elle pourra également être motorisée. En fait, un patient utilisera
+différents types de prothèse, selon l'activité. Le crochet est une
+prothèse de travail, dont l'outil est interchangeable.
+
+#+CAPTION: Prothèse de main utilitaire, d'apparence simple, elle remplit bien un usage fonctionnel jusqu'à une certaine force
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_008.jpg]]
+
+#+CAPTION: Prothèse de main utilitaire, mécanique à trois doigts
+#+attr_html: :width 30% :align center
+[[file:medias/01_Presentation_projet/20161019_027.jpg]]
+
+#+CAPTION: Prothèse de main motorisée, à droite
+#+attr_html: :width 30% :align center
+[[file:medias/01_Presentation_projet/20161019_033.jpg]]
+
+#+CAPTION: Réplique 3D d'une prothèse de main Michel-Angelo utilitaire
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_030.jpg]]
+
+Les deux dernières sont des mains motorisées, le tout premier modèle de
+main à commande myoélectrique est apparu en 1967.
+
+La main Michel-Angelo est une des plus coûteuse aujourd'hui. Les photos en
+présentent une réplique 3D. Dans le modèle réel, elle est équipée de 3
+moteurs: un moteur au sein de la mein, un pour la rotation et un pour la
+préhension.
+
+#+CAPTION: Réplique 3D d'une prothèse de main Michel-Angelo, normalement équipée de 3 moteurs
+#+attr_html: :width 30% :align center
+[[file:medias/01_Presentation_projet/20161019_031.jpg]]
+
+Dans la prise en compte du réalisme du mouvement de la main, il y a un
+réel défi sur la rotation. En effet, les mouvements sont limités du fait
+de la consitution des os et des muscles du bras et de la main. Le
+mouvement de rotation de la main met en jeu un mouvement qui démarre dès
+le début de l'avant-bras. 
+
+Les deux os radius et cubitus sont parallèles au repos (c'est le cas de la
+station bras tendus vers le bas), ils viennent se superposer l'un
+au-dessus de l'autre au cours de la rotation.
+
+C'est ce que vous pouvez voir sur la video et la série d'images qui suivent.
+
+
+#+CAPTION: Démonstration des mouvements des os du bras représentés par des stylos
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/01_Presentation_projet/20161019_020.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+# NOTE: L'alignement pourrait se faire avec "display:inline-block",
+# cependant ça a été sans succès, de même "float:left" n'améliore pas la
+# situation
+#
+# => Voir http://stackoverflow.com/questions/24680030/align-images-side-by-side-in-html#24680165
+
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_011.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_012.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_013.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_014.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_015.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_016.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_017.jpg]]
+#+attr_html: :width 30% :align left
+[[file:medias/01_Presentation_projet/20161019_018.jpg]]
+#+CAPTION: Démonstration des mouvements des os du bras en photos
+#+attr_html: :width 30% :align left :style display:inline
+[[file:medias/01_Presentation_projet/20161019_019.jpg]]
+
+#+begin_html
+<br style="clear:both;" />
+#+end_html
+
+Les caractéristiques du mouvement induisent donc des contraintes
+spécifiques à la tenue de la prothèse au bras:
+
+#+CAPTION: Explications sur les spécificités des mouvements du bras
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/01_alimentation/20161019_021.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+
+La commande d'une main motorisée se réalise à l'aide de capteurs
+musculaires. Dans le corps, les signaux électriques musculaires ont pour
+support les fibres musculaires, donc l'eau.
+
+Ces signaux sont captés par des électrodes, qui vont pouvoir relayer le
+signal électrique à un circuit de commande. Le circuit se comportera
+différemment du mouvement corporel musculaire, le patient devra donc
+s'habituer à manipuler la prothèse, ce qui nécessite une phase
+d'apprentissage. Prendre un objet solide ou un objet fragile comme un
+gobelet à café en plastique nécessitera un abord différent. La manoeuvre
+couvre une grande amplitude de forces sur une petite plage d'action
+musculaire, le contrôle du mouvement est donc subtil.
+
+#+CAPTION: Commande d'un doigt motorisé au moyen d'un capteur musculaire
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161019_019.jpg]]
+
+
+Sur le plan des caractéristiques physiques pour le traitement du signal,
+la tension des signaux musculaires est de l'ordre de 5µV. Donc, c'est très
+petit et l'acquisition du signal est très sensible aux parasites
+(proximité de transformateurs, de téléphones portables et autres sources
+de perturbations potentielles).
+
+Au niveau électronique, il faut donc utiliser un amplificateur
+différentiel pour filtrer les signaux parasites en fonction de la longueur
+d'onde du signal.
+
+Sur la main myoléctrique, la pression de 10kg/cm2. Il y a également des
+différences homme/femme à prendre en compte dans l'élaboration de la
+prothèse.
+
+Il faut également savoir que depuis le bras, il n'est pas possible de
+capter les signaux pour tous les doigts, il n'y a pas un signal par
+muscle, le mouvement corporel se répartit autrement dans le jeu des
+tendons du bras et de la main.
+
+Dans le monde des prothèses motorisées, il se fait aussi des retours de
+sensibilité, qui permette de rendre compte d'un ressenti de ce qui est
+pris en main.
+
+Et parmi les particularités que le patient a à prendre compte, il y a la
+sensation fantôme. C'est une sensation nerveuse qui se réveille à un
+endroit que le cerveau interprète comme là où le membre était présent
+auparavant. C'est assez troublant et fait également l'objet d'un
+apprentissage.
+
+Dans la répartition, il y a un choix: 50% des gens portent des
+prothèses, et 50% n'en portent pas.
+
+** Enjeux et programme du /Fabrikarium/
+L'origine du /Fabrikarium/ part du constat que les prothèses sont à la
+fois une nécessité pour celui qui en a besoin, qu'elles ont un coût élevé
+et une étendue de fonctions limitées par les choix de recherches et
+investissements menés par les entreprises spécialisées.
+
+Des recherches et expériences ont été menées en laboratoires académiques
+ou par des amateurs, notamment pour des applications en robotique. Si la
+proximité semblait évidente, ce n'est pas le cas du tout, les champs
+d'application de la robotique et de la prothèse médicale sont complètement
+différents.
+
+Le mode de fonctionnement de l'OpenSource et l'émergence des fab lab est
+venu mettre un coup-de-pied dans l'accessibilité de fabrication et apporte
+des nouveautés dans les possibilités de confection de prothèses.
+
+Voici par exemples un projet anglais (orange) et un projet japonais
+(blanc) pour la construction d'une prothèse de main motorisée, tous deux
+issus des fab labs et de l'OpenSource:
+
+#+CAPTION: Projets de prothèses de mains motorisées issues des fab labs
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161020_086.jpg]]
+
+
+Le modèle anglais est construit dans un matériau souple et commandé par un
+moteur pour chaque doigt.
+
+Pour l'atelier du /Fabrikarium/, c'est le modèle japonais qui a été retenu
+comme point de départ, c'est celui du projet [[http://exiii-hackberry.com][exiii HACKberry]].
+
+Une première version a été adaptée lors d'un séjour de Nicolas Huchet de
+[[http://myhumankit.org][My Human Kit]] en immersion dans le fab lab de Berlin en Allemagne, elle
+vient se fixer sur sa prothèse médicale professionnelle.
+
+#+CAPTION: Première version de la Bionicohand fabriquée à Berlin sur le modèle du projet exiii HACKberry
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161021_018.jpg]]
+
+
+L'objectif du /Fabrikarium/ est d'améliorer cette première version et
+d'aboutir à un prototype de prothèse complète, entièrement réalisable
+soi-même.
+
+A ce titre, les enjeux de cet atelier sont:
+
+  - Prévoir une prothèse et son emboîture, réalisable soi-même avec un
+    procédé simple et des matériaux accessibles:
+  
+    - veiller à l'autonomie de la personne pour le chaussage
+  
+    - permettre le changement d'équipements sur la main
+  
+  - Assurer un montage aisé de la main motorisée:
+
+   - Vérifier la faisabilité de montage de la main en suivant le tutoriel
+
+   - Valider la sélection des pièces référencées dans les catalogues
+     européens
+  
+  - Utiliser une batterie et un chargeur du commerce plutôt qu'une
+    batterie et un chargeur spécifiques au constructeur
+
+  - Valider le nouveau circuit imprimé et le fonctionnement de ses
+    branchements avec le processeur Arduino:
+
+    - présence de deux capteurs désormais
+
+    - améliorer la commande des moteurs:
+
+      - ouvrir et fermer par palliers, en restant en position à chaque
+        étape, plutôt qu'avoir une commande d'ouverture et une de
+        fermeture
+
+    - fournir un retour de sensibilité simple sur la main :
+
+      - éclairage d'une led bleue si contact avec un objet froid, rouge
+        s'il est chaud
+
+  - Tester l'utilisation d'un /smartphone/ grâce à un filtre capacitif sur
+    l'index de la main 
+
+  - Récolter les retours de patients qui testeront le projet
+
+  - Rendre compte sous forme de documentation des étapes de réalisation et
+    des expériences menées
+* Réalisation et montage
+** Plans de la main Bionico et composants
+Le projet est présenté et documenté sur http://myhumankit.org et
+http://bionico.org.
+
+Celui-ci s'appuie sur le projet japonais [[http://exiii-hackberry.com][exiii HACKberry]].
+
+Les plans pour la réalisation des pièces par impression 3D sont
+disponibles au format STL sur la plate-forme GitHub:
+https://github.com/exiii/HACKberry.
+
+Pour le /hackathon/ du /Fabrikarium/, les pièces imprimées ont été
+commandées chez /Würth Industries/, qui les a fabriquées sur une machine
+/Dimension/ de /Stratasys/, machine de qualité industrielle.
+
+Au niveau des finitions, le résultat sur ce type de machine est bien plus
+fin que sur une imprimante de bureau 3D qui pourra présenter des bavures à
+certains endroits.
+
+Pour ce qui est des pièces et composants du commerce, il a fallu trouver
+la correspondance européenne par rapport à celles référencées dans le
+projet au Japon. En conséquence, les caractéristiques ne seront pas
+entièrement identiques.
+
+Plusieurs manuels d'assemblage sont à disposition:
+
+ - le tutoriel de [[https://www.myhumankit.org][My Human Kit]]:
+   http://myhumankit.org/tutoriels/main-hackberry-exiii/
+
+ - les manuels originaux du projet "[[http://exiii-hackberry.com][exiii HACKberry]]":
+
+   - http://exiii-hackberry.com/dw/doku.php?id=start pour l'ensemble du
+     projet
+
+   - http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble pour les
+     instructions d'assemblage
+
+
+La documentation ici présente fournira un mode d'emploi qui viendra
+compléter les informations qui pourraient manquer dans ces guides, ou qui
+viendra documenter des nouveautés ou des nouvelles fonctionnalités mises
+en place.
+
+** Assemblage de la main
+*** Identification des pièces
+Une première étape pour organiser le travail d'assemblage est d'identifier
+et rasssembler les pièces dont nous aurons besoin pour la réalisation.
+
+Par méthode, les pièces seront régroupées pour chaque doigt:
+
+#+CAPTION: Regroupement des pièces pour la construction de la main
+#+attr_html: :width 70% :align center
+[[file:medias/02_montage_mecanique/01_plan_disposition_pieces/20161019_046.jpg]]
+
+Attention à séparer le doigt de l'index, qui a une rainure
+supplémentaire au milieu:
+
+#+CAPTION: Repérage de l'index au moyen de la rainure
+#+attr_html: :width 70% :align center
+[[file:medias/02_montage_mecanique/01_plan_disposition_pieces/20161019_109.jpg]]
+
+L'ensemble des photos pour l'organisation des pièces est disponible
+sous [[file:medias/02_montage_mecanique/01_plan_disposition_pieces]].
+*** Montage des doigts et de la main
+Le montage des doigts et de la main est décrit dans le tutoriel
+[[http://myhumankit.org][My Human Kit]]:
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-7
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-8
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-9
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-10
+
+
+Au cours du /Fabrikarium/, une série de photos sur le montage ont été
+prises: "file:medias/02_montage_mecanique/02_montage_main".
+
+A noter que dans le modèle commandé pour l'atelier, les doigts ont été
+regroupés par couleurs selon les parties de la main. L'esthétique s'en
+retrouve différente et a pour effet de faciliter le repérage des pièces.
+
+Au travers de ces photos, les particularité suivantes sont
+mises-en-évidence:
+
+ - forer les pièces pour les agrandir: certains trous doivent être
+   agrandis pour être à dimension des axes
+
+ - Assemblage des axes dans les entretoîses, visser avec précaution: les
+   pièces sont en plastique, il ne faut pas serrer trop fort pur ne pas
+   déformer les pièces et l'entretoise (le passage des vis et axes), mais
+   suffisamment pour que l'assemblage tienne
+
+ - Montage de l'index
+
+ - Montage des 4 doigts pour la paume
+
+ - Montage du pouce: celui-ci est légèrement différent par rapport au
+   tutoriel, il y a deux pièces circulaires à "sertir" entre elles, là où
+   le tutoriel désignait 2 pièces également, mais conçues autrement (l'une
+   avec un double anneau, l'autre avec un anneau simple)
+
+ - Montage de la main en réservant la place pour l'accueil des moteurs
+** Montage des moteurs
+*** Protection des moteurs
+C'est l'opération décrite à l'étape 8 du tutoriel:
+http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-11.
+
+Au préalable, enlever le cache du moteur.
+
+L'opération consiste à couper le fil du moteur (rouge), pour insérer un
+fusible réarmable. Son principe de fonctionnement est qu'il coupe
+brusquement lorsqu'il atteint une une certaine température, qui correspond
+à un courant donné.
+
+La connexion est réalisée par brasage (voir "[[id:f9906297-5bb5-42ea-ac9a-005934edcfec][Brasure et soudure]]"), puis
+elle sera protégée en utilisant un isolant rétractable, qui a la
+particularité de se resserrer en chauffant.
+
+Il y a 2 petits moteurs ainsi, un pour le pouce, et un pour les trois
+doigts. Ensuite, il y a un plus gros moteur pour l'index.
+
+Les prises-de-vue réalisées au cours du /Fabrikarium/ sont sous
+"file:medias/03_montage_moteurs/01_protection_moteurs".
+*** Test des moteurs
+Après modification, chacun des moteurs sera testé après branchement du
+processeur Arduino pour s'assurer qu'il répond aux commandes.
+
+Ces essais sont réalisés au moyen de l'environnement de développement
+(IDE) Arduino. Dans l'application, il y a un menu spécifique pour tester
+un servo-moteur: le processeur commande le moteur qui y est branché, il
+mène le moteur tout le long de sa course dans un sens, puis dans l'autre.
+
+L'idéal serait d'utiliser un outil de test de modélisme, qui serait plus
+fin, mais l'IDE Arduino permet de faire ça, très simplement.
+*** Installation des moteurs
+Les moteurs sont logés dans leur emplacement dans la main.
+
+Ce sont les opérations décrites aux étapes:
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-13
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-14
+
+- http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-15
+
+Avant de les installer, il faut qu'ils soient configurés en butée. Pour
+cela, tourner le moteur sens anti-horaire jsuqu'à la butée et mettre le
+moteur dans son emplacement. Attention, il y a risque de casse si la butée
+ne correspond pas à la fin de course.
+
+Les clichés pris au cours du /Fabrikarium/ sont sous
+"file:medias/03_montage_moteurs/02_installation_moteurs".
+** Réalisation des circuits électriques
+*** Alimentation
+Le circuit d'alimentation assure l'approvisionnement en électricité des
+composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]].
+**** Connectique de la batterie
+La "Bionico Hand" sera alimentée par une batterie de 8.4V, disponible
+dans le commerce avec son chargeur qui se connecte à un port USB.
+
+Pour ce faire, il est prévu que la batterie d'alimentation vienne se
+brancher à un circuit imprimé en PCB au moyen d'une prise
+/jack/. C'est sur ce circuit que viendront se brancher le processeur
+Arduino, les capteurs, et les interrupeurs de commande.
+
+Il est nécessaire de trouver un moyen pour brancher cette batterie au
+câble d'alimentation de la prise /jack/.
+
+Pour gagner de la place et faciliter la construction, ce câble sera
+soudé directement aux connecteurs de la batterie, en veillant à
+déposer une brasure suffisamment fine pour pouvoir placer la batterie
+dans le chargeur en conservant son branchement.
+
+La video qui suit explique la réflexion qui a été menée pour aboutir à
+la solution pour le branchement de la batterie.
+
+#+CAPTION: Réflexion et présentation des moyens de branchement de la batterie
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/01_alimentation/20161020_037.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+
+Pour réaliser le branchement, il faut déterminer la polarité des fils
+reliés au /jack/, sachant que la polarité positive du /jack/ est dans
+le conducteur intérieur et la polarité négative dans le conducteur
+extérieur.
+
+#+CAPTION: Test des polarités du fil connecté à la prise /jack/
+#+attr_html: :width 70% :align center
+file:medias/04_circuits_electriques/01_alimentation/20161020_043.jpg
+
+
+#+CAPTION: Test des polarités du fil connecté à la prise /jack/
+#+attr_html: :width 70% :align center
+file:medias/04_circuits_electriques/01_alimentation/20161020_045.jpg
+
+A l'aide d'un multimètre, marquer le fil positif en mesurant que la
+résitance est nulle (contact établi) lorsque le multimètre est branché
+sur la broche positive. Souvent, le multimètre émet un /beep/ sonore
+dans cette configuration pour signaler le contact franc.
+
+Ensuite, sur la batterie qui comporte 4 connecteurs, il faudra
+identifier la borne "*+*" pour y souder le fil positif relié au
+/jack/ et la borne "*-*" pour y souder la masse.
+
+#+CAPTION: Repérage des bornes "+" et "-" identifiées sur la batterie
+#+attr_html: :width 70% :align center
+file:medias/04_circuits_electriques/01_alimentation/20161020_048.jpg
+
+#+CAPTION: Test des polarités du fil connecté à la prise /jack/
+#+attr_html: :width 70% :align center
+file:medias/04_circuits_electriques/01_alimentation/20161020_046.jpg
+
+Une fois les bornes positive et négative clairement identifées, il
+faudra y souder les fils correspondant reliés à la prise /jack/:
+
+#+CAPTION: Fils de la prise /jack/ soudés sur les bornes adéquates de la batterie
+#+attr_html: :width 70% :align center
+file:medias/04_circuits_electriques/01_alimentation/20161020_049.jpg
+
+
+A l'issue de l'opération, tester que la batterie ainsi équipée
+s'ajuste dans le chargeur et que la charge est effective (la /led/ du
+chargeur devient rouge pour indiquer que la batterie est en charge,
+pourvu qu'elle n'ait pas été chargée au préalable).
+
+Enfin, solidariser les fils sur le côté externe de la batterie.
+
+L'ensemble des photos et videos se rapportant au branchement de la
+batterie sont disponibles à l'emplacement
+"file:medias/04_circuits_electriques/01_alimentation/".
+**** Confection d'un régulateur de tension
+:PROPERTIES:
+:ID:       1d7e3fb5-49dc-4630-9ce3-e7fc2e452418
+:END:
+A l'entrée du circuit, c'est une batterie de 8.4V qui sera
+positionnée.
+
+Or, les équipements électroniques pour notre main doivent être
+alimentés par une tension de 5V.
+
+Pour obtenir une tension d'entrée de 5V pour le circuit de la main, il
+faudra donc placer un régulateur. Le domaine de fonctionnement de la
+batterie se situe entre 8.4V et 7.2V (2*3.6V) à minimum de charge
+(après quoi, la tension chute rapidement).
+
+Dans un tel montage, la différence de puissance correspondant à la
+conversion de tension entre l'entrée et la sortie sera dissipée en
+chaleur.
+
+Puisque la tension minimale de fonctionnement de la batterie sera de
+7.2V, il y a donc 2V de marge. Pour un meilleur rendement énergétique,
+il pourra être envisagé de choisir une batterie plus faible s'il
+existe dans le commerce des modèles aussi pratiques d'utilisation que
+celui qui a été trouvé.
+ 
+Au cours du /Fabrikarium/, le régulateur conçu pour la "Bionico Hand"
+a été construit à partir d'un un régulateur linéaire à 5V, de référence
+"7805" et du circuit suivant:
+
+- un dissipateur a été monté sur celui-ci pour dissiper la chaleur
+  résultant de la conversion de tension excédentaire
+
+- en amont et en aval deux capacités de filtrage ont été ajoutés, une
+  chimique polarisée (1000µF, cylindre, qui gère l'appel de courant)
+  et une céramique (100 nF, filtre les petits parasites, appels de
+  courant)
+
+Le circuit est représenté sur les photos qui suivent.
+
+#+CAPTION: Circuit de montage pour le reégulateur de tension 5V - composants
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/02_regulateur_tension/20161020_015.jpg]]
+
+#+CAPTION: Circuit de montage pour le reégulateur de tension 5V - connexions
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/02_regulateur_tension/20161020_016.jpg]]
+
+
+Une video montre le travail de brasure pour souder les composants et
+réaliser le circuit de connexion:
+
+#+CAPTION: Soudure des composants et dessin du circuit du régulateur de batterie
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/02_regulateur_tension/20161020_024.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+Vous trouverez quelques conseils pour obtenir une bonne brasure à la
+section "[[*Brasure%20et%20soudure][Brasure et soudure]]".
+
+A l'issue du montage, le régulateur devra être testé. Pour cela, il
+faudra utiliser une alimentation stabilisée, réglée à 8V, qui se situe
+dans la plage de tension attendue de la batterie dans son domaine de
+fonctionnement.
+
+A l'aide d'un multimètre, deux mesures seront faites. Dans un premier
+temps, à l'entrée du circuit, pour vérifier que la tension de 8V
+commandée est bien présente. Ensuite, dans un deuxième temps, vérifier
+que la tension indique 5V stabilisés à la sortie du circuit.
+
+L'ensemble des photos et videos disponibles pour la confection du
+régulateur de tension sont rassemblées dans le dossier
+"file:medias/04_circuits_electriques/02_regulateur_tension/".
+
+*** Montage du circuit intégré
+Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
+commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le processeur
+Arduino, ainsi que le circuit d'alimentation pour la fourniture en
+énergie.
+
+Le schéma du PCB a été revu par rapport au projet [[http://exiii-hackberry.com][exiii HACKberry]] pour
+permettre l'installation d'un capteur supplémentaire. Il en découle une
+utilisation différente des bornes du processeur Arduino, d'où un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel
+adressage à prévoir entre le processeur et le circuit]].
+**** Branchement des éléments du circuit imprimé
+Comme indiqué dans la rubrique "[[id:f9906297-5bb5-42ea-ac9a-005934edcfec][brasure et soudure]]", les éléments à fixer
+au circuit imprimé le seront en commençant par les plus petits.
+
+Les différentes phases d'assemblage sont présentées dans le [[https://fr.wikipedia.org/wiki/Brasage][tutoriel My
+Human Kit - étape 16]].
+
+La première photo présente le circuit PCB et les composants à assembler,
+que nous avons ici pour le /Fabrikarium/:
+
+#+CAPTION: Eléments à assembler au circuit imprimé PCB
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_290.jpg]]
+
+#+CAPTION: Poste à souder
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_310.jpg]]
+
+
+Les photos 2, 3 et 8 présentent l'installation du /jack/ pour
+l'alimentation.
+
+Les photos 4 à 7 présentent l'assemblage du bouton de commande on/off, des
+borniers (/pin header/ ou /têtes de broches/) mâles et femelles et des
+boutons de commande.
+
+
+1. Installation du bouton on/off:
+
+#+CAPTION: Présentation de l'interrupteur on/off
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_297.jpg]]
+
+#+CAPTION: Mise-en-place de l'interrupteur on/off
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_296.jpg]]
+
+#+CAPTION: Interrupteur on/off en place
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_295.jpg]]
+
+#+CAPTION: Présentation de la brasure par revers pour l'interrupteur on/off, en le maintenant en place
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_298.jpg]]
+
+#+CAPTION: Brasage de l'interrupteur on/off par revers
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_298.jpg]]
+
+
+2. Assemblage des borniers pour la commande des moteurs et pour acceuillir
+   le processeur Arduino (selon leur positionnement, ils pourront être
+   coupés a posteriori pour disposer d'un meilleur maintien):
+
+#+CAPTION: Présentation du bornier pour le processeur Arduino sur le circuit
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_311.jpg]]
+
+#+CAPTION: Brasage du bornier par revers, bien posé sur la table
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_306.jpg]]
+
+#+CAPTION: Brasage du bornier par revers, de plus près
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_325.jpg]]
+
+#+CAPTION: Présentation du bornier pour la commande des moteurs
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_312.jpg]]
+
+#+CAPTION: Assemblage complet des borniers et du /jack/ femelle pour l'alimentation
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161020_054.jpg]]
+
+
+3.Installation des boutons de commande:
+
+#+CAPTION: Assemblage des boutons de commande pour terminer cette face du PCB
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161020_053.jpg]]
+
+
+Les photos 9 à 12 du tutoriel My Human Kit concernent le [[id:1d7e3fb5-49dc-4630-9ce3-e7fc2e452418][régulateur de
+tension que nous avons revu au cours du /Fabrikarium/]]. Nous ne les
+reverrons pas ici.
+
+Pour visualiser l'ensemble des photos sur le montage du circuit imprimé,
+se rérérer au contenu du dossier
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB]].
+
+**** Deux approches pour la connexion des capteurs
+:PROPERTIES:
+:ID:       b185de0b-b4c6-40cd-be0b-a26b704dd4d6
+:END:
+
+Dans le projet original, il était prévu une prise /mini-jack/ stereo, qui
+permettait donc de relayer une masse, une tension d'alimentation et un
+signal.
+
+Par rapport au projet [[http://exiii-hackberry.com][exiii HACKberry]], la [[http://www.bionico.org][Bionicohand]] prévoit d'utiliser
+deux capteurs afin d'étendre les possibilités de pilotage de la main
+commandée électroniquement.
+
+Pour pouvoir brancher un deuxième capteur, le cicuit imprimé a été repensé
+pour faire sortir les deux signaux de capteur vers le /mini-jack/ stereo,
+en se passant de l'alimentation qui sera réalisée de manière externe au
+moyen de deux piles Lithium-Ion. Une autre possibilité serait de prévoir
+un /mini-jack/ à 4 connecteurs, comme il en existe pour les branchements
+d'écouteurs avec micro-phone.
+
+Il en résulte deux montages possibles pour les capteurs.
+
+***** Alimentation externe
+Le premier montage consiste à utiliser une alimentation externe pour les
+capteurs, puisque celle-ci n'est pas piquée sur le circuit principal.
+
+#+CAPTION: Dispositif d'alimentation externe par 2 piles Lithium CR2032 pour le capteur
+#+attr_html: :width 30% :align center
+[[file:medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_303.jpg]]
+
+#+CAPTION: Installation du bornier de connexion sur le capteur par brasage
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_301.jpg]]
+
+#+CAPTION: Assemblage du circuit du capteur au circuit d'alimentation externe
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_314.jpg]]
+
+#+CAPTION: Réalisation de la connectique pour l'ensemble capteur/alimentation
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_314.jpg]]
+
+***** Alimentation sur la carte et circuit de stabilisation
+L'autre approche consiste à utiliser l'alimentation de la carte pour les
+deux capteurs, en utilisant un /mini-jack/ à 4 connecteurs.
+
+Au cours du /Fabrikarium/, le /mini-jack/ stereo prévu n'était pas
+disponible de toutes façons. Pour s'en passer, les capteurs ont donc été
+reliés directement au PCB au moyen de fils. Ce qui a également permis de
+tester le branchement à 4 connexions, une masse, une alimentation et deux
+signaux.
+
+L'alimentation du capteur a été puisée directement à partir de la tension
+positive du PCB plutôt qu'à partir d'une alimentation supplémentaire. Cela
+permet de s'affranchir de gérer des sources d'énergies additionnelles
+chacune avec leur cycle de vie propre.
+
+Les deux capteurs sont connectés l'un à l'autre, pour relayer la tension
+d'alimentation. De plus, un circuit de stabilisation a été monté pour
+filtrer le bruit et transmettre un meilleur signal au processeur Arduino
+pour le traitement de l'information.
+
+#+CAPTION: Vue des deux capteurs connectés l'un à l'autre pour partager la même alimentation
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/05_connectique_capteurs_seuls_stabilises/20161021_016.jpg]]
+
+#+CAPTION: Schéma du circuit de stabilisation avec grandeurs physiques des composants.
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/05_connectique_capteurs_seuls_stabilises/20161021_017.jpg]]
+
+Le circuit de stabilisation est un circuit RLC comportant à l'entrée une
+capacité de 4,7 µF, ensuite en série une inductance (/self/) de 470 µH et
+une résistance de 0,5 ohms, pour sortir sur un montage en parallèle de
+deux condensateurs 100 mF et 820 µF.
+
+Ce circuit assure une meilleure stabilité dans la tension de sortie, tout
+en réduisant les parasites. Le résultat donne une mesure beaucoup plus
+fine à l'entrée du processeur Arduino, ce qui permet une meilleure boucle
+de régulation dans la commande de la main.
+**** Montage des circuits
+Une fois les différents circuits réalisés, il va falloir les connecter
+entre eux et les loger dans le compartiment prévu de la main motorisée.
+
+Il faut donc tester que les circuits et composants prennent bien place
+dans la main et ce, sous la coque du dos de la main, en s'assurant que les
+boutons de commande soient suffisamment mobiles, au besoin limer les
+insertions.
+
+#+CAPTION: Insertion du circuit sous la coque et vérification de la mobilité des boutons
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/06_montage_circuits/20161020_051.jpg]]
+
+Dans notre cas, nous avons dû réduire la taille du dissipateur de chaleur
+installé sur le régulateur "7805" de notre circuit de régulation: il a
+simplement été replié pour gagner de la place en hauteur (comparez celui
+de droite à celui de gauche, dans sa forme initiale):
+
+#+CAPTION: Repliement du dissipateur pour loger le circuit dans son emplacement
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/06_montage_circuits/20161020_052.jpg]]
+
+
+Le dissipateur sera ensuite branché au circuit imprimé par brasage, en
+respectant le schéma de connexion présenté ci-dessous:
+
+#+CAPTION: Schéma de branchement du régulateur au circuit imprimé: emplacements sur le circuit
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/06_montage_circuits/20161020_056.jpg]]
+
+#+CAPTION: Schéma de branchement du régulateur au circuit imprimé: connexion des fils
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/06_montage_circuits/20161020_057.jpg]]
+
+
+Pour terminer, préparer les fils de connexion qui seront branchés aux
+capteurs musculaires. La video qui suit indique comment réaliser la
+connectique pour la réception des signaux en gris et en orange, une prise
+de masse en bleu et la tension en rouge.
+
+#+CAPTION: Branchement sur le circuit imprimé des fils de connexion aux capteurs
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/06_montage_circuits/20161020_082.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+Les branchements et circuits seront isolés à l'aide de toile isolante
+(aussi appelée "/chatterton/" du nom de son inventeur:
+https://fr.wikipedia.org/wiki/Ruban_adh%C3%A9sif#Utilisations_et_types)
+afin d'éviter un court-circuit en juxtaposant les circuits les uns contre
+les autres:
+
+#+CAPTION: Branchement sur le circuit imprimé des fils de connexion aux capteurs
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/06_montage_circuits/20161020_083.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+La video montre également que 4 fils sont rassemblés et solidarisés pour
+établir la connexion aux deux capteurs, en se passant de la prise
+/mini-jack/ à 4 connecteurs.
+** Tests, calibration, ajustement des commandes et capteurs
+Lorsque les circuits sont mis en place, les moteurs peuvent être installés
+et branchés au circuit, puis testés.
+*** Tests de commande des moteurs
+Les deux videos qui suivent présentent les premiers tests qui ont été
+réalisés sur la main motorisée.
+
+Le fonctionnement ne s'avère pas comme attendu, il y a un temps de
+réflexion et d'examen. Cette étape est intéressante car elle montre
+comment s'y prendre face à une situation imprévue. Deux mains ont été
+montées, elles présentaient toutes les deux un comportement inadéquat, pas
+100% le même. C'est donc le montage qui a été remis en question.
+
+#+CAPTION: Tests de commande des moteurs pour la première main, non concluants
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_080_testsNOK.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Tests de commande des moteurs pour la deuxième main, non concluants non plus
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_081_testsNOK.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+Le principe de base est de s'y prendre pas-à-pas pour pister le problème,
+les commandes ont été testées une par une à partir d'un programme Arduino
+simplifié.
+
+De là, il s'est avéré que l'adressage des bornes de l'Arduino dans le
+logiciel n'était pas le même, le circuit a été modifié à ce niveau-là
+également. Donc, il a été nécessaire de procéder à des [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][ajustements dans
+l'adressage des bornes du processeur Arduino]] pour réceptionner
+correctement les signaux et piloter les moteurs avec les commandes
+adéquates.
+
+Ensuite, le nouvel adressage a pu être testé, ce qui nous donne les
+résultats présentés dans cette video. Cette fois, le comportement est tout
+à fait satisfaisant !
+
+
+#+CAPTION: Tests de commande des moteurs, concluants cette fois !
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_084_testsOK.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+La différence qui avait été constatée entre les deux mains s'est
+retrouvées dans les tests moteurs, même après bon adressage: dans la
+première main, bien que d'apparence semblable, c'est un moteur différent
+qui a été monté. Il est important de choisir un moteur continu avec
+consigne de position qui se mettra en mouvement jusqu'à atteindre la
+position voulue, non pas avec une consigne de commande qui se déplacera
+jusqu'à recevoir une autre consigne et nécessite donc un travail permanent
+pour maintenir une position fixe, ce qui affaiblira très vite la batterie.
+*** Ajustement dans l'adressage des bornes du processeur Arduino
+:PROPERTIES:
+:ID:       ddff0242-6a58-4bcd-852e-1e865a3dea7a
+:END:
+
+Voici la table de correspondance entre l'adressage Arduino du circuit
+[[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que réalisée
+au /Fabrikarium d'octobre 2016/:
+
+#+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
+#+attr_html: :width 30% :align center
+[[file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
+*** Tests du montage complet
+Après l'adressage réalisé et les tests de base concluants, il est temps de
+réaliser les tests sur le montage complet:
+
+#+CAPTION: Tests de commande de la main motorisée, montage complet !
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/05_tests_et_calibrations_/03_tests_montage_complet/20161021_015.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+L'objectif final sera de commander la main entièrement arrimée à la
+prothèse:
+
+#+CAPTION: Prothèse et main motorisée
+#+attr_html: :width 70% :align center
+[[file:medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_018.jpg]]
+
+#+CAPTION: Test de la main installé sur la prothèse (1)
+#+attr_html: :width 70% :align center
+[[file:medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_021.jpg]]
+
+#+CAPTION: Test de la main installé sur la prothèse (2)
+#+attr_html: :width 70% :align center
+[[file:medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_023.jpg]]
+
+
+Vous pouvez consulter les autres photos sur ce thème sous
+[[file:medias/05_tests_et_calibrations/03_tests_montage_complet]].
+
+La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Confection d'un support de main (R&D)]]" décrira comment concevoir une
+prothèse de main et son emboiture à monter soi-même.
+*** Capteur de pression
+Sur l'index, un capteur de pression a été positionné afin de mesurer la
+force de pince.
+
+Grâce à celui-ci, la pression exercée sur la prise-en-main pourra être
+mesurée, ce qui permettra de doser la force exercée sur un objet en
+fonction de la force musculaire exercée.
+** Support de la main
+*** Confection d'un support de main (R&D)
+:PROPERTIES:
+:ID:       41d49b6a-e462-4640-b453-00591c6706e8
+:END:
+
+Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
+prothèse de main à partir de matériaux accessibles: voir
+[[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
+et videos sur la R&D.
+*** Installation des capteurs sur la prothèse de main
+Les capteurs de pression seront installés sur la prothèse ainsi
+confectionnée.
+
+Des boutons-pression seront utilisés pour établir un contact amovible
+entre le bras et le capteur, comme expliqué dans ces deux videos:
+
+#+CAPTION: Système de bouton-pression pour le contact entre le bras et le capteur
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_038.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Où installer le bouton-pression sur la prothèse pour le contact du capteur
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_041.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+
+Pour que la réalisation soit fonctionnelle, il faut que le capteur soit
+localisé au bon endroit. Dans un premier temps, l'endroit a été localisé à
+partir de la prothèse industrielle pour être marqué par souci de
+fiabilité, sachant que ce qui nous intéresse, c'est la zone musculaire
+active, comme le montre ces deux videos:
+
+#+CAPTION: Mise-en-place de la prothèse pour localiser la zone musculaire à utiliser par le capteur
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_040.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Marquage de la zone musculaire active pour le positionnement du capteur
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_042.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+Ensuite, il faut repérer la zone de contact entre la prothèse et le
+muscle. Une première approche est d'utiliser de la pâte-à-modeler, ce qui
+ne s'est pas avéré efficace. La deuxième approche utilise de la peinture
+effaçable, sans danger pour le corps.
+
+#+CAPTION: Marquage de la zone de contact avec le muscle dans la prothèse: tentative peu fructueuse avec la pâte-à-modeler
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_039.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Marquage de la zone de contact avec le muscle dans la prothèse: utilisation de peinture lavable pour le corps
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_062.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Présentation du marquage pour la zone de contact avec le muscle dans la prothèse
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_061.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+A partir du marquage réalisé, les boutons-pression et le capteur pourront
+être installés sur la prothèse. Plusieurs videos montrent les
+manipulations réalisées.
+
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 1)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_058.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 2)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_059.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 3)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_060.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 4)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_063.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 5)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_064.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+#+CAPTION: Installation des capteurs et leur contact sur la prothèse (étape 6)
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_065.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+** Améliorations
+*** Toucher conducteur pour les /smartphones/
+Pour pouvoir utiliser un /smartphone/, il faut une surface conductrice et
+capacitive. Le corps humain a un effet capacitif pour lequel les écrans
+des téléphones tactiles ont été étalonnés. Le dispositif s'appuiera donc
+sur le corps pour relayer au doigt de la prothèse le courant capacitif, en
+utilisant une peinture conductrice sur le doigt, reliée à une zone du
+corps par contact électrique.
+
+La video suivante montre l'application d'une peinture conductrice sur le
+doigt de la main mécanisée.
+
+
+#+CAPTION: Branchement sur le circuit imprimé des fils de connexion aux capteurs
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/11_ameliorations/01_peinture_electrique/20161020_083.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+* Savoir-faire techniques
+Cette rubrique reprend quelques techniques à s'approprier pour devenir un
+parfait bricoleur ou /maker/ de la [[http://www.bionico.org][Bionicohand]].
+** Brasure et soudure
+:PROPERTIES:
+:ID:       f9906297-5bb5-42ea-ac9a-005934edcfec
+:END:
+Il y a quelques astuces et notions utiles à connaître pour réaliser
+une belle brasure en électronique. Dans le langage courant, le terme
+"soudure" est souvent utilisé, le terme correct est "brasure".
+
+Il se fait que l'objectif est le même, celui de souder deux éléments
+électroniques ensemble, dans le sens de les "assembler".
+
+En réalité, si le résultat escompté est le même, c'est le procédé qui est
+différent. La soudure conduit à chauffer les éléments jusqu'à leur
+température de fusion, tandis que le brasage ne doit pas l'atteindre,
+pourvu qu'il chauffe suffisamment les éléments pour qu'un échange de
+matière puisse avoir lieu. Cette opération peut se faire au moyen d'un
+métal d'apport, souvent un fil d'étain. La page Wikipedia sur [[https://fr.wikipedia.org/wiki/Brasage][le brasage]]
+permet d'aller plus loin dans les détails.
+
+Pour ce qui est de la pratique, en électronique, pour souder (assembler)
+un composant sur une carte, il faut toujours commencer par les composants
+les moins hauts, de sorte à ne pas être gènés par la suite pour installer
+les composants les plus petits.
+
+Les étapes pour la chauffe sont:
+
+ - régler la température dans le cas d'un fer réglable (ex: 350°C sur le
+   cadran de notre appareil, attention c'est chaud !)
+
+ - nettoyer la patte du fer sur l'éponge métallique
+
+ - chauffer l'emplacement sur le circuit
+
+ - appliquer le fil d'étain, et l'avancer progressivement pour le
+   faire fondre et déposer de la matière
+ 
+ - retirer l'étain, puis le fer, l'opération dure 1 à 3 secondes maximum
+
+Une belle brasure aura un aspect tout lisse, qui assure une bonne
+conductivité, c'est l'effet recherché. Une brasure avec des aspérités
+ne sera pas de bonne qualité.
+
+En guise d'exemple, se reporter à la video pour la soudure du circuit
+pour le régulateur de tension.
+
+#+CAPTION: Démonstration sur la réalisation d'une brasure
+#+attr_html: :controls controls :width 800
+#+BEGIN_video
+#+HTML: <source src="medias/04_circuits_electriques/02_regulateur_tension/20161020_024.mp4" type="video/mp4">
+Your browser does not support the video tag.
+#+END_video
+
+En cas de besoin, il est possible de déssouder, en faisant fondre la
+soudure.
+
+Pour cela, il faut utiliser une tresse à désouder (en cuivre), qui
+absorbe par capillarité l'étain lorsqu'il est chauffé pour être fondu,
+c'est ce qui illustré à l'image suivante, lors de la connexion des
+branchements au circuit PCB:
+
+#+CAPTION: Utilisation de la tresse à désouder
+#+attr_html: :width 70% :align center
+[[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_329.jpg]]
+
+* Retours d'expérience
+** Généralités
+- La documentation telle qu'elle est s'adresse à des connaisseurs, il y a
+  besoin d'une documentation pas-à-pas pour la rendre plus accessible.
+
+  L'idéal serait un montage de type jeu à construire ou meuble à
+  assembler, avec la présentation de chaque pièce avant chacune des
+  étapes, puis la réalisation de l'étape en question.
+
+  Il est à noter que c'est déjà existant pour le [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][montage de la main]] et [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][des
+  doigts]] sur le projet [[http://exiii-hackberry.com][exiii HACKberry]] qui a été mis à jour récemment. Les
+  montages électriques sont par contre mieux détaillés sur le [[http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-16][tutoriel My
+  Human Kit]].
+
+  Dans tout les cas, il faudra certainement avoir le goût du bricolage, et
+  il sera bon de se faire aider par quelqu'un de plus averti si
+  nécessaire, ce qui s'avérera conduire à une véritable aventure
+  humaine. Une piste pour ceux qui n'auraient pas de contacts en vue: se
+  renseigner auprès des [[https://fr.wikipedia.org/wiki/Fab_lab][Fab labs]] du coin...
+
+- Pour le montage des pièces conçues en impression 3D, il serait bon
+  d'identifier chacune des pièces à monter, en le gravant sur la
+  pièce. Puisque ce sera à éviter du côté visible pour des raisons
+  évidentes d'esthétisme, le défi est de parvenir à graver l'identifiant
+  sans gène mécanique du côté impliqué dans le montage.
+
+- Pour les pièces de montage (visseries, entretoises, composants,
+  circuits, moteurs, ...), il serait judicieux de les caractériser
+  exactement (référence, grandeurs physiques, caractéristiques
+  spécifiques)
+** Technique
+
+- Envisager de prendre des vis au pas-de-vis plus fin pour induire moins
+  de contraintes lors du vissage, car celui-ci peut devenir destructeur en
+  regard de la solidité des composants 3D à assembler (entretoises qui
+  peuvent se désolidariser de la pièce lors du passage de la vis)
+
+- Les axes pour fixer les doigts de la main doivent être de longueur de 14
+  mm cm plutôt que de 16mm, autrement ils dépassent s'ils se trouvent en
+  butée
+
+- Pour le choix des moteurs, veiller à réunir toutes les caractéristiques
+  nécessaires: moteur électrique à courant continu, avec position de
+  consigne, et de dimensions adéquates pour le logement dans la main
+  motorisée
