@@ -1,6 +1,6 @@
 #+TITLE: Fabrikarium - Projet Bionico
-#+DATE: <2016-11-06 dim.>
-#+AUTHOR: Christophe Schockaert pour Flossmanuals Francophone (CC-BY-SA 4.0)
+#+DATE: <2016-11-07 lun.>
+#+AUTHOR: Christophe Schockaert pour Flossmanuals Francophone (CC BY 4.0)
 #+EMAIL: Christophe.Schockaer@createcnix.eu
 #+KEYWORDS: Prothèse,commande électronique, Bionico, Bionicohand, Fablab
 #+DESCRIPTION: Hackathon sur la fabrication d'une prothèse de main commandée électroniquement
@@ -58,7 +58,7 @@ contenu.
 
 Le présent texte a été rédigé par Christophe Schockaert
 (http://createcnix.eu) pour [[https://www.flossmanualsfr.net/][Flossmanuals Francophone]]. Il est placé sous
-licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons "CC BY-SA 4.0"]], de même que toutes les images et
+licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons "CC BY 4.0"]], de même que toutes les images et
 videos accompagnant la rédaction du manuel.
 
 * Le projet "Bionicohand"
