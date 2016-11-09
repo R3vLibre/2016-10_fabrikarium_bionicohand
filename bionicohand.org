@@ -1295,13 +1295,77 @@ Vous pouvez consulter les autres photos sur ce thème sous
 
 La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Confection d'un support de main (R&D)]]" décrira comment concevoir une
 prothèse de main et son emboiture à monter soi-même.
-*** Capteur de pression
-Sur l'index, un capteur de pression a été positionné afin de mesurer la
-force de pince.
 
-Grâce à celui-ci, la pression exercée sur la prise-en-main pourra être
-mesurée, ce qui permettra de doser la force exercée sur un objet en
-fonction de la force musculaire exercée.
+* Capteurs
+** Filtrage du signal des capteurs
+*** problématique
+     
+     
+     Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
+
+
+  #+ATTR_HTML: width="600px"
+  #+CAPTION: Le nouveau support du servo monté sur la paume.
+  [[file:images/myoware.jpg]]
+        
+      Un travail a été effectué afin de filtrer leur signal de sortie pour le rendre plus lisse et que les événements déclencheur soit bien identifiés. Lorsqu'ils fonctionnent correctement, le signal est maintenant tout à fait exploitable et permet bien de régler la position de la main progressivement et non pas en tout ou rien.
+     
+     Certains paramètres restent critiques dans le bon fonctionnement de ces capteurs:
+-  la position des électrodes sur le muscle
+-  le type de contact avec la peau (patch adhésif, pâte conductrice, contact métalliques...) et aussi l'humidité de la peau.
+-  la pression exercée sur le capteur, qui doivent être serré avec une bande de scratch.
+   
+   Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
+   
+
+  #+ATTR_HTML: width="600px"
+  #+CAPTION: Montage et test d'un MyoWare sur une emboîture
+  [[file:images/PA203442.JPG]]
+        
+
+*** protocole
+    
+    Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
+    
+    Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer directement l'évolution d'un signal analogique, reçu par l'intermédiaire du port série.
+
+*** méthode de filtrage
+    
+    Sur le programme arduino d'origine, une moyenne est appliquée sur une certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche pas l'apparition d'une variation brusque entre le premier lot de valeurs et celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des médianes) flottantes, c'est à dire que ce sont toujours les vingt dernières valeurs reçues qui sont prise en compte dans le traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la marge et le signal résultant évoluera de façon plus continue.
+
+    [[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser simplement des médianes flottantes.
+
+    Finalement, deux médianes flottantes sont utilisées :
+-  la médiane courte correspond à un premier filtrage où tous les signaux reçu par le capteur sont prises en compte. Elle permet de supprimer les bruits et d'obtenir un signal relativement lisse.
+-  la médiane longue est une médiane flottantes des médianes courtes. Il s'agit d'obtenir une référence qui évolue en fonction du temps et à partir de laquelle on va détecter des changements sur de plus courtes échelles de temps.
+   
+   C'est donc à partir des variations de cette différence que nous allons détecter des événements correspondant à contraction du muscle correspondant.
+
+   Sur la photo suivant, on voit l'évolution des médianes obtenues pour deux capteurs musculaires. Le signal lisse correspond à la médiane courte, le signal en escalier correspond à la médiane longue.
+
+  #+ATTR_HTML: width="600px"
+  #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
+  [[file:images/PA203439.JPG]]        
+
+** Capteur de pression
+
+   Cette partie consiste à ajouter un capteur au bout du pouce afin d'avoir un retour d'information "sensible". Ce retour d'information permet au porteur de la main d'adapter lui même la pression. Il s'agit d'un capteur de pression de type FSR.
+   
+   #+ATTR_HTML: width="600px"
+   #+CAPTION: Fixation du capteur de pression sur le pouce
+   [[file:images/PA213465.JPG]]
+   
+   
+   Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
+   
+   #+ATTR_HTML: width="600px"
+   #+CAPTION: Schéma du montage du capteur de pression
+   [[file:images/PA213463.JPG]]
+   
+   Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
+
+
+
 * Support de la main
 ** Confection d'un support de main (R&D)
 :PROPERTIES:
