@@ -813,12 +813,12 @@ extérieur.
 
 #+CAPTION: Test des polarités du fil connecté à la prise /jack/
 #+attr_html: :width 70% :align center
-file:medias/04_circuits_electriques/01_alimentation/20161020_043.jpg
+[[file:medias/04_circuits_electriques/01_alimentation/20161020_043.jpg]]
 
 
 #+CAPTION: Test des polarités du fil connecté à la prise /jack/
 #+attr_html: :width 70% :align center
-file:medias/04_circuits_electriques/01_alimentation/20161020_045.jpg
+[[file:medias/04_circuits_electriques/01_alimentation/20161020_045.jpg]]
 
 A l'aide d'un multimètre, marquer le fil positif en mesurant que la
 résitance est nulle (contact établi) lorsque le multimètre est branché
@@ -831,18 +831,18 @@ identifier la borne "*+*" pour y souder le fil positif relié au
 
 #+CAPTION: Repérage des bornes "+" et "-" identifiées sur la batterie
 #+attr_html: :width 70% :align center
-file:medias/04_circuits_electriques/01_alimentation/20161020_048.jpg
+[[file:medias/04_circuits_electriques/01_alimentation/20161020_048.jpg]]
 
 #+CAPTION: Test des polarités du fil connecté à la prise /jack/
 #+attr_html: :width 70% :align center
-file:medias/04_circuits_electriques/01_alimentation/20161020_046.jpg
+[[file:medias/04_circuits_electriques/01_alimentation/20161020_046.jpg]]
 
 Une fois les bornes positive et négative clairement identifées, il
 faudra y souder les fils correspondant reliés à la prise /jack/:
 
 #+CAPTION: Fils de la prise /jack/ soudés sur les bornes adéquates de la batterie
 #+attr_html: :width 70% :align center
-file:medias/04_circuits_electriques/01_alimentation/20161020_049.jpg
+[[file:medias/04_circuits_electriques/01_alimentation/20161020_049.jpg]]
 
 
 A l'issue de l'opération, tester que la batterie ainsi équipée
