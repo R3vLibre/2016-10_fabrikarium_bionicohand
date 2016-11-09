@@ -585,7 +585,6 @@ mises-en-évidence:
  - Montage de la main en réservant la place pour l'accueil des moteurs
 
 ** Adaptations aux pièces européennes
-
 *** les vis
     Le premier problème rencontré par les deux équipes et la casse d'entretoises en plastiques et de pas de vis. Il s'agit sans doute dûes à un problème de commande : les vis utilisées ont un diamètre de 2.2mm au lieu de 2mm.
     De plus, il est précisé dans la documentation en anglais qu'il s'agit de vis auto-foreuse ("tapping screw") ce qui n'était pas le cas des vis utilisées lors de ce montage.
@@ -722,13 +721,12 @@ mises-en-évidence:
      
    La nouvelle pièce ne s'insère pas entièrement dans l'ouverture de la carte électronique, ce qui n'empêche pas de fermer la main.
    
-
-** Montage des moteurs
-*** Protection des moteurs
+** Montage des servomoteurs
+*** Protection des servomoteurs
 C'est l'opération décrite à l'étape 8 du tutoriel:
 http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-11.
 
-Au préalable, enlever le cache du moteur.
+Au préalable, enlever le cache du servomoteur.
 
 L'opération consiste à couper le fil du moteur (rouge), pour insérer un
 fusible réarmable. Son principe de fonctionnement est qu'il coupe
@@ -744,19 +742,19 @@ doigts. Ensuite, il y a un plus gros moteur pour l'index.
 
 Les prises-de-vue réalisées au cours du /Fabrikarium/ sont sous
 "file:medias/03_montage_moteurs/01_protection_moteurs".
-*** Test des moteurs
-Après modification, chacun des moteurs sera testé après branchement du
+*** Test des servomoteurs
+Après modification, chacun des servomoteurs sera testé après branchement du
 processeur Arduino pour s'assurer qu'il répond aux commandes.
 
 Ces essais sont réalisés au moyen de l'environnement de développement
 (IDE) Arduino. Dans l'application, il y a un menu spécifique pour tester
-un servo-moteur: le processeur commande le moteur qui y est branché, il
+un servomoteur: le processeur commande le moteur qui y est branché, il
 mène le moteur tout le long de sa course dans un sens, puis dans l'autre.
 
 L'idéal serait d'utiliser un outil de test de modélisme, qui serait plus
 fin, mais l'IDE Arduino permet de faire ça, très simplement.
-*** Installation des moteurs
-Les moteurs sont logés dans leur emplacement dans la main.
+*** Installation des servomoteurs
+Les servomoteurs sont logés dans leur emplacement dans la main.
 
 Ce sont les opérations décrites aux étapes:
 
@@ -1172,10 +1170,45 @@ Your browser does not support the video tag.
 La video montre également que 4 fils sont rassemblés et solidarisés pour
 établir la connexion aux deux capteurs, en se passant de la prise
 /mini-jack/ à 4 connecteurs.
-** Tests, calibration, ajustement des commandes et capteurs
-Lorsque les circuits sont mis en place, les moteurs peuvent être installés
+*** Ajustement dans l'adressage des bornes du microcontrôleur Arduino
+:PROPERTIES:
+:ID:       ddff0242-6a58-4bcd-852e-1e865a3dea7a
+:END:
+
+La modification du PCB pour permettre de brancher le nouveau capteur a entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas du schéma du nouveau circuit, il a fallu retrouver une par une à quoi les bornes étaient reliés.
+
+Voici la table de correspondance obtenu entre l'adressage Arduino du circuit
+[[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que réalisée
+au /Fabrikarium d'octobre 2016/:
+
+| borne | ancienne affectation | nouvelle affectation |
+|-------+----------------------+----------------------|
+| A0    | sensorInput0         | myo0                 |
+| A3    | fingerPin            | ?                    |
+| A4    | thumbPin             | fingerPin            |
+| A5    | X                    | thumbPin             |
+| A6    | calibPin0            | myo1                 |
+| 7     | X                    | (calibPin0?) reset   |
+
+thumbPin, fingerPin et calibPin0 correspondent aux boutons situés sur le dessus de la main. Le nouveau programme arduino ne nécessitant pas de calibrage, le bouton de calibrage est affecté à une fonction de reset.
+
+Les bornes affectées au contôle des servomoteurs restent inchangées :
+
+| borne | affectation  |
+|-------+--------------|
+|     3 | servo index  |
+|     5 | servo middle |
+|     6 | servo thumb  |
+
+
+# #+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
+# #+attr_html: :width 30% :align center
+[[# file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
+
+** Tests et calibration
+Lorsque les circuits sont mis en place, les servomoteurs peuvent être installés
 et branchés au circuit, puis testés.
-*** Tests de commande des moteurs
+*** Tests de commande des servomoteurs
 Les deux videos qui suivent présentent les premiers tests qui ont été
 réalisés sur la main motorisée.
 
@@ -1225,23 +1258,11 @@ Your browser does not support the video tag.
 La différence qui avait été constatée entre les deux mains s'est
 retrouvées dans les tests moteurs, même après bon adressage: dans la
 première main, bien que d'apparence semblable, c'est un moteur différent
-qui a été monté. Il est important de choisir un moteur continu avec
+qui a été monté. Il est important de choisir un servomoteur avec
 consigne de position qui se mettra en mouvement jusqu'à atteindre la
 position voulue, non pas avec une consigne de commande qui se déplacera
 jusqu'à recevoir une autre consigne et nécessite donc un travail permanent
 pour maintenir une position fixe, ce qui affaiblira très vite la batterie.
-*** Ajustement dans l'adressage des bornes du processeur Arduino
-:PROPERTIES:
-:ID:       ddff0242-6a58-4bcd-852e-1e865a3dea7a
-:END:
-
-Voici la table de correspondance entre l'adressage Arduino du circuit
-[[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que réalisée
-au /Fabrikarium d'octobre 2016/:
-
-#+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
-#+attr_html: :width 30% :align center
-[[file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
 *** Tests du montage complet
 Après l'adressage réalisé et les tests de base concluants, il est temps de
 réaliser les tests sur le montage complet:
