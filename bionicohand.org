@@ -514,8 +514,7 @@ Elle s'attarderas également sur les différences et difficultés particulières
 -  elles peuvent être dûes à des composants non disponibles en Europe, et pour lesquels l'adaptation avec des produits disponibles plus localement est un objectif du workshop. 
 -  elles peuvent être dues à des erreurs de commandes, auquel cas les solutions trouvées lors du workshop seront tout de même détaillées.
 
-# - ou qui viendra documenter des nouveautés ou des nouvelles fonctionnalités mises en place.
-# les nouveautés et nouvelles fonctionnalités sont dans les autres sections
+Les nouveautés ou nouvelles fonctionnalités mises en places lors du /Fabrikarium/ seront l'objets des chapitres suivants.
 
   Deux mains (rouge et jaune) sont montées en parallèle par chacune des équipes avec quelques différences dans les solutions trouvées.
    
