@@ -466,7 +466,7 @@ Dans la répartition, il y a un choix: 50% des gens portent des
 prothèses, et 50% n'en portent pas.
 
 * Réalisation et montage
-** Plans de la main Bionico et composants
+** Plans de la main Bionico, composants et documentation existante
 Le projet est présenté et documenté sur http://myhumankit.org et
 http://bionico.org.
 
@@ -491,22 +491,37 @@ entièrement identiques.
 
 Plusieurs manuels d'assemblage sont à disposition:
 
- - le tutoriel de [[https://www.myhumankit.org][My Human Kit]]:
+- le tutoriel de [[https://www.myhumankit.org][My Human Kit]] réalisé par Nicolas Huchet lors d'une résidence à Berlin (en français et en anglais):
    http://myhumankit.org/tutoriels/main-hackberry-exiii/
+- [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble][la documentation en anglais et japonais d'exiii]], l'équipe japonaise qui développe le projet HACKberry original. Sur la partie mécanique elle est principalement constituée de vues 3d pour chaque étape du montage, avec des références précises de chaque pièce à utilisée. La documentation qui nous intéresse lors du fabrikarium est séparée en 3 pages : 
+ - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:circuit][réalisation du circuit et télé-versement du code]],
+ - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:fingers][assemblage des doigts]],
+ - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][assemblage de la main]].
 
- - les manuels originaux du projet "[[http://exiii-hackberry.com][exiii HACKberry]]":
+Sur le dépôt github du projet, on trouveras également :
+ - la liste des pièces (BOM = bills of material)
+ - les sources du programme arduino
+ - les schémas des circuits imprimés 
+ - les fichiers des pièces à imprimer (.stl)
+ - les fichiers d'assemblage au formats step et igs.
 
-   - http://exiii-hackberry.com/dw/doku.php?id=start pour l'ensemble du
-     projet
-
-   - http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble pour les
-     instructions d'assemblage
-
+    Ces derniers fichiers sont particulièrement intéressants pour le montage car ils permettent de visualiser l'assemblage complet de toutes les pièces qu'il s'agisse de pièces imprimées, de pièces mécaniques conventionnelles (vis, entretoise...) ou d'électronique. Le format Step est un standard ouvert qui peut être lu par le logiciel de CAO libre Freecad.
 
 La documentation ici présente fournira un mode d'emploi qui viendra
-compléter les informations qui pourraient manquer dans ces guides, ou qui
-viendra documenter des nouveautés ou des nouvelles fonctionnalités mises
-en place.
+compléter les informations qui pourraient manquer dans ces guides. 
+
+Elle s'attarderas également sur les différences et difficultés particulières rencontrées lors du montage des deux mains au fabrikarium. Ces différences ont deux causes :
+-  elles peuvent être dûes à des composants non disponibles en Europe, et pour lesquels l'adaptation avec des produits disponibles plus localement est un objectif du workshop. 
+-  elles peuvent être dues à des erreurs de commandes, auquel cas les solutions trouvées lors du workshop seront tout de même détaillées.
+
+# - ou qui viendra documenter des nouveautés ou des nouvelles fonctionnalités mises en place.
+# les nouveautés et nouvelles fonctionnalités sont dans les autres sections
+
+  Deux mains (rouge et jaune) sont montées en parallèle par chacune des équipes avec quelques différences dans les solutions trouvées.
+   
+  #+CAPTION: Les deux mains montées lors du Fabrikarium (sans les servomoteurs ni l'électronique)
+  #+attr_html: :width 70% :align center
+  [[file:medias/laurent/PA193408.JPG]]
 
 ** Assemblage de la main
 *** Identification des pièces
