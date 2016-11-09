@@ -1432,7 +1432,6 @@ Voici la liste des améliorations possibles et envisagées :
   #+CAPTION: couplage conique
   [[file:medias/laurent/PA213472.JPG]]
    
-
    
 -  mettre au point un système de réglage et de blocage qui soit déporté sur le côté et pas sur le dessus ou autour. voir schéma. Solution dessiné qui n'a pas pu être testée. En plus des parties solidaires de la main et du moignon, une troisième partie mobile (en bleu sur le schéma) permettrait de dissocier la fixation du système d'indexage en rotation. (PA213470.JPG)
   #+attr_html: :width 70% :align center
@@ -1650,8 +1649,8 @@ branchements au circuit PCB:
   assembler, avec la présentation de chaque pièce avant chacune des
   étapes, puis la réalisation de l'étape en question.
 
-  Il est à noter que c'est déjà existant pour le [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][montage de la main]] et [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][des
-  doigts]] sur le projet [[http://exiii-hackberry.com][exiii HACKberry]] qui a été mis à jour récemment. Les
+  Il est à noter que c'est déjà existant pour le [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][montage de la main]] et 
+[[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][des doigts]] sur le projet [[http://exiii-hackberry.com][exiii HACKberry]] qui a été mis à jour récemment. Les
   montages électriques sont par contre mieux détaillés sur le [[http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-16][tutoriel My
   Human Kit]].
 
@@ -1660,6 +1659,8 @@ branchements au circuit PCB:
   nécessaire, ce qui s'avérera conduire à une véritable aventure
   humaine. Une piste pour ceux qui n'auraient pas de contacts en vue: se
   renseigner auprès des [[https://fr.wikipedia.org/wiki/Fab_lab][Fab labs]] du coin...
+
+- Il est dommage que les participants n'ait pas eu un plus large accès à la documentation actuelle. Cela aurait permis d'être plus efficace pendant le montage mais surtout de pouvoir faire la critique de la documentation actuelle et l'améliorer. Sans instructions de montage, les participants se sont beaucoup servi de la main déjà montée.
 
 - Pour le montage des pièces conçues en impression 3D, il serait bon
   d'identifier chacune des pièces à monter, en le gravant sur la
@@ -1671,12 +1672,16 @@ branchements au circuit PCB:
   circuits, moteurs, ...), il serait judicieux de les caractériser
   exactement (référence, grandeurs physiques, caractéristiques
   spécifiques)
+
 ** Technique
+# est-ce nécessaire par rapport à ce qui est déjà dans la partie 
+# [[*Assemblage%20de%20la%20main][Assemblage de la main]] ?
 
 - Envisager de prendre des vis au pas-de-vis plus fin pour induire moins
   de contraintes lors du vissage, car celui-ci peut devenir destructeur en
   regard de la solidité des composants 3D à assembler (entretoises qui
   peuvent se désolidariser de la pièce lors du passage de la vis)
+
 
 - Les axes pour fixer les doigts de la main doivent être de longueur de 14
   mm cm plutôt que de 16mm, autrement ils dépassent s'ils se trouvent en
