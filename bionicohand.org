@@ -14,8 +14,8 @@
 #+SELECT_TAGS: export
 #+OPTIONS: html-postamble:auto html-preamble:t tex:t
 #+HTML_CONTAINER: div
-#+HTML_DOCTYPE: <!DOCTYPE html>
 #+HTML_HEAD:
+#+HTML_DOCTYPE: <!DOCTYPE html>
 #+HTML_HEAD_EXTRA:
 #+HTML_INCLUDE_SCRIPTS:
 #+HTML_INCLUDE_STYLE:
@@ -24,10 +24,11 @@
 #+HTML_MATHJAX:
 #+INFOJS_OPT:
 
-* Contexte
+* Présentation du projet "bionicohand"
 :PROPERTIES:
 :ID:       201ee7a5-060b-4743-927f-0e11a2faec9b
 :END:
+** Bionicohand
 [[https://bionico.org][Bionico]] est un projet de prothèse de main à commande électronique, dite
 "prothèse myoélectrique", conçu pour être réalisé à partir de matériaux
 accessibles pour une fabrication personnelle.
@@ -61,8 +62,95 @@ Le présent texte a été rédigé par Christophe Schockaert
 licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons "CC BY 4.0"]], de même que toutes les images et
 videos accompagnant la rédaction du manuel.
 
-* Le projet "Bionicohand"
-** Présentation
+** Enjeux et programme du /Fabrikarium/
+L'origine du /Fabrikarium/ part du constat que les prothèses sont à la
+fois une nécessité pour celui qui en a besoin, qu'elles ont un coût élevé
+et une étendue de fonctions limitées par les choix de recherches et
+investissements menés par les entreprises spécialisées.
+
+Des recherches et expériences ont été menées en laboratoires académiques
+ou par des amateurs, notamment pour des applications en robotique. Si la
+proximité semblait évidente, ce n'est pas le cas du tout, les champs
+d'application de la robotique et de la prothèse médicale sont complètement
+différents.
+
+Le mode de fonctionnement de l'OpenSource et l'émergence des fab lab est
+venu mettre un coup-de-pied dans l'accessibilité de fabrication et apporte
+des nouveautés dans les possibilités de confection de prothèses.
+
+Voici par exemples un projet anglais (orange) et un projet japonais
+(blanc) pour la construction d'une prothèse de main motorisée, tous deux
+issus des fab labs et de l'OpenSource:
+
+#+CAPTION: Projets de prothèses de mains motorisées issues des fab labs
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161020_086.jpg]]
+
+
+Le modèle anglais est construit dans un matériau souple et commandé par un
+moteur pour chaque doigt.
+
+Pour l'atelier du /Fabrikarium/, c'est le modèle japonais qui a été retenu
+comme point de départ, c'est celui du projet [[http://exiii-hackberry.com][exiii HACKberry]].
+
+Une première version a été adaptée lors d'un séjour de Nicolas Huchet de
+[[http://myhumankit.org][My Human Kit]] en immersion dans le fab lab de Berlin en Allemagne, elle
+vient se fixer sur sa prothèse médicale professionnelle.
+
+#+CAPTION: Première version de la Bionicohand fabriquée à Berlin sur le modèle du projet exiii HACKberry
+#+attr_html: :width 70% :align center
+[[file:medias/01_Presentation_projet/20161021_018.jpg]]
+
+
+L'objectif du /Fabrikarium/ est d'améliorer cette première version et
+d'aboutir à un prototype de prothèse complète, entièrement réalisable
+soi-même.
+
+A ce titre, les enjeux de cet atelier sont:
+
+  - Prévoir une prothèse et son emboîture, réalisable soi-même avec un
+    procédé simple et des matériaux accessibles:
+  
+    - veiller à l'autonomie de la personne pour le chaussage
+  
+    - permettre le changement d'équipements sur la main
+  
+  - Assurer un montage aisé de la main motorisée:
+
+   - Vérifier la faisabilité de montage de la main en suivant le tutoriel
+
+   - Valider la sélection des pièces référencées dans les catalogues
+     européens
+  
+  - Utiliser une batterie et un chargeur du commerce plutôt qu'une
+    batterie et un chargeur spécifiques au constructeur
+
+  - Valider le nouveau circuit imprimé et le fonctionnement de ses
+    branchements avec le processeur Arduino:
+
+    - présence de deux capteurs désormais
+
+    - améliorer la commande des moteurs:
+
+      - ouvrir et fermer par palliers, en restant en position à chaque
+        étape, plutôt qu'avoir une commande d'ouverture et une de
+        fermeture
+
+    - fournir un retour de sensibilité simple sur la main :
+
+      - éclairage d'une led bleue si contact avec un objet froid, rouge
+        s'il est chaud
+
+  - Tester l'utilisation d'un /smartphone/ grâce à un filtre capacitif sur
+    l'index de la main 
+
+  - Récolter les retours de patients qui testeront le projet
+
+  - Rendre compte sous forme de documentation des étapes de réalisation et
+    des expériences menées
+
+* La prothétique bionique de la main : présentation et enjeux
+** Généralités
 Les prothèses médicales sont des équipements élaborés, réalisés par des
 entreprises spécialisées, mettant souvent en oeuvre des technologies de
 pointe. Leur coût est dès lors très élevé. S'il est pris en charge par la
@@ -105,6 +193,8 @@ aisément possible.
 Pour une prothèse de main, il y a des myriades de possibilités, il va donc
 falloir caratériser son usage.
 
+** Prothèse estétique
+
 La première facette, c'est celle de la prothèse esthétique:
 
 #+CAPTION: Présentation d'une prothèse de main esthétique
@@ -140,8 +230,9 @@ même simplement entre changements de température. Au niveau mécanique, la
 prothèse aura des limitations aussi. Le patient va donc devoir accepter
 les limites dans la réalisation d'une prothèse.
 
-
 Vient alors la question technique: comment concevoir une prothèse ?
+
+** L'emboiture
 
 L'élément essentiel de la prothèse est l'emboîture. C'est sa structure, sa
 fondation, il est important qu'elle soit confortable et adaptée à la
@@ -159,6 +250,8 @@ Le point de départ sera un moulage en plâtre, dans un premier un négatif
 sera obtenu (il sera à l'envers pour l'obtention de la prothèse), duquel
 sera créé un positif. Ce moulage doit être fin pour s'adapter parfaitement
 au corps de la personne.
+
+** Fixation de l'emboiture
 
 Il faut également travailler le système de fixation. En observant le
 coude, en le palpant, nous pouvons observer trois pointes osseuses. 
@@ -258,6 +351,8 @@ préhension.
 #+attr_html: :width 30% :align center
 [[file:medias/01_Presentation_projet/20161019_031.jpg]]
 
+** Reproduire les mouvements de la mains
+
 Dans la prise en compte du réalisme du mouvement de la main, il y a un
 réel défi sur la rotation. En effet, les mouvements sont limités du fait
 de la consitution des os et des muscles du bras et de la main. Le
@@ -318,6 +413,7 @@ spécifiques à la tenue de la prothèse au bras:
 Your browser does not support the video tag.
 #+END_video
 
+** Capteurs musculaires
 
 La commande d'une main motorisée se réalise à l'aide de capteurs
 musculaires. Dans le corps, les signaux électriques musculaires ont pour
@@ -369,92 +465,6 @@ apprentissage.
 Dans la répartition, il y a un choix: 50% des gens portent des
 prothèses, et 50% n'en portent pas.
 
-** Enjeux et programme du /Fabrikarium/
-L'origine du /Fabrikarium/ part du constat que les prothèses sont à la
-fois une nécessité pour celui qui en a besoin, qu'elles ont un coût élevé
-et une étendue de fonctions limitées par les choix de recherches et
-investissements menés par les entreprises spécialisées.
-
-Des recherches et expériences ont été menées en laboratoires académiques
-ou par des amateurs, notamment pour des applications en robotique. Si la
-proximité semblait évidente, ce n'est pas le cas du tout, les champs
-d'application de la robotique et de la prothèse médicale sont complètement
-différents.
-
-Le mode de fonctionnement de l'OpenSource et l'émergence des fab lab est
-venu mettre un coup-de-pied dans l'accessibilité de fabrication et apporte
-des nouveautés dans les possibilités de confection de prothèses.
-
-Voici par exemples un projet anglais (orange) et un projet japonais
-(blanc) pour la construction d'une prothèse de main motorisée, tous deux
-issus des fab labs et de l'OpenSource:
-
-#+CAPTION: Projets de prothèses de mains motorisées issues des fab labs
-#+attr_html: :width 70% :align center
-[[file:medias/01_Presentation_projet/20161020_086.jpg]]
-
-
-Le modèle anglais est construit dans un matériau souple et commandé par un
-moteur pour chaque doigt.
-
-Pour l'atelier du /Fabrikarium/, c'est le modèle japonais qui a été retenu
-comme point de départ, c'est celui du projet [[http://exiii-hackberry.com][exiii HACKberry]].
-
-Une première version a été adaptée lors d'un séjour de Nicolas Huchet de
-[[http://myhumankit.org][My Human Kit]] en immersion dans le fab lab de Berlin en Allemagne, elle
-vient se fixer sur sa prothèse médicale professionnelle.
-
-#+CAPTION: Première version de la Bionicohand fabriquée à Berlin sur le modèle du projet exiii HACKberry
-#+attr_html: :width 70% :align center
-[[file:medias/01_Presentation_projet/20161021_018.jpg]]
-
-
-L'objectif du /Fabrikarium/ est d'améliorer cette première version et
-d'aboutir à un prototype de prothèse complète, entièrement réalisable
-soi-même.
-
-A ce titre, les enjeux de cet atelier sont:
-
-  - Prévoir une prothèse et son emboîture, réalisable soi-même avec un
-    procédé simple et des matériaux accessibles:
-  
-    - veiller à l'autonomie de la personne pour le chaussage
-  
-    - permettre le changement d'équipements sur la main
-  
-  - Assurer un montage aisé de la main motorisée:
-
-   - Vérifier la faisabilité de montage de la main en suivant le tutoriel
-
-   - Valider la sélection des pièces référencées dans les catalogues
-     européens
-  
-  - Utiliser une batterie et un chargeur du commerce plutôt qu'une
-    batterie et un chargeur spécifiques au constructeur
-
-  - Valider le nouveau circuit imprimé et le fonctionnement de ses
-    branchements avec le processeur Arduino:
-
-    - présence de deux capteurs désormais
-
-    - améliorer la commande des moteurs:
-
-      - ouvrir et fermer par palliers, en restant en position à chaque
-        étape, plutôt qu'avoir une commande d'ouverture et une de
-        fermeture
-
-    - fournir un retour de sensibilité simple sur la main :
-
-      - éclairage d'une led bleue si contact avec un objet froid, rouge
-        s'il est chaud
-
-  - Tester l'utilisation d'un /smartphone/ grâce à un filtre capacitif sur
-    l'index de la main 
-
-  - Récolter les retours de patients qui testeront le projet
-
-  - Rendre compte sous forme de documentation des étapes de réalisation et
-    des expériences menées
 * Réalisation et montage
 ** Plans de la main Bionico et composants
 Le projet est présenté et documenté sur http://myhumankit.org et
@@ -609,11 +619,11 @@ ne correspond pas à la fin de course.
 
 Les clichés pris au cours du /Fabrikarium/ sont sous
 "file:medias/03_montage_moteurs/02_installation_moteurs".
-** Réalisation des circuits électriques
-*** Alimentation
+* Réalisation des circuits électriques
+** Alimentation
 Le circuit d'alimentation assure l'approvisionnement en électricité des
 composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]].
-**** Connectique de la batterie
+*** Connectique de la batterie
 La "Bionico Hand" sera alimentée par une batterie de 8.4V, disponible
 dans le commerce avec son chargeur qui se connecte à un port USB.
 
@@ -690,7 +700,7 @@ Enfin, solidariser les fils sur le côté externe de la batterie.
 L'ensemble des photos et videos se rapportant au branchement de la
 batterie sont disponibles à l'emplacement
 "file:medias/04_circuits_electriques/01_alimentation/".
-**** Confection d'un régulateur de tension
+*** Confection d'un régulateur de tension
 :PROPERTIES:
 :ID:       1d7e3fb5-49dc-4630-9ce3-e7fc2e452418
 :END:
@@ -765,7 +775,7 @@ L'ensemble des photos et videos disponibles pour la confection du
 régulateur de tension sont rassemblées dans le dossier
 "file:medias/04_circuits_electriques/02_regulateur_tension/".
 
-*** Montage du circuit intégré
+** Montage du circuit intégré
 Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
 commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le processeur
 Arduino, ainsi que le circuit d'alimentation pour la fourniture en
@@ -775,7 +785,7 @@ Le schéma du PCB a été revu par rapport au projet [[http://exiii-hackberry.co
 permettre l'installation d'un capteur supplémentaire. Il en découle une
 utilisation différente des bornes du processeur Arduino, d'où un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel
 adressage à prévoir entre le processeur et le circuit]].
-**** Branchement des éléments du circuit imprimé
+*** Branchement des éléments du circuit imprimé
 Comme indiqué dans la rubrique "[[id:f9906297-5bb5-42ea-ac9a-005934edcfec][brasure et soudure]]", les éléments à fixer
 au circuit imprimé le seront en commençant par les plus petits.
 
@@ -865,7 +875,7 @@ Pour visualiser l'ensemble des photos sur le montage du circuit imprimé,
 se rérérer au contenu du dossier
 [[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB]].
 
-**** Deux approches pour la connexion des capteurs
+*** Deux approches pour la connexion des capteurs
 :PROPERTIES:
 :ID:       b185de0b-b4c6-40cd-be0b-a26b704dd4d6
 :END:
@@ -944,7 +954,7 @@ Ce circuit assure une meilleure stabilité dans la tension de sortie, tout
 en réduisant les parasites. Le résultat donne une mesure beaucoup plus
 fine à l'entrée du processeur Arduino, ce qui permet une meilleure boucle
 de régulation dans la commande de la main.
-**** Montage des circuits
+*** Montage des circuits
 Une fois les différents circuits réalisés, il va falloir les connecter
 entre eux et les loger dans le compartiment prévu de la main motorisée.
 
@@ -1116,8 +1126,8 @@ force de pince.
 Grâce à celui-ci, la pression exercée sur la prise-en-main pourra être
 mesurée, ce qui permettra de doser la force exercée sur un objet en
 fonction de la force musculaire exercée.
-** Support de la main
-*** Confection d'un support de main (R&D)
+* Support de la main
+** Confection d'un support de main (R&D)
 :PROPERTIES:
 :ID:       41d49b6a-e462-4640-b453-00591c6706e8
 :END:
@@ -1126,7 +1136,7 @@ Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
 prothèse de main à partir de matériaux accessibles: voir
 [[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
 et videos sur la R&D.
-*** Installation des capteurs sur la prothèse de main
+** Installation des capteurs sur la prothèse de main
 Les capteurs de pression seront installés sur la prothèse ainsi
 confectionnée.
 
@@ -1241,8 +1251,8 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 #+END_video
 
-** Améliorations
-*** Toucher conducteur pour les /smartphones/
+* Améliorations
+** Toucher conducteur pour les /smartphones/
 Pour pouvoir utiliser un /smartphone/, il faut une surface conductrice et
 capacitive. Le corps humain a un effet capacitif pour lequel les écrans
 des téléphones tactiles ont été étalonnés. Le dispositif s'appuiera donc
