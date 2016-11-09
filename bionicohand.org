@@ -774,7 +774,7 @@ ne correspond pas à la fin de course.
 Les clichés pris au cours du /Fabrikarium/ sont sous
 "file:medias/03_montage_moteurs/02_installation_moteurs".
 
-* Réalisation des circuits électriques
+* Réalisation et modifications des circuits électriques
 ** Alimentation
 Le circuit d'alimentation assure l'approvisionnement en électricité des
 composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]].
