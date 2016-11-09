@@ -199,15 +199,15 @@ La première facette, c'est celle de la prothèse esthétique:
 
 #+CAPTION: Présentation d'une prothèse de main esthétique
 #+attr_html: :width 70% :align center
-[[file:images/20161019_001.jpg][file:medias/01_Presentation_projet/20161019_001.jpg]]
+[[file:medias/01_Presentation_projet/20161019_001.jpg]]
 
 #+CAPTION: Présentation d'une prothèse de main esthétique
 #+attr_html: :width 70% :align center
-[[file:images/20161019_002.jpg][file:medias/01_Presentation_projet/20161019_002.jpg]]
+[[file:medias/01_Presentation_projet/20161019_002.jpg]]
 
 #+CAPTION: Prothèse de main esthétique, vue intérieure de sa composition
 #+attr_html: :width 70% :align center
-[[file:images/20161019_004.jpg][file:medias/01_Presentation_projet/20161019_004.jpg]]
+[[file:medias/01_Presentation_projet/20161019_004.jpg]]
 
 #+CAPTION: Prothèse de main esthétique
 #+attr_html: :width 70% :align center
@@ -1299,14 +1299,11 @@ prothèse de main et son emboiture à monter soi-même.
 * Capteurs
 ** Filtrage du signal des capteurs
 *** problématique
-     
-     
      Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
-
 
   #+ATTR_HTML: width="600px"
   #+CAPTION: Le nouveau support du servo monté sur la paume.
-  [[file:images/myoware.jpg]]
+  [[file:medias/laurent/myoware.jpg]]
         
       Un travail a été effectué afin de filtrer leur signal de sortie pour le rendre plus lisse et que les événements déclencheur soit bien identifiés. Lorsqu'ils fonctionnent correctement, le signal est maintenant tout à fait exploitable et permet bien de régler la position de la main progressivement et non pas en tout ou rien.
      
@@ -1317,12 +1314,10 @@ prothèse de main et son emboiture à monter soi-même.
    
    Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
    
-
   #+ATTR_HTML: width="600px"
   #+CAPTION: Montage et test d'un MyoWare sur une emboîture
-  [[file:images/PA203442.JPG]]
+  [[file:medias/laurent/PA203442.JPG]]
         
-
 *** protocole
     
     Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
@@ -1345,7 +1340,7 @@ prothèse de main et son emboiture à monter soi-même.
 
   #+ATTR_HTML: width="600px"
   #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
-  [[file:images/PA203439.JPG]]        
+  [[file:medias/laurent/PA203439.JPG]]        
 
 ** Capteur de pression
 
@@ -1353,18 +1348,16 @@ prothèse de main et son emboiture à monter soi-même.
    
    #+ATTR_HTML: width="600px"
    #+CAPTION: Fixation du capteur de pression sur le pouce
-   [[file:images/PA213465.JPG]]
+   [[file:medias/laurent/PA213465.JPG]]
    
    
    Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
    
    #+ATTR_HTML: width="600px"
    #+CAPTION: Schéma du montage du capteur de pression
-   [[file:images/PA213463.JPG]]
+   [[file:medias/laurent/PA213463.JPG]]
    
    Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
-
-
 
 * Support de la main
 ** Confection d'un support de main (R&D)
