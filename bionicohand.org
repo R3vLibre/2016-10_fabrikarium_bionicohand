@@ -589,7 +589,7 @@ mises-en-évidence:
     Le premier problème rencontré par les deux équipes et la casse d'entretoises en plastiques et de pas de vis. Il s'agit sans doute dûes à un problème de commande : les vis utilisées ont un diamètre de 2.2mm au lieu de 2mm.
     De plus, il est précisé dans la documentation en anglais qu'il s'agit de vis auto-foreuse ("tapping screw") ce qui n'était pas le cas des vis utilisées lors de ce montage.
     
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Agrandissement du trou d'une des entretoise en plastique cassée
    [[file:medias/laurent/PA193393.JPG]]
    
@@ -608,22 +608,22 @@ mises-en-évidence:
    Il faut donc agrandir les trous qui doivent les recevoir. 
    
 - On commence par percer à 3,8mm à la perceuse à colonne
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Perçage à 3.8mm toujours un peu trop petit malgrès le chauffage de la pièce
   [[file:medias/laurent/PA193399.JPG]]
  
 - Le trou est ensuite agrandit puis chanfreiné du côté ou on introduit l'entretoise
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Agrandissement à 4mm
   [[file:medias/laurent/PA193402.JPG]]
  
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Les outils pour percer, puis chanfreiner
   [[file:medias/laurent/PA193404.JPG]]
  
 - L'entretoise est ensuite insérée à la presse, dans l'étau de la perceuse à colonne.
   
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Insertion à la presse
   [[file:medias/laurent/PA193401.JPG]]
  
@@ -639,10 +639,10 @@ mises-en-évidence:
 
     Les dimensions ont l'air correctes mais il y a juste une petite excroissance qu'il suffit de limer
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    [[file:medias/laurent/PA193410.JPG]]
   
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    [[file:medias/laurent/PA193412.JPG]]
     
     Un autre problème est plus critique : les servomoteurs commandés (modèle SM-S4303R) sont continus, et tournent à 360° sans butée mécanique. Il n'est donc pas possible de connaître leur position absolue et ils sont inutilisables pour la main bionique. Ils sont remplacés par un modèle Hitec FS-5106B.
@@ -654,7 +654,7 @@ mises-en-évidence:
     
     Finalement, nous avons pu récupérer un autre servomoteur (modèle SM-S2309S), dont les dimensions sont plus proches de celles attendues s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur une des deux mains.
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Deux modèles de servomoteurs : le TGY-90S (à droite) s'adapte difficilement, le modèle SM-S2309S un peu mieux.
    [[file:medias/laurent/PA193424.JPG]]
 
@@ -664,23 +664,23 @@ mises-en-évidence:
 
      Il y a de la place pour décaler la fixation de la sortie du servo du côté du pouce. Pour éviter de changer l'axe de rotation du pouce, nous avons un petit peu usiné à la dremel la partie de la paume à laquelle est fixée de bras du servomoteur. 
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Usinage de la paume pour ajuster l'axe de rotation du pouce
    [[file:medias/laurent/PA193418.JPG]]
      
    Il a également fallu arrondir certains angles des languettes de fixation du servomoteur 
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Arrondissement des languettes de fixations du servomoteur
    [[file:medias/laurent/PA193420.JPG]]
    
    Une cale formée par deux petits bout d'une croix en plastique de servo superposée à été intercalée. D'abord maintenu en place à l'adhésif double face, elle est finalement fixée avec de la colle cyanoacrylate (superglue).
    
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 1
    [[file:medias/laurent/PA193421.JPG]]
    
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 2
    [[file:medias/laurent/PA193422.JPG]]
       
@@ -693,28 +693,28 @@ mises-en-évidence:
      La pièce HBMotorHolder01 a donc été modifiée avec blender et réimprimée en blanc.
      Image : support_servo_fleche.png
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Les modifications effectuées sur le support du servomoteur de l'auriculaire
    [[file:medias/laurent/support_servo_fleche.png]]
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Il a fallu ré-usiner le fond qui avait été déplacé de 6mm au lieu des 3 prévus
    [[file:medias/laurent/PA193427.JPG]]
 
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Le servo monté sur son nouveau support
    [[file:medias/laurent/PA193430.JPG]]
          
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Le nouveau support du servo monté sur la paume
    [[file:medias/laurent/PA193430.JPG]]
      
      L'illustration suivante permet de bien voir la différence pour la fixation de la bielle de l'auriculaire : à gauche le montage d'origine avec le bras à l'intérieur, du côté du servo ; à droite le montage avec le servo plus large, le bras est fixé à l'extérieur.
 
 
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Le nouveau support du servo monté sur la paume
    [[file:medias/laurent/servo_auriculaire_bielle.jpg]]
              
@@ -1298,10 +1298,10 @@ prothèse de main et son emboiture à monter soi-même.
 
 * Capteurs
 ** Filtrage du signal des capteurs
-*** problématique
+*** Problématique
      Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
 
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Le nouveau support du servo monté sur la paume.
   [[file:medias/laurent/myoware.jpg]]
         
@@ -1314,17 +1314,17 @@ prothèse de main et son emboiture à monter soi-même.
    
    Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
    
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Montage et test d'un MyoWare sur une emboîture
   [[file:medias/laurent/PA203442.JPG]]
         
-*** protocole
+*** Protocole
     
     Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
     
     Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer directement l'évolution d'un signal analogique, reçu par l'intermédiaire du port série.
 
-*** méthode de filtrage
+*** Méthode de filtrage
     
     Sur le programme arduino d'origine, une moyenne est appliquée sur une certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche pas l'apparition d'une variation brusque entre le premier lot de valeurs et celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des médianes) flottantes, c'est à dire que ce sont toujours les vingt dernières valeurs reçues qui sont prise en compte dans le traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la marge et le signal résultant évoluera de façon plus continue.
 
@@ -1338,7 +1338,7 @@ prothèse de main et son emboiture à monter soi-même.
 
    Sur la photo suivant, on voit l'évolution des médianes obtenues pour deux capteurs musculaires. Le signal lisse correspond à la médiane courte, le signal en escalier correspond à la médiane longue.
 
-  #+ATTR_HTML: width="600px"
+  #+attr_html: :width 70% :align center
   #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
   [[file:medias/laurent/PA203439.JPG]]        
 
@@ -1346,29 +1346,99 @@ prothèse de main et son emboiture à monter soi-même.
 
    Cette partie consiste à ajouter un capteur au bout du pouce afin d'avoir un retour d'information "sensible". Ce retour d'information permet au porteur de la main d'adapter lui même la pression. Il s'agit d'un capteur de pression de type FSR.
    
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Fixation du capteur de pression sur le pouce
    [[file:medias/laurent/PA213465.JPG]]
    
    
    Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
    
-   #+ATTR_HTML: width="600px"
+   #+attr_html: :width 70% :align center
    #+CAPTION: Schéma du montage du capteur de pression
    [[file:medias/laurent/PA213463.JPG]]
    
    Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
 
-* Support de la main
-** Confection d'un support de main (R&D)
+* Emboîture
+** Conception d'une prise rapide de poignée
 :PROPERTIES:
 :ID:       41d49b6a-e462-4640-b453-00591c6706e8
 :END:
 
-Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
-prothèse de main à partir de matériaux accessibles: voir
-[[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
-et videos sur la R&D.
+   Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
+   prothèse de main à partir de matériaux accessibles: voir
+   [[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
+   et videos sur la R&D.
+   
+   Deux modèles de prise rapide ont été prototypés.
+
+*** Objectifs
+    
+   L'objectif est de prototyper Un système mécanique qui permet :
+- d'adapter plusieurs types de mains ou d'outils sur une seule emboîture,
+- de pouvoir régler la rotation de la main dans différentes positions,
+- bloquer la main ou l'outil dans une position donnée,
+- avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
+- avoir un système le plus fin possible en épaisseur pour raccourcir la distance entre l'extrémité du moignon et la base de la main.
+  
+*** Solution proposée
+   
+   La solution proposée est un assemblage de deux pièces :    
+- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec trois pattes thermoformables permettant de se fixer sur n'importe quel emboîture,
+- au niveau de la rotation du poignée : deux pièces crantées cylindriques (côté emboîture / côté main) qui s'accouplent dans différentes position.
+  
+   Pour un des prototype, le blocage de ces deux pièces est réalisé par un système de levier à biellette mais il peut être renforcé et optimisé.
+  
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Les deux pièces imprimées avant leur fixation
+   [[file:medias/10_support_main/01_realisation_prothese/20161021_033.jpg]]
+
+   Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le système. Deux plaques ont été imprimé à cet effet pour la fixation d'une des main réalisée lors du fabrikarium.
+  
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
+   [[file:medias/10_support_main/01_realisation_prothese/20161020_030.jpg]]
+   
+*** Fabrication
+     
+    Les pièces sont été modélisées avec le logiciel Catia, puis imprimées en ABS.
+
+    #+attr_html: :width 70% :align center
+    #+CAPTION: Les deux pièces imprimées
+    [[file:medias/10_support_main/01_realisation_prothese/20161020_007.jpg]]
+    
+*** Les prototypes
+    
+   Deux prototypes fonctionnels sont finalement réalisés :
+-  le premier, qui a été fixé sur le moignon court de Sylvie, ne comporte pas de système de blocage 
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Prototype d'attache rapide sans système de blocage
+  [[file:medias/laurent/PA213467.JPG]]
+
+-  Le second a pu être être adapté sur le moignon long de Nicolas est complètement fonctionnel bien que fragile
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Avec système de blocage
+  [[file:medias/laurent/PA213469.JPG]]
+
+*** Problèmes rencontrés / améliorations possibles
+
+Voici la liste des améliorations possibles et envisagées :
+
+-  les pattes du cueille pomme en abs sont difficilement thermoformables (le pla n'étant pas envisageable car trop fragile) on peut envisagé de les réalisé à partir de plaque ou de tube d'un plastique plus standard (PVC)
+-  par rapport au fichier : redimensionner le levier de fixation pour qu'il soit plus solide
+-  améliorer le système de cran et son ajustage
+-  exploration de la piste d'un mécanisme de réglage conique pour augmenter la surface de contact, abandonné car trop compliqué.
+  #+attr_html: :width 70% :align center
+  #+CAPTION: couplage conique
+  [[file:medias/laurent/PA213472.JPG]]
+   
+
+   
+-  mettre au point un système de réglage et de blocage qui soit déporté sur le côté et pas sur le dessus ou autour. voir schéma. Solution dessiné qui n'a pas pu être testée. En plus des parties solidaires de la main et du moignon, une troisième partie mobile (en bleu sur le schéma) permettrait de dissocier la fixation du système d'indexage en rotation. (PA213470.JPG)
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Une idée pour un futur prototype
+  [[file:medias/laurent/PA213470.JPG]]   
+   
 ** Installation des capteurs sur la prothèse de main
 Les capteurs de pression seront installés sur la prothèse ainsi
 confectionnée.
