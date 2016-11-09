@@ -126,7 +126,7 @@ A ce titre, les enjeux de cet atelier sont:
     batterie et un chargeur spécifiques au constructeur
 
   - Valider le nouveau circuit imprimé et le fonctionnement de ses
-    branchements avec le processeur Arduino:
+    branchements avec le microcontrôleur Arduino:
 
     - présence de deux capteurs désormais
 
@@ -744,7 +744,7 @@ Les prises-de-vue réalisées au cours du /Fabrikarium/ sont sous
 "file:medias/03_montage_moteurs/01_protection_moteurs".
 *** Test des servomoteurs
 Après modification, chacun des servomoteurs sera testé après branchement du
-processeur Arduino pour s'assurer qu'il répond aux commandes.
+microcontrôleur Arduino pour s'assurer qu'il répond aux commandes.
 
 Ces essais sont réalisés au moyen de l'environnement de développement
 (IDE) Arduino. Dans l'application, il y a un menu spécifique pour tester
@@ -782,7 +782,7 @@ dans le commerce avec son chargeur qui se connecte à un port USB.
 
 Pour ce faire, il est prévu que la batterie d'alimentation vienne se
 brancher à un circuit imprimé en PCB au moyen d'une prise
-/jack/. C'est sur ce circuit que viendront se brancher le processeur
+/jack/. C'est sur ce circuit que viendront se brancher le microcontrôleur
 Arduino, les capteurs, et les interrupeurs de commande.
 
 Il est nécessaire de trouver un moyen pour brancher cette batterie au
@@ -930,13 +930,13 @@ régulateur de tension sont rassemblées dans le dossier
 
 ** Montage du circuit intégré
 Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
-commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le processeur
+commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le microcontrôleur
 Arduino, ainsi que le circuit d'alimentation pour la fourniture en
 énergie.
 
 Le schéma du PCB a été revu par rapport au projet [[http://exiii-hackberry.com][exiii HACKberry]] pour
 permettre l'installation d'un capteur supplémentaire. Il en découle une
-utilisation différente des bornes du processeur Arduino, d'où un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel adressage à prévoir entre le processeur et le circuit]].
+utilisation différente des bornes du microcontrôleur Arduino, d'où un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel adressage à prévoir entre le microcontrôleur et le circuit]].
 
 *** Branchement des éléments du circuit imprimé
 Comme indiqué dans la rubrique "[[id:f9906297-5bb5-42ea-ac9a-005934edcfec][brasure et soudure]]", les éléments à fixer
@@ -989,10 +989,10 @@ boutons de commande.
 
 
 2. Assemblage des borniers pour la commande des moteurs et pour acceuillir
-   le processeur Arduino (selon leur positionnement, ils pourront être
+   le microcontrôleur Arduino (selon leur positionnement, ils pourront être
    coupés a posteriori pour disposer d'un meilleur maintien):
 
-#+CAPTION: Présentation du bornier pour le processeur Arduino sur le circuit
+#+CAPTION: Présentation du bornier pour le microcontrôleur Arduino sur le circuit
 #+attr_html: :width 70% :align center
 [[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_311.jpg]]
 
@@ -1087,7 +1087,7 @@ chacune avec leur cycle de vie propre.
 
 Les deux capteurs sont connectés l'un à l'autre, pour relayer la tension
 d'alimentation. De plus, un circuit de stabilisation a été monté pour
-filtrer le bruit et transmettre un meilleur signal au processeur Arduino
+filtrer le bruit et transmettre un meilleur signal au microcontrôleur Arduino
 pour le traitement de l'information.
 
 #+CAPTION: Vue des deux capteurs connectés l'un à l'autre pour partager la même alimentation
@@ -1105,7 +1105,7 @@ deux condensateurs 100 mF et 820 µF.
 
 Ce circuit assure une meilleure stabilité dans la tension de sortie, tout
 en réduisant les parasites. Le résultat donne une mesure beaucoup plus
-fine à l'entrée du processeur Arduino, ce qui permet une meilleure boucle
+fine à l'entrée du microcontrôleur Arduino, ce qui permet une meilleure boucle
 de régulation dans la commande de la main.
 *** Montage des circuits
 Une fois les différents circuits réalisés, il va falloir les connecter
@@ -1239,7 +1239,7 @@ simplifié.
 De là, il s'est avéré que l'adressage des bornes de l'Arduino dans le
 logiciel n'était pas le même, le circuit a été modifié à ce niveau-là
 également. Donc, il a été nécessaire de procéder à des [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][ajustements dans
-l'adressage des bornes du processeur Arduino]] pour réceptionner
+l'adressage des bornes du microcontrôleur Arduino]] pour réceptionner
 correctement les signaux et piloter les moteurs avec les commandes
 adéquates.
 
