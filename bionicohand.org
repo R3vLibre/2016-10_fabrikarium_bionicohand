@@ -52,7 +52,7 @@ réalisations des projets adressés au cours de ce /hackathon/, de sorte à
 pérenniser le savoir-faire et transmettre de quoi les perpétuer.
 
 Dans cette optique, une partie des tâches du travail documentaire est
-d'un part de vérifier que la documentation existante est suffisamment explicite,
+d'une part de vérifier que la documentation existante est suffisamment explicite,
 pour la compléter si besoin et d'autre part, de documenter les
 nouveautés ainsi que rapporter les avancées en R&D. C'est l'objet de
 ce contenu.
