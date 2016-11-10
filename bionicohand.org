@@ -465,7 +465,7 @@ apprentissage.
 Dans la répartition, il y a un choix: 50% des gens portent des
 prothèses, et 50% n'en portent pas.
 
-* Réalisation et montage
+* Montage de la main
 ** Plans de la main Bionico, composants et documentation existante
 Le projet est présenté et documenté sur http://myhumankit.org et
 http://bionico.org.
@@ -772,10 +772,10 @@ ne correspond pas à la fin de course.
 Les clichés pris au cours du /Fabrikarium/ sont sous
 "file:medias/03_montage_moteurs/02_installation_moteurs".
 
-* Réalisation et modifications des circuits électriques
+* Réalisation et modifications de l'éléctronique
 ** Alimentation
 Le circuit d'alimentation assure l'approvisionnement en électricité des
-composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]].
+composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]]. 
 *** Connectique de la batterie
 La "Bionico Hand" sera alimentée par une batterie de 8.4V, disponible
 dans le commerce avec son chargeur qui se connecte à un port USB.
@@ -928,7 +928,7 @@ L'ensemble des photos et videos disponibles pour la confection du
 régulateur de tension sont rassemblées dans le dossier
 "file:medias/04_circuits_electriques/02_regulateur_tension/".
 
-** Montage du circuit intégré
+** Circuit imprimé : ajout d'un deuxième capteur myoéléctrique
 Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
 commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le microcontrôleur
 Arduino, ainsi que le circuit d'alimentation pour la fourniture en
@@ -1296,148 +1296,6 @@ Vous pouvez consulter les autres photos sur ce thème sous
 La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Confection d'un support de main (R&D)]]" décrira comment concevoir une
 prothèse de main et son emboiture à monter soi-même.
 
-* Capteurs
-** Filtrage du signal des capteurs
-*** Problématique
-     Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
-
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Le nouveau support du servo monté sur la paume.
-  [[file:medias/laurent/myoware.jpg]]
-        
-      Un travail a été effectué afin de filtrer leur signal de sortie pour le rendre plus lisse et que les événements déclencheur soit bien identifiés. Lorsqu'ils fonctionnent correctement, le signal est maintenant tout à fait exploitable et permet bien de régler la position de la main progressivement et non pas en tout ou rien.
-     
-     Certains paramètres restent critiques dans le bon fonctionnement de ces capteurs:
--  la position des électrodes sur le muscle
--  le type de contact avec la peau (patch adhésif, pâte conductrice, contact métalliques...) et aussi l'humidité de la peau.
--  la pression exercée sur le capteur, qui doivent être serré avec une bande de scratch.
-   
-   Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
-   
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Montage et test d'un MyoWare sur une emboîture
-  [[file:medias/laurent/PA203442.JPG]]
-        
-*** Protocole
-    
-    Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
-    
-    Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer directement l'évolution d'un signal analogique, reçu par l'intermédiaire du port série.
-
-*** Méthode de filtrage
-    
-    Sur le programme arduino d'origine, une moyenne est appliquée sur une certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche pas l'apparition d'une variation brusque entre le premier lot de valeurs et celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des médianes) flottantes, c'est à dire que ce sont toujours les vingt dernières valeurs reçues qui sont prise en compte dans le traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la marge et le signal résultant évoluera de façon plus continue.
-
-    [[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser simplement des médianes flottantes.
-
-    Finalement, deux médianes flottantes sont utilisées :
--  la médiane courte correspond à un premier filtrage où tous les signaux reçu par le capteur sont prises en compte. Elle permet de supprimer les bruits et d'obtenir un signal relativement lisse.
--  la médiane longue est une médiane flottantes des médianes courtes. Il s'agit d'obtenir une référence qui évolue en fonction du temps et à partir de laquelle on va détecter des changements sur de plus courtes échelles de temps.
-   
-   C'est donc à partir des variations de cette différence que nous allons détecter des événements correspondant à contraction du muscle correspondant.
-
-   Sur la photo suivant, on voit l'évolution des médianes obtenues pour deux capteurs musculaires. Le signal lisse correspond à la médiane courte, le signal en escalier correspond à la médiane longue.
-
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
-  [[file:medias/laurent/PA203439.JPG]]        
-
-** Capteur de pression
-
-   Cette partie consiste à ajouter un capteur au bout du pouce afin d'avoir un retour d'information "sensible". Ce retour d'information permet au porteur de la main d'adapter lui même la pression. Il s'agit d'un capteur de pression de type FSR.
-   
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Fixation du capteur de pression sur le pouce
-   [[file:medias/laurent/PA213465.JPG]]
-   
-   
-   Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
-   
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Schéma du montage du capteur de pression
-   [[file:medias/laurent/PA213463.JPG]]
-   
-   Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
-
-* Emboîture
-** Conception d'une prise rapide de poignée
-:PROPERTIES:
-:ID:       41d49b6a-e462-4640-b453-00591c6706e8
-:END:
-
-   Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
-   prothèse de main à partir de matériaux accessibles: voir
-   [[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
-   et videos sur la R&D.
-   
-   Deux modèles de prise rapide ont été prototypés.
-
-*** Objectifs
-    
-   L'objectif est de prototyper Un système mécanique qui permet :
-- d'adapter plusieurs types de mains ou d'outils sur une seule emboîture,
-- de pouvoir régler la rotation de la main dans différentes positions,
-- bloquer la main ou l'outil dans une position donnée,
-- avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
-- avoir un système le plus fin possible en épaisseur pour raccourcir la distance entre l'extrémité du moignon et la base de la main.
-  
-*** Solution proposée
-   
-   La solution proposée est un assemblage de deux pièces :    
-- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec trois pattes thermoformables permettant de se fixer sur n'importe quel emboîture,
-- au niveau de la rotation du poignée : deux pièces crantées cylindriques (côté emboîture / côté main) qui s'accouplent dans différentes position.
-  
-   Pour un des prototype, le blocage de ces deux pièces est réalisé par un système de levier à biellette mais il peut être renforcé et optimisé.
-  
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Les deux pièces imprimées avant leur fixation
-   [[file:medias/10_support_main/01_realisation_prothese/20161021_033.jpg]]
-
-   Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le système. Deux plaques ont été imprimé à cet effet pour la fixation d'une des main réalisée lors du fabrikarium.
-  
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
-   [[file:medias/10_support_main/01_realisation_prothese/20161020_030.jpg]]
-   
-*** Fabrication
-     
-    Les pièces sont été modélisées avec le logiciel Catia, puis imprimées en ABS.
-
-    #+attr_html: :width 70% :align center
-    #+CAPTION: Les deux pièces imprimées
-    [[file:medias/10_support_main/01_realisation_prothese/20161020_007.jpg]]
-    
-*** Les prototypes
-    
-   Deux prototypes fonctionnels sont finalement réalisés :
--  le premier, qui a été fixé sur le moignon court de Sylvie, ne comporte pas de système de blocage 
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Prototype d'attache rapide sans système de blocage
-  [[file:medias/laurent/PA213467.JPG]]
-
--  Le second a pu être être adapté sur le moignon long de Nicolas est complètement fonctionnel bien que fragile
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Avec système de blocage
-  [[file:medias/laurent/PA213469.JPG]]
-
-*** Problèmes rencontrés / améliorations possibles
-
-Voici la liste des améliorations possibles et envisagées :
-
--  les pattes du cueille pomme en abs sont difficilement thermoformables (le pla n'étant pas envisageable car trop fragile) on peut envisagé de les réalisé à partir de plaque ou de tube d'un plastique plus standard (PVC)
--  par rapport au fichier : redimensionner le levier de fixation pour qu'il soit plus solide
--  améliorer le système de cran et son ajustage
--  exploration de la piste d'un mécanisme de réglage conique pour augmenter la surface de contact, abandonné car trop compliqué.
-  #+attr_html: :width 70% :align center
-  #+CAPTION: couplage conique
-  [[file:medias/laurent/PA213472.JPG]]
-   
-   
--  mettre au point un système de réglage et de blocage qui soit déporté sur le côté et pas sur le dessus ou autour. voir schéma. Solution dessiné qui n'a pas pu être testée. En plus des parties solidaires de la main et du moignon, une troisième partie mobile (en bleu sur le schéma) permettrait de dissocier la fixation du système d'indexage en rotation. (PA213470.JPG)
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Une idée pour un futur prototype
-  [[file:medias/laurent/PA213470.JPG]]   
-   
 ** Installation des capteurs sur la prothèse de main
 Les capteurs de pression seront installés sur la prothèse ainsi
 confectionnée.
@@ -1553,6 +1411,146 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 #+END_video
 
+** Filtrage du signal des capteurs
+*** Problématique
+     Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
+
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Le nouveau support du servo monté sur la paume.
+  [[file:medias/laurent/myoware.jpg]]
+        
+      Un travail a été effectué afin de filtrer leur signal de sortie pour le rendre plus lisse et que les événements déclencheur soit bien identifiés. Lorsqu'ils fonctionnent correctement, le signal est maintenant tout à fait exploitable et permet bien de régler la position de la main progressivement et non pas en tout ou rien.
+     
+     Certains paramètres restent critiques dans le bon fonctionnement de ces capteurs:
+-  la position des électrodes sur le muscle
+-  le type de contact avec la peau (patch adhésif, pâte conductrice, contact métalliques...) et aussi l'humidité de la peau.
+-  la pression exercée sur le capteur, qui doivent être serré avec une bande de scratch.
+   
+   Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
+   
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Montage et test d'un MyoWare sur une emboîture
+  [[file:medias/laurent/PA203442.JPG]]
+        
+*** Protocole
+    
+    Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
+    
+    Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer directement l'évolution d'un signal analogique, reçu par l'intermédiaire du port série.
+
+*** Méthode de filtrage
+    
+    Sur le programme arduino d'origine, une moyenne est appliquée sur une certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche pas l'apparition d'une variation brusque entre le premier lot de valeurs et celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des médianes) flottantes, c'est à dire que ce sont toujours les vingt dernières valeurs reçues qui sont prise en compte dans le traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la marge et le signal résultant évoluera de façon plus continue.
+
+    [[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser simplement des médianes flottantes.
+
+    Finalement, deux médianes flottantes sont utilisées :
+-  la médiane courte correspond à un premier filtrage où tous les signaux reçu par le capteur sont prises en compte. Elle permet de supprimer les bruits et d'obtenir un signal relativement lisse.
+-  la médiane longue est une médiane flottantes des médianes courtes. Il s'agit d'obtenir une référence qui évolue en fonction du temps et à partir de laquelle on va détecter des changements sur de plus courtes échelles de temps.
+   
+   C'est donc à partir des variations de cette différence que nous allons détecter des événements correspondant à contraction du muscle correspondant.
+
+   Sur la photo suivant, on voit l'évolution des médianes obtenues pour deux capteurs musculaires. Le signal lisse correspond à la médiane courte, le signal en escalier correspond à la médiane longue.
+
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
+  [[file:medias/laurent/PA203439.JPG]]        
+
+** Capteur de pression
+
+   Cette partie consiste à ajouter un capteur au bout du pouce afin d'avoir un retour d'information "sensible". Ce retour d'information permet au porteur de la main d'adapter lui même la pression. Il s'agit d'un capteur de pression de type FSR.
+   
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Fixation du capteur de pression sur le pouce
+   [[file:medias/laurent/PA213465.JPG]]
+   
+   
+   Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
+   
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Schéma du montage du capteur de pression
+   [[file:medias/laurent/PA213463.JPG]]
+   
+   Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
+
+* Emboiture : conception d'une prise rapide de poignée
+:PROPERTIES:
+:ID:       41d49b6a-e462-4640-b453-00591c6706e8
+:END:
+
+   Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
+   prothèse de main à partir de matériaux accessibles: voir
+   [[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
+   et videos sur la R&D.
+   
+   Deux modèles de prise rapide ont été prototypés.
+
+** Objectifs
+    
+   L'objectif est de prototyper Un système mécanique qui permet :
+- d'adapter plusieurs types de mains ou d'outils sur une seule emboîture,
+- de pouvoir régler la rotation de la main dans différentes positions,
+- bloquer la main ou l'outil dans une position donnée,
+- avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
+- avoir un système le plus fin possible en épaisseur pour raccourcir la distance entre l'extrémité du moignon et la base de la main.
+  
+** Solution proposée
+   
+   La solution proposée est un assemblage de deux pièces :    
+- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec trois pattes thermoformables permettant de se fixer sur n'importe quel emboîture,
+- au niveau de la rotation du poignée : deux pièces crantées cylindriques (côté emboîture / côté main) qui s'accouplent dans différentes position.
+  
+   Pour un des prototype, le blocage de ces deux pièces est réalisé par un système de levier à biellette mais il peut être renforcé et optimisé.
+  
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Les deux pièces imprimées avant leur fixation
+   [[file:medias/10_support_main/01_realisation_prothese/20161021_033.jpg]]
+
+   Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le système. Deux plaques ont été imprimé à cet effet pour la fixation d'une des main réalisée lors du fabrikarium.
+  
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
+   [[file:medias/10_support_main/01_realisation_prothese/20161020_030.jpg]]
+   
+** Fabrication
+    
+   Les pièces sont été modélisées avec le logiciel Catia, puis imprimées en ABS.
+
+   #+attr_html: :width 70% :align center
+   #+CAPTION: Les deux pièces imprimées
+   [[file:medias/10_support_main/01_realisation_prothese/20161020_007.jpg]]
+   
+** Les prototypes
+    
+   Deux prototypes fonctionnels sont finalement réalisés :
+-  le premier, qui a été fixé sur le moignon court de Sylvie, ne comporte pas de système de blocage 
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Prototype d'attache rapide sans système de blocage
+  [[file:medias/laurent/PA213467.JPG]]
+
+-  Le second a pu être être adapté sur le moignon long de Nicolas est complètement fonctionnel bien que fragile
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Avec système de blocage
+  [[file:medias/laurent/PA213469.JPG]]
+
+** Problèmes rencontrés / améliorations possibles
+
+Voici la liste des améliorations possibles et envisagées :
+
+-  les pattes du cueille pomme en abs sont difficilement thermoformables (le pla n'étant pas envisageable car trop fragile) on peut envisagé de les réalisé à partir de plaque ou de tube d'un plastique plus standard (PVC)
+-  par rapport au fichier : redimensionner le levier de fixation pour qu'il soit plus solide
+-  améliorer le système de cran et son ajustage
+-  exploration de la piste d'un mécanisme de réglage conique pour augmenter la surface de contact, abandonné car trop compliqué.
+  #+attr_html: :width 70% :align center
+  #+CAPTION: couplage conique
+  [[file:medias/laurent/PA213472.JPG]]
+   
+   
+-  mettre au point un système de réglage et de blocage qui soit déporté sur le côté et pas sur le dessus ou autour. voir schéma. Solution dessiné qui n'a pas pu être testée. En plus des parties solidaires de la main et du moignon, une troisième partie mobile (en bleu sur le schéma) permettrait de dissocier la fixation du système d'indexage en rotation. (PA213470.JPG)
+  #+attr_html: :width 70% :align center
+  #+CAPTION: Une idée pour un futur prototype
+  [[file:medias/laurent/PA213470.JPG]]   
+   
 * Améliorations
 ** Toucher conducteur pour les /smartphones/
 Pour pouvoir utiliser un /smartphone/, il faut une surface conductrice et
