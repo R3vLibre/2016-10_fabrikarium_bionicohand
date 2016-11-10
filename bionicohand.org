@@ -107,31 +107,30 @@ L'objectif du /Fabrikarium/ est d'améliorer cette première version et
 d'aboutir à un prototype de prothèse complète, entièrement réalisable
 soi-même.
 
-A ce titre, les enjeux de cet atelier sont :
-
-  - Prévoir une prothèse et son emboîture, réalisable soi-même avec un
-    procédé simple et des matériaux accessibles :
-  
-    - veiller à l'autonomie de la personne pour le chaussage
-  
-    - permettre le changement d'équipements sur la main
+À ce titre, les enjeux de cet atelier sont :
   
   - Assurer un montage aisé de la main motorisée :
 
-    - Vérifier la faisabilité de montage de la main en suivant le tutoriel
+    - Vérifier la faisabilité de montage de la main en suivant le
+      tutoriel (section [[id:8dfdeeca-f61d-4b87-bb17-fd181eb28fda][Assemblage de la main]])
 
     - Valider la sélection des pièces référencées dans les catalogues
-      européens
+      européens (section [[id:270d0ed0-a92d-4e38-a12f-da9025505914][Adaptations aux pièces européennes]])
   
   - Utiliser une batterie et un chargeur du commerce plutôt qu'une
-    batterie et un chargeur spécifiques au constructeur
+    batterie et un chargeur spécifiques au constructeur (section
+    [[id:796fc5ef-74e6-4532-96fc-9f96143dc6ba][Connectique de la batterie]])
 
   - Valider le nouveau circuit imprimé et le fonctionnement de ses
     branchements avec le microcontrôleur Arduino :
 
-    - présence de deux capteurs myoélectriques désormais
+    - présence de deux capteurs myoélectriques désormais (section
+      [[id:a9101e3a-3c08-429f-b4b1-100f3416e908][Circuit imprimé : ajout d'un deuxième capteur myoélectrique]])
 
     - améliorer la commande des servomoteurs :
+      
+      - améliorer le filtrage du signal des capteurs myoélectriques
+        (section [[id:380943ba-f58e-44f6-847e-7af874e69afe][Filtrage du signal des capteurs myoélectriques]])
 
       - ouvrir et fermer par paliers, en restant en position à chaque
         étape, plutôt qu'avoir une commande d'ouverture et une de
@@ -143,17 +142,23 @@ A ce titre, les enjeux de cet atelier sont :
         s'il est chaud
 
       - capteur de pression au bout du pouce avec un retour sensible
-        au niveau de l'avant-bras
+        au niveau de l'avant-bras (section [[id:0ef446c9-d3b4-4bea-a8d5-da2c84c59175][Capteur de pression]])
 
   - Tester l'utilisation d'un /smartphone/ grâce à un filtre capacitif sur
-    l'index de la main 
+    l'index de la main (section [[id:ba6ddd19-d271-4bf3-90f9-f8f2ceb04474][Toucher conducteur pour les /smartphones/]])
+
+  - Prévoir une prothèse et son emboîture, réalisable soi-même avec un
+    procédé simple et des matériaux accessibles :
+  
+    - veiller à l'autonomie de la personne pour le chaussage
+  
+    - permettre le changement d'équipements sur la main (section
+      [[id:41d49b6a-e462-4640-b453-00591c6706e8][Emboiture : conception d'une prise rapide de poignée]])
 
   - Récolter les retours de patients qui testeront le projet
 
   - Rendre compte sous forme de documentation des étapes de réalisation et
     des expériences menées
-
-# TODO ajouter lien vers les sections
 
 * La prothétique bionique de la main : présentation et enjeux
 ** Généralités
@@ -504,7 +509,7 @@ Plusieurs manuels d'assemblage sont à disposition:
   qui développe le projet HACKberry original. Sur la partie mécanique
   elle est principalement constituée de vues 3d pour chaque étape du
   montage, avec des références précises de chaque pièce à utilisée. La
-  documentation qui nous intéresse lors du fabrikarium est séparée en
+  documentation qui nous intéresse lors du /Fabrikarium/ est séparée en
   3 pages :
   - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:circuit][réalisation du circuit et téléversement du code]],
   - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:fingers][assemblage des doigts]],
@@ -547,6 +552,9 @@ Deux mains (rouge et jaune) sont montées en parallèle par chacune des
 [[file:medias/laurent/PA193408.JPG]]
   
 ** Assemblage de la main
+   :PROPERTIES:
+   :ID:       8dfdeeca-f61d-4b87-bb17-fd181eb28fda
+   :END:
 *** Identification des pièces
 Une première étape pour organiser le travail d'assemblage est d'identifier
 et rassembler les pièces dont nous aurons besoin pour la réalisation.
@@ -609,6 +617,9 @@ mises en évidence :
  - Montage de la main en réservant la place pour l'accueil des moteurs
 
 ** Adaptations aux pièces européennes
+   :PROPERTIES:
+   :ID:       270d0ed0-a92d-4e38-a12f-da9025505914
+   :END:
 *** les vis
 Le premier problème rencontré par les deux équipes est la casse
 d'entretoises en plastiques et de pas de vis. Il s'agit sans doute
@@ -852,6 +863,9 @@ Les clichés pris au cours du /Fabrikarium/ sont sous
 Le circuit d'alimentation assure l'approvisionnement en électricité des
 composants électriques et électroniques de la [[http://www.bionico.org][Bionicohand]]. 
 *** Connectique de la batterie
+    :PROPERTIES:
+    :ID:       796fc5ef-74e6-4532-96fc-9f96143dc6ba
+    :END:
 La "Bionico Hand" sera alimentée par une batterie de 8.4V, disponible
 dans le commerce avec son chargeur qui se connecte à un port USB.
 
@@ -1004,6 +1018,9 @@ régulateur de tension sont rassemblées dans le dossier
 "file:medias/04_circuits_electriques/02_regulateur_tension/".
 
 ** Circuit imprimé : ajout d'un deuxième capteur myoélectrique
+   :PROPERTIES:
+   :ID:       a9101e3a-3c08-429f-b4b1-100f3416e908
+   :END:
 Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
 commande et contrôle des moteurs de la [[http://www.bionico.org][Bionicohand]], dont le microcontrôleur
 Arduino, ainsi que le circuit d'alimentation pour la fourniture en
@@ -1494,7 +1511,10 @@ Your browser does not support the video tag.
 Your browser does not support the video tag.
 #+END_video
 
-** Filtrage du signal des capteurs
+** Filtrage du signal des capteurs myoélectriques
+   :PROPERTIES:
+   :ID:       380943ba-f58e-44f6-847e-7af874e69afe
+   :END:
 *** Problématique
 
 Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite
@@ -1578,6 +1598,9 @@ courte, le signal en escalier correspond à la médiane longue.
 [[file:medias/laurent/PA203439.JPG]]        
 
 ** Capteur de pression
+   :PROPERTIES:
+   :ID:       0ef446c9-d3b4-4bea-a8d5-da2c84c59175
+   :END:
 
 Cette partie consiste à ajouter un capteur au bout du pouce afin
 d'avoir un retour d'information "sensible". Ce retour d'information
@@ -1601,7 +1624,7 @@ supérieure à la résistance du capteur lorsque celui ci est chargé. Une
 autre solution est de la remplacer par une résistance variable afin de
 pouvoir la calibrer directement.
 
-* Emboiture : conception d'une prise rapide de poignée
+* Emboiture : conception d'une prise rapide de poignée
 :PROPERTIES:
 :ID:       41d49b6a-e462-4640-b453-00591c6706e8
 :END:
@@ -1704,6 +1727,9 @@ Voici la liste des améliorations possibles et envisagées :
    
 * Améliorations
 ** Toucher conducteur pour les /smartphones/
+   :PROPERTIES:
+   :ID:       ba6ddd19-d271-4bf3-90f9-f8f2ceb04474
+   :END:
 Pour pouvoir utiliser un /smartphone/, il faut une surface conductrice et
 capacitive. Le corps humain a un effet capacitif pour lequel les écrans
 des téléphones tactiles ont été étalonnés. Le dispositif s'appuiera donc
