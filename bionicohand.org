@@ -491,37 +491,55 @@ entièrement identiques.
 
 Plusieurs manuels d'assemblage sont à disposition:
 
-- le tutoriel de [[https://www.myhumankit.org][My Human Kit]] réalisé par Nicolas Huchet lors d'une résidence à Berlin (en français et en anglais):
-   http://myhumankit.org/tutoriels/main-hackberry-exiii/
-- [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble][la documentation en anglais et japonais d'exiii]], l'équipe japonaise qui développe le projet HACKberry original. Sur la partie mécanique elle est principalement constituée de vues 3d pour chaque étape du montage, avec des références précises de chaque pièce à utilisée. La documentation qui nous intéresse lors du fabrikarium est séparée en 3 pages : 
- - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:circuit][réalisation du circuit et télé-versement du code]],
- - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:fingers][assemblage des doigts]],
- - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][assemblage de la main]].
+- le tutoriel de [[https://www.myhumankit.org][My Human Kit]] réalisé par Nicolas Huchet lors d'une
+  résidence à Berlin (en français et en anglais):
+  http://myhumankit.org/tutoriels/main-hackberry-exiii/
+- [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble][la documentation en anglais et japonais d'exiii]], l'équipe japonaise
+  qui développe le projet HACKberry original. Sur la partie mécanique
+  elle est principalement constituée de vues 3d pour chaque étape du
+  montage, avec des références précises de chaque pièce à utilisée. La
+  documentation qui nous intéresse lors du fabrikarium est séparée en
+  3 pages :
+  - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:circuit][réalisation du circuit et télé-versement du code]],
+  - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:fingers][assemblage des doigts]],
+  - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][assemblage de la main]].
 
 Sur le dépôt github du projet, on trouveras également :
- - la liste des pièces (BOM = bills of material)
- - les sources du programme arduino
- - les schémas des circuits imprimés 
- - les fichiers des pièces à imprimer (.stl)
- - les fichiers d'assemblage au formats step et igs.
+- la liste des pièces (BOM = bills of material)
+- les sources du programme arduino
+- les schémas des circuits imprimés 
+- les fichiers des pièces à imprimer (.stl)
+- les fichiers d'assemblage au formats step et igs.
 
-    Ces derniers fichiers sont particulièrement intéressants pour le montage car ils permettent de visualiser l'assemblage complet de toutes les pièces qu'il s'agisse de pièces imprimées, de pièces mécaniques conventionnelles (vis, entretoise...) ou d'électronique. Le format Step est un standard ouvert qui peut être lu par le logiciel de CAO libre Freecad.
+Ces derniers fichiers sont particulièrement intéressants pour le
+montage car ils permettent de visualiser l'assemblage complet de
+toutes les pièces qu'il s'agisse de pièces imprimées, de pièces
+mécaniques conventionnelles (vis, entretoise...) ou d'électronique. Le
+format Step est un standard ouvert qui peut être lu par le logiciel de
+CAO libre Freecad.
 
 La documentation ici présente fournira un mode d'emploi qui viendra
 compléter les informations qui pourraient manquer dans ces guides. 
 
-Elle s'attarderas également sur les différences et difficultés particulières rencontrées lors du montage des deux mains au fabrikarium. Ces différences ont deux causes :
--  elles peuvent être dûes à des composants non disponibles en Europe, et pour lesquels l'adaptation avec des produits disponibles plus localement est un objectif du workshop. 
--  elles peuvent être dues à des erreurs de commandes, auquel cas les solutions trouvées lors du workshop seront tout de même détaillées.
+Elle s'attarderas également sur les différences et difficultés
+particulières rencontrées lors du montage des deux mains au
+fabrikarium. Ces différences ont deux causes :
+-  elles peuvent être dûes à des composants non disponibles en Europe,
+   et pour lesquels l'adaptation avec des produits disponibles plus
+   localement est un objectif du workshop.
+-  elles peuvent être dues à des erreurs de commandes, auquel cas les
+   solutions trouvées lors du workshop seront tout de même détaillées.
 
-Les nouveautés ou nouvelles fonctionnalités mises en places lors du /Fabrikarium/ seront l'objets des chapitres suivants.
+Les nouveautés ou nouvelles fonctionnalités mises en places lors du
+/Fabrikarium/ seront l'objets des chapitres suivants.
 
-  Deux mains (rouge et jaune) sont montées en parallèle par chacune des équipes avec quelques différences dans les solutions trouvées.
+Deux mains (rouge et jaune) sont montées en parallèle par chacune des
+équipes avec quelques différences dans les solutions trouvées.
    
-  #+CAPTION: Les deux mains montées lors du Fabrikarium (sans les servomoteurs ni l'électronique)
-  #+attr_html: :width 70% :align center
-  [[file:medias/laurent/PA193408.JPG]]
-
+#+CAPTION: Les deux mains montées lors du Fabrikarium (sans les servomoteurs ni l'électronique)
+#+attr_html: :width 70% :align center
+[[file:medias/laurent/PA193408.JPG]]
+  
 ** Assemblage de la main
 *** Identification des pièces
 Une première étape pour organiser le travail d'assemblage est d'identifier
@@ -586,140 +604,184 @@ mises-en-évidence:
 
 ** Adaptations aux pièces européennes
 *** les vis
-    Le premier problème rencontré par les deux équipes et la casse d'entretoises en plastiques et de pas de vis. Il s'agit sans doute dûes à un problème de commande : les vis utilisées ont un diamètre de 2.2mm au lieu de 2mm.
-    De plus, il est précisé dans la documentation en anglais qu'il s'agit de vis auto-foreuse ("tapping screw") ce qui n'était pas le cas des vis utilisées lors de ce montage.
+Le premier problème rencontré par les deux équipes et la casse
+d'entretoises en plastiques et de pas de vis. Il s'agit sans doute
+dûes à un problème de commande : les vis utilisées ont un diamètre de
+2.2mm au lieu de 2mm.  De plus, il est précisé dans la documentation
+en anglais qu'il s'agit de vis auto-foreuse ("tapping screw") ce qui
+n'était pas le cas des vis utilisées lors de ce montage.
     
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Agrandissement du trou d'une des entretoise en plastique cassée
-   [[file:medias/laurent/PA193393.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Agrandissement du trou d'une des entretoise en plastique cassée
+[[file:medias/laurent/PA193393.JPG]]
    
-    Compte tenu de la précision de l'impression 3d, il est de toute façon nécessaire d'agrandir les trous de vis. Cet agrandissement se fera donc avec un forêt de 2,2mm, voire 2,4mm, au lieu du foret de 2mm préconisé dans les tutoriels.
+Compte tenu de la précision de l'impression 3d, il est de toute façon
+nécessaire d'agrandir les trous de vis. Cet agrandissement se fera
+donc avec un forêt de 2,2mm, voire 2,4mm, au lieu du foret de 2mm
+préconisé dans les tutoriels.
     
 *** les entretoises
    
-   Les 6 entretoises métalliques ("Metal Collar" dans la BOM) utilisées pour les glissement des axes au niveaux des phalanges et des bielles n'ont pas le même diamètres que celles du projet original. 
+Les 6 entretoises métalliques ("Metal Collar" dans la BOM) utilisées
+pour les glissement des axes au niveaux des phalanges et des bielles
+n'ont pas le même diamètres que celles du projet original.
    
-   Cela concerne les pièces :
+Cela concerne les pièces :
 -  HbFingerMainCouplerLink
 -  HbMiddle-RingCouplerLink
 -  HbRing-LittleCouplerLink
    
 
-   Il faut donc agrandir les trous qui doivent les recevoir. 
+Il faut donc agrandir les trous qui doivent les recevoir. 
    
 - On commence par percer à 3,8mm à la perceuse à colonne
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Perçage à 3.8mm toujours un peu trop petit malgrès le chauffage de la pièce
-  [[file:medias/laurent/PA193399.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Perçage à 3.8mm toujours un peu trop petit malgrès le chauffage de la pièce
+[[file:medias/laurent/PA193399.JPG]]
  
-- Le trou est ensuite agrandit puis chanfreiné du côté ou on introduit l'entretoise
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Agrandissement à 4mm
-  [[file:medias/laurent/PA193402.JPG]]
+- Le trou est ensuite agrandit puis chanfreiné du côté ou on introduit
+  l'entretoise
+#+attr_html: :width 70% :align center
+#+CAPTION: Agrandissement à 4mm
+[[file:medias/laurent/PA193402.JPG]]
  
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Les outils pour percer, puis chanfreiner
-  [[file:medias/laurent/PA193404.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Les outils pour percer, puis chanfreiner
+[[file:medias/laurent/PA193404.JPG]]
  
-- L'entretoise est ensuite insérée à la presse, dans l'étau de la perceuse à colonne.
+- L'entretoise est ensuite insérée à la presse, dans l'étau de la
+  perceuse à colonne.
   
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Insertion à la presse
-  [[file:medias/laurent/PA193401.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Insertion à la presse
+[[file:medias/laurent/PA193401.JPG]]
  
-  À terme, il faudrait donc agrandir les trous dans les modèles géométriques.
+À terme, il faudrait donc agrandir les trous dans les modèles
+géométriques.
   
-  En raison du diamètre des vis (2,2mm au lieu de 2mm), il est également nécessaire d'agrandir, à la perceuse à colonne, le diamètre intérieur des bagues à 2,2mm.
+En raison du diamètre des vis (2,2mm au lieu de 2mm), il est également
+nécessaire d'agrandir, à la perceuse à colonne, le diamètre intérieur
+des bagues à 2,2mm.
   
 *** Les axes de rotations des doigts
-    
-    Les axes qui permettent l'articulation entre la paume et les doigts font 16mm au lieu de 15mm comme précisés dans la BOM. Il est nécessaire de les limer. À voir si des axes de 15mm sont disponibles dans le commerce, ou si des axes de 14mm qui seraient disponibles pourrait suffire.
+# TODO ref bom    
+Les axes qui permettent l'articulation entre la paume et les doigts
+font 16mm au lieu de 15mm comme précisés dans la BOM. Il est
+nécessaire de les limer. À voir si des axes de 15mm sont disponibles
+dans le commerce, ou si des axes de 14mm qui seraient disponibles
+pourrait suffire.
 
 *** Problème du gros servomoteur (index)
 
-    Les dimensions ont l'air correctes mais il y a juste une petite excroissance qu'il suffit de limer
+Les dimensions ont l'air correctes mais il y a juste une petite
+excroissance qu'il suffit de limer
 
-   #+attr_html: :width 70% :align center
-   [[file:medias/laurent/PA193410.JPG]]
+#+attr_html: :width 70% :align center
+[[file:medias/laurent/PA193410.JPG]]
   
-   #+attr_html: :width 70% :align center
-   [[file:medias/laurent/PA193412.JPG]]
+#+attr_html: :width 70% :align center
+[[file:medias/laurent/PA193412.JPG]]
     
-    Un autre problème est plus critique : les servomoteurs commandés (modèle SM-S4303R) sont continus, et tournent à 360° sans butée mécanique. Il n'est donc pas possible de connaître leur position absolue et ils sont inutilisables pour la main bionique. Ils sont remplacés par un modèle Hitec FS-5106B.
+Un autre problème est plus critique : les servomoteurs commandés
+(modèle SM-S4303R) sont continus, et tournent à 360° sans butée
+mécanique. Il n'est donc pas possible de connaître leur position
+absolue et ils sont inutilisables pour la main bionique. Ils sont
+remplacés par un modèle Hitec FS-5106B.
      
 *** Gros problèmes des petits servomoteurs (pouce et auriculaire)
     
-    Les petits servomoteurs disponibles (modèle TGY-90S) ne sont pas aux bonnes côtes : 3 mm de plus dans l'épaisseur (dans l'axe de l'arbre du servo).
-    Il a donc fallu adapter leur fixation à la paume et leur liaison au niveau de l'arbre de sortie. 
+Les petits servomoteurs disponibles (modèle TGY-90S) ne sont pas aux
+bonnes côtes : 3 mm de plus dans l'épaisseur (dans l'axe de l'arbre du
+servo).  Il a donc fallu adapter leur fixation à la paume et leur
+liaison au niveau de l'arbre de sortie.
     
-    Finalement, nous avons pu récupérer un autre servomoteur (modèle SM-S2309S), dont les dimensions sont plus proches de celles attendues s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur une des deux mains.
+Finalement, nous avons pu récupérer un autre servomoteur (modèle
+SM-S2309S), dont les dimensions sont plus proches de celles attendues
+s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur
+une des deux mains.
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Deux modèles de servomoteurs : le TGY-90S (à droite) s'adapte difficilement, le modèle SM-S2309S un peu mieux.
-   [[file:medias/laurent/PA193424.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Deux modèles de servomoteurs : le TGY-90S (à droite) s'adapte difficilement, le modèle SM-S2309S un peu mieux.
+[[file:medias/laurent/PA193424.JPG]]
 
-    (lexique : on appelle "bras" ou "croix" la petite bielle fixée directement sur la sortie du servomoteur)
+(lexique : on appelle "bras" ou "croix" la petite bielle fixée
+directement sur la sortie du servomoteur)
     
 **** Du côté du pouce 
 
-     Il y a de la place pour décaler la fixation de la sortie du servo du côté du pouce. Pour éviter de changer l'axe de rotation du pouce, nous avons un petit peu usiné à la dremel la partie de la paume à laquelle est fixée de bras du servomoteur. 
+Il y a de la place pour décaler la fixation de la sortie du servo du
+côté du pouce. Pour éviter de changer l'axe de rotation du pouce, nous
+avons un petit peu usiné à la dremel la partie de la paume à laquelle
+est fixée de bras du servomoteur.
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Usinage de la paume pour ajuster l'axe de rotation du pouce
-   [[file:medias/laurent/PA193418.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Usinage de la paume pour ajuster l'axe de rotation du pouce
+[[file:medias/laurent/PA193418.JPG]]
      
-   Il a également fallu arrondir certains angles des languettes de fixation du servomoteur 
+Il a également fallu arrondir certains angles des languettes de
+fixation du servomoteur
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Arrondissement des languettes de fixations du servomoteur
-   [[file:medias/laurent/PA193420.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Arrondissement des languettes de fixations du servomoteur
+[[file:medias/laurent/PA193420.JPG]]
    
-   Une cale formée par deux petits bout d'une croix en plastique de servo superposée à été intercalée. D'abord maintenu en place à l'adhésif double face, elle est finalement fixée avec de la colle cyanoacrylate (superglue).
+Une cale formée par deux petits bout d'une croix en plastique de servo
+superposée à été intercalée. D'abord maintenu en place à l'adhésif
+double face, elle est finalement fixée avec de la colle cyanoacrylate
+(superglue).
    
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 1
-   [[file:medias/laurent/PA193421.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 1
+[[file:medias/laurent/PA193421.JPG]]
    
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 2
-   [[file:medias/laurent/PA193422.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Fixation de l'arbre du servomoteur à la paume, vue 2
+[[file:medias/laurent/PA193422.JPG]]
       
-     De part sa position, le servo du pouce bloque d'accès au port usb de l'arduino et gêne légèrement celui du jack.
+De part sa position, le servo du pouce bloque d'accès au port usb de
+l'arduino et gêne légèrement celui du jack.
      
 **** Du côté de l'auriculaire
 
-     Il parait compliqué de reculer le servo pour conserver l'axe de la grande bielle. Nous avons donc choisi de l'avancer, pour faire passer la bielle de l'autre côté de la croix du servo moteur. Les deux surfaces sur lesquelles est fixée le servo ont donc été déplacées de 6mm et le fond de 3mm (sauf que la différence a été oubliée lors de la modification de la pièce, il a donc fallu ré-usiner le fond de 3mm.
+Il parait compliqué de reculer le servo pour conserver l'axe de la
+grande bielle. Nous avons donc choisi de l'avancer, pour faire passer
+la bielle de l'autre côté de la croix du servo moteur. Les deux
+surfaces sur lesquelles est fixée le servo ont donc été déplacées de
+6mm et le fond de 3mm (sauf que la différence a été oubliée lors de la
+modification de la pièce, il a donc fallu ré-usiner le fond de 3mm.
 
-     La pièce HBMotorHolder01 a donc été modifiée avec blender et réimprimée en blanc.
-     Image : support_servo_fleche.png
+La pièce HBMotorHolder01 a donc été modifiée avec blender et
+réimprimée en blanc.
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Les modifications effectuées sur le support du servomoteur de l'auriculaire
-   [[file:medias/laurent/support_servo_fleche.png]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Les modifications effectuées sur le support du servomoteur de l'auriculaire
+[[file:medias/laurent/support_servo_fleche.png]]
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Il a fallu ré-usiner le fond qui avait été déplacé de 6mm au lieu des 3 prévus
-   [[file:medias/laurent/PA193427.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Il a fallu ré-usiner le fond qui avait été déplacé de 6mm au lieu des 3 prévus
+[[file:medias/laurent/PA193427.JPG]]
 
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Le servo monté sur son nouveau support
-   [[file:medias/laurent/PA193430.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Le servo monté sur son nouveau support
+[[file:medias/laurent/PA193430.JPG]]
          
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Le nouveau support du servo monté sur la paume
-   [[file:medias/laurent/PA193430.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Le nouveau support du servo monté sur la paume
+[[file:medias/laurent/PA193430.JPG]]
      
-     L'illustration suivante permet de bien voir la différence pour la fixation de la bielle de l'auriculaire : à gauche le montage d'origine avec le bras à l'intérieur, du côté du servo ; à droite le montage avec le servo plus large, le bras est fixé à l'extérieur.
+L'illustration suivante permet de bien voir la différence pour la
+fixation de la bielle de l'auriculaire : à gauche le montage d'origine
+avec le bras à l'intérieur, du côté du servo ; à droite le montage
+avec le servo plus large, le bras est fixé à l'extérieur.
 
-
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Le nouveau support du servo monté sur la paume
-   [[file:medias/laurent/servo_auriculaire_bielle.jpg]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Le nouveau support du servo monté sur la paume
+[[file:medias/laurent/servo_auriculaire_bielle.jpg]]
              
-     
-   La nouvelle pièce ne s'insère pas entièrement dans l'ouverture de la carte électronique, ce qui n'empêche pas de fermer la main.
+La nouvelle pièce ne s'insère pas entièrement dans l'ouverture de la
+carte électronique, ce qui n'empêche pas de fermer la main.
    
 ** Montage des servomoteurs
 *** Protection des servomoteurs
@@ -935,8 +997,9 @@ Arduino, ainsi que le circuit d'alimentation pour la fourniture en
 énergie.
 
 Le schéma du PCB a été revu par rapport au projet [[http://exiii-hackberry.com][exiii HACKberry]] pour
-permettre l'installation d'un capteur supplémentaire. Il en découle une
-utilisation différente des bornes du microcontrôleur Arduino, d'où un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel adressage à prévoir entre le microcontrôleur et le circuit]].
+permettre l'installation d'un capteur supplémentaire. Il en découle
+une utilisation différente des bornes du microcontrôleur Arduino, d'où
+un [[id:ddff0242-6a58-4bcd-852e-1e865a3dea7a][nouvel adressage à prévoir entre le microcontrôleur et le circuit]].
 
 *** Branchement des éléments du circuit imprimé
 Comme indiqué dans la rubrique "[[id:f9906297-5bb5-42ea-ac9a-005934edcfec][brasure et soudure]]", les éléments à fixer
@@ -1175,7 +1238,10 @@ La video montre également que 4 fils sont rassemblés et solidarisés pour
 :ID:       ddff0242-6a58-4bcd-852e-1e865a3dea7a
 :END:
 
-La modification du PCB pour permettre de brancher le nouveau capteur a entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas du schéma du nouveau circuit, il a fallu retrouver une par une à quoi les bornes étaient reliés.
+La modification du PCB pour permettre de brancher le nouveau capteur a
+entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas
+du schéma du nouveau circuit, il a fallu retrouver une par une à quoi
+les bornes étaient reliés.
 
 Voici la table de correspondance obtenu entre l'adressage Arduino du circuit
 [[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que réalisée
@@ -1190,7 +1256,10 @@ au /Fabrikarium d'octobre 2016/:
 | A6    | calibPin0            | myo1                 |
 | 7     | X                    | (calibPin0?) reset   |
 
-thumbPin, fingerPin et calibPin0 correspondent aux boutons situés sur le dessus de la main. Le nouveau programme arduino ne nécessitant pas de calibrage, le bouton de calibrage est affecté à une fonction de reset.
+thumbPin, fingerPin et calibPin0 correspondent aux boutons situés sur
+le dessus de la main. Le nouveau programme arduino ne nécessitant pas
+de calibrage, le bouton de calibrage est affecté à une fonction de
+reset.
 
 Les bornes affectées au contôle des servomoteurs restent inchangées :
 
@@ -1201,14 +1270,14 @@ Les bornes affectées au contôle des servomoteurs restent inchangées :
 |     6 | servo thumb  |
 
 
-# #+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
-# #+attr_html: :width 30% :align center
+##+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
+##+attr_html: :width 30% :align center
 [[# file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
 
-** Tests et calibration
+*** Tests et calibration
 Lorsque les circuits sont mis en place, les servomoteurs peuvent être installés
 et branchés au circuit, puis testés.
-*** Tests de commande des servomoteurs
+**** Tests de commande des servomoteurs
 Les deux videos qui suivent présentent les premiers tests qui ont été
 réalisés sur la main motorisée.
 
@@ -1263,7 +1332,7 @@ consigne de position qui se mettra en mouvement jusqu'à atteindre la
 position voulue, non pas avec une consigne de commande qui se déplacera
 jusqu'à recevoir une autre consigne et nécessite donc un travail permanent
 pour maintenir une position fixe, ce qui affaiblira très vite la batterie.
-*** Tests du montage complet
+**** Tests du montage complet
 Après l'adressage réalisé et les tests de base concluants, il est temps de
 réaliser les tests sur le montage complet:
 
@@ -1293,7 +1362,7 @@ prothèse:
 Vous pouvez consulter les autres photos sur ce thème sous
 [[file:medias/05_tests_et_calibrations/03_tests_montage_complet]].
 
-La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Confection d'un support de main (R&D)]]" décrira comment concevoir une
+La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Emboiture : conception d'une prise rapide de poignée]]" décrira comment concevoir une
 prothèse de main et son emboiture à monter soi-même.
 
 ** Installation des capteurs sur la prothèse de main
@@ -1310,19 +1379,19 @@ entre le bras et le capteur, comme expliqué dans ces deux videos:
 Your browser does not support the video tag.
 #+END_video
 
+Pour que la réalisation soit fonctionnelle, il faut que le capteur soit
+localisé au bon endroit. Dans un premier temps, l'endroit a été localisé à
+partir de la prothèse industrielle pour être marqué par souci de
+fiabilité, sachant que ce qui nous intéresse, c'est la zone musculaire
+active, comme le montre ces deux videos:
+
+
 #+CAPTION: Où installer le bouton-pression sur la prothèse pour le contact du capteur
 #+attr_html: :controls controls :width 800
 #+BEGIN_video
 #+HTML: <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_041.mp4" type="video/mp4">
 Your browser does not support the video tag.
 #+END_video
-
-
-Pour que la réalisation soit fonctionnelle, il faut que le capteur soit
-localisé au bon endroit. Dans un premier temps, l'endroit a été localisé à
-partir de la prothèse industrielle pour être marqué par souci de
-fiabilité, sachant que ce qui nous intéresse, c'est la zone musculaire
-active, comme le montre ces deux videos:
 
 #+CAPTION: Mise-en-place de la prothèse pour localiser la zone musculaire à utiliser par le capteur
 #+attr_html: :controls controls :width 800
@@ -1413,143 +1482,211 @@ Your browser does not support the video tag.
 
 ** Filtrage du signal des capteurs
 *** Problématique
-     Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite utiliser sont capricieux. L'objectif du filtrage est d'être en mesure de détecter certains événements afin qu'ils se traduisent par l'actionnement d'un des servomoteur.
 
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Le nouveau support du servo monté sur la paume.
-  [[file:medias/laurent/myoware.jpg]]
+Les [[https://www.adafruit.com/product/2699][capteurs musculaire myoélectriques MyoWare]] que l'on souhaite
+utiliser sont capricieux. L'objectif du filtrage est d'être en mesure
+de détecter certains événements afin qu'ils se traduisent par
+l'actionnement d'un des servomoteur.
+
+#+attr_html: :width 70% :align center
+#+CAPTION: Le nouveau support du servo monté sur la paume.
+[[file:medias/laurent/myoware.jpg]]
         
-      Un travail a été effectué afin de filtrer leur signal de sortie pour le rendre plus lisse et que les événements déclencheur soit bien identifiés. Lorsqu'ils fonctionnent correctement, le signal est maintenant tout à fait exploitable et permet bien de régler la position de la main progressivement et non pas en tout ou rien.
+Un travail a été effectué afin de filtrer leur signal de sortie pour
+le rendre plus lisse et que les événements déclencheur soit bien
+identifiés. Lorsqu'ils fonctionnent correctement, le signal est
+maintenant tout à fait exploitable et permet bien de régler la
+position de la main progressivement et non pas en tout ou rien.
      
-     Certains paramètres restent critiques dans le bon fonctionnement de ces capteurs:
+Certains paramètres restent critiques dans le bon fonctionnement de
+ces capteurs:
 -  la position des électrodes sur le muscle
--  le type de contact avec la peau (patch adhésif, pâte conductrice, contact métalliques...) et aussi l'humidité de la peau.
--  la pression exercée sur le capteur, qui doivent être serré avec une bande de scratch.
+-  le type de contact avec la peau (patch adhésif, pâte conductrice,
+   contact métalliques...) et aussi l'humidité de la peau.
+-  la pression exercée sur le capteur, qui doivent être serré avec une
+   bande de scratch.
    
-   Tout ces facteurs font qu'il est difficilement envisageable dans l'état actuel d'utiliser ces capteurs à l'intérieur d'une emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
+Tout ces facteurs font qu'il est difficilement envisageable dans
+l'état actuel d'utiliser ces capteurs à l'intérieur d'une
+emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
    
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Montage et test d'un MyoWare sur une emboîture
-  [[file:medias/laurent/PA203442.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Montage et test d'un MyoWare sur une emboîture
+[[file:medias/laurent/PA203442.JPG]]
         
 *** Protocole
     
-    Le filtrage a été mis au point par essai erreur, en testant successivement plusieurs techniques. On utilise un utilitaire présent dans les versions récents de l'IDE d'Arduino (version supérieures à 1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des valeurs reçu sur le port série avec une échelle verticale qui s'adapte à l'évolution du signal (ou des signaux).
+Le filtrage a été mis au point par essai erreur, en testant
+successivement plusieurs techniques. On utilise un utilitaire présent
+dans les versions récents de l'IDE d'Arduino (version supérieures à
+1.6.6) : serialPlotter. Cet utilitaire représente en temps réelle des
+valeurs reçu sur le port série avec une échelle verticale qui s'adapte
+à l'évolution du signal (ou des signaux).
     
-    Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer directement l'évolution d'un signal analogique, reçu par l'intermédiaire du port série.
+Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer
+directement l'évolution d'un signal analogique, reçu par
+l'intermédiaire du port série.
 
 *** Méthode de filtrage
     
-    Sur le programme arduino d'origine, une moyenne est appliquée sur une certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche pas l'apparition d'une variation brusque entre le premier lot de valeurs et celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des médianes) flottantes, c'est à dire que ce sont toujours les vingt dernières valeurs reçues qui sont prise en compte dans le traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la marge et le signal résultant évoluera de façon plus continue.
+Sur le programme arduino d'origine, une moyenne est appliquée sur une
+certains nombres de valeurs à suivre (une vingtaine) ce qui n'empêche
+pas l'apparition d'une variation brusque entre le premier lot de
+valeurs et celui qui arrivent ensuite. On utilisera plutôt des
+moyennes (ou des médianes) flottantes, c'est à dire que ce sont
+toujours les vingt dernières valeurs reçues qui sont prise en compte
+dans le traitement. Chaque nouvelle valeur ne modifiera donc la
+moyenne qu'à la marge et le signal résultant évoluera de façon plus
+continue.
 
-    [[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser simplement des médianes flottantes.
+[[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser
+simplement des médianes flottantes.
 
-    Finalement, deux médianes flottantes sont utilisées :
--  la médiane courte correspond à un premier filtrage où tous les signaux reçu par le capteur sont prises en compte. Elle permet de supprimer les bruits et d'obtenir un signal relativement lisse.
--  la médiane longue est une médiane flottantes des médianes courtes. Il s'agit d'obtenir une référence qui évolue en fonction du temps et à partir de laquelle on va détecter des changements sur de plus courtes échelles de temps.
+Finalement, deux médianes flottantes sont utilisées :
+-  la médiane courte correspond à un premier filtrage où tous les
+   signaux reçu par le capteur sont prises en compte. Elle permet de
+   supprimer les bruits et d'obtenir un signal relativement lisse.
+-  la médiane longue est une médiane flottantes des médianes
+   courtes. Il s'agit d'obtenir une référence qui évolue en fonction
+   du temps et à partir de laquelle on va détecter des changements sur
+   de plus courtes échelles de temps.
    
-   C'est donc à partir des variations de cette différence que nous allons détecter des événements correspondant à contraction du muscle correspondant.
+C'est donc à partir des variations de cette différence que nous allons
+détecter des événements correspondant à contraction du muscle
+correspondant.
 
-   Sur la photo suivant, on voit l'évolution des médianes obtenues pour deux capteurs musculaires. Le signal lisse correspond à la médiane courte, le signal en escalier correspond à la médiane longue.
+Sur la photo suivant, on voit l'évolution des médianes obtenues pour
+deux capteurs musculaires. Le signal lisse correspond à la médiane
+courte, le signal en escalier correspond à la médiane longue.
 
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
-  [[file:medias/laurent/PA203439.JPG]]        
+#+attr_html: :width 70% :align center
+#+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
+[[file:medias/laurent/PA203439.JPG]]        
 
 ** Capteur de pression
 
-   Cette partie consiste à ajouter un capteur au bout du pouce afin d'avoir un retour d'information "sensible". Ce retour d'information permet au porteur de la main d'adapter lui même la pression. Il s'agit d'un capteur de pression de type FSR.
+Cette partie consiste à ajouter un capteur au bout du pouce afin
+d'avoir un retour d'information "sensible". Ce retour d'information
+permet au porteur de la main d'adapter lui même la pression. Il s'agit
+d'un capteur de pression de type FSR.
    
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Fixation du capteur de pression sur le pouce
-   [[file:medias/laurent/PA213465.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Fixation du capteur de pression sur le pouce
+[[file:medias/laurent/PA213465.JPG]]
    
    
-   Pour ce test, le retour d'information se fait par un servomoteur en contact avec le bras du porteur.
+Pour ce test, le retour d'information se fait par un servomoteur en
+contact avec le bras du porteur.
    
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Schéma du montage du capteur de pression
-   [[file:medias/laurent/PA213463.JPG]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Schéma du montage du capteur de pression
+[[file:medias/laurent/PA213463.JPG]]
    
-   Dimensionnement de la résistance du circuit : il faut qu'elle soit supérieure à la résistance du capteur lorsque celui ci est chargé. Une autre solution est de la remplacer par une résistance variable afin de pouvoir la calibrer directement.
+Dimensionnement de la résistance du circuit : il faut qu'elle soit
+supérieure à la résistance du capteur lorsque celui ci est chargé. Une
+autre solution est de la remplacer par une résistance variable afin de
+pouvoir la calibrer directement.
 
 * Emboiture : conception d'une prise rapide de poignée
 :PROPERTIES:
 :ID:       41d49b6a-e462-4640-b453-00591c6706e8
 :END:
 
-   Un atelier de R&D s'est déroulé pour travailler sur la confection d'une
-   prothèse de main à partir de matériaux accessibles: voir
-   [[file:medias/10_support_main/01_realisation_prothese]] pour toutes les photos
-   et videos sur la R&D.
+Un atelier de R&D s'est déroulé pour travailler sur la confection
+d'une prothèse de main à partir de matériaux accessibles: voir
+[[file:medias/10_support_main/01_realisation_prothese]] pour toutes les
+photos et videos sur la R&D.
    
-   Deux modèles de prise rapide ont été prototypés.
+Deux modèles de prise rapide ont été prototypés.
 
 ** Objectifs
     
-   L'objectif est de prototyper Un système mécanique qui permet :
-- d'adapter plusieurs types de mains ou d'outils sur une seule emboîture,
+L'objectif est de prototyper Un système mécanique qui permet :
+- d'adapter plusieurs types de mains ou d'outils sur une seule
+  emboîture,
 - de pouvoir régler la rotation de la main dans différentes positions,
 - bloquer la main ou l'outil dans une position donnée,
 - avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
-- avoir un système le plus fin possible en épaisseur pour raccourcir la distance entre l'extrémité du moignon et la base de la main.
+- avoir un système le plus fin possible en épaisseur pour raccourcir
+  la distance entre l'extrémité du moignon et la base de la main.
   
 ** Solution proposée
    
-   La solution proposée est un assemblage de deux pièces :    
-- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec trois pattes thermoformables permettant de se fixer sur n'importe quel emboîture,
-- au niveau de la rotation du poignée : deux pièces crantées cylindriques (côté emboîture / côté main) qui s'accouplent dans différentes position.
+La solution proposée est un assemblage de deux pièces :
+- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec
+  trois pattes thermoformables permettant de se fixer sur n'importe
+  quel emboîture,
+- au niveau de la rotation du poignée : deux pièces crantées
+  cylindriques (côté emboîture / côté main) qui s'accouplent dans
+  différentes position.
   
-   Pour un des prototype, le blocage de ces deux pièces est réalisé par un système de levier à biellette mais il peut être renforcé et optimisé.
+Pour un des prototype, le blocage de ces deux pièces est réalisé par
+un système de levier à biellette mais il peut être renforcé et
+optimisé.
   
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Les deux pièces imprimées avant leur fixation
-   [[file:medias/10_support_main/01_realisation_prothese/20161021_033.jpg]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Les deux pièces imprimées avant leur fixation
+[[file:medias/10_support_main/01_realisation_prothese/20161021_033.jpg]]
 
-   Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le système. Deux plaques ont été imprimé à cet effet pour la fixation d'une des main réalisée lors du fabrikarium.
+Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le
+système. Deux plaques ont été imprimé à cet effet pour la fixation
+d'une des main réalisée lors du fabrikarium.
   
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
-   [[file:medias/10_support_main/01_realisation_prothese/20161020_030.jpg]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
+[[file:medias/10_support_main/01_realisation_prothese/20161020_030.jpg]]
    
 ** Fabrication
     
-   Les pièces sont été modélisées avec le logiciel Catia, puis imprimées en ABS.
+Les pièces sont été modélisées avec le logiciel Catia, puis imprimées
+en ABS.
 
-   #+attr_html: :width 70% :align center
-   #+CAPTION: Les deux pièces imprimées
-   [[file:medias/10_support_main/01_realisation_prothese/20161020_007.jpg]]
+#+attr_html: :width 70% :align center
+#+CAPTION: Les deux pièces imprimées
+[[file:medias/10_support_main/01_realisation_prothese/20161020_007.jpg]]
    
 ** Les prototypes
     
-   Deux prototypes fonctionnels sont finalement réalisés :
--  le premier, qui a été fixé sur le moignon court de Sylvie, ne comporte pas de système de blocage 
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Prototype d'attache rapide sans système de blocage
-  [[file:medias/laurent/PA213467.JPG]]
+Deux prototypes fonctionnels sont finalement réalisés :
+- le premier, qui a été fixé sur le moignon court de Sylvie, ne
+  comporte pas de système de blocage
+#+attr_html: :width 70% :align center
+#+CAPTION: Prototype d'attache rapide sans système de blocage
+[[file:medias/laurent/PA213467.JPG]]
 
--  Le second a pu être être adapté sur le moignon long de Nicolas est complètement fonctionnel bien que fragile
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Avec système de blocage
-  [[file:medias/laurent/PA213469.JPG]]
+- Le second a pu être être adapté sur le moignon long de Nicolas est
+  complètement fonctionnel bien que fragile
+#+attr_html: :width 70% :align center
+#+CAPTION: Avec système de blocage
+[[file:medias/laurent/PA213469.JPG]]
 
 ** Problèmes rencontrés / améliorations possibles
 
 Voici la liste des améliorations possibles et envisagées :
 
--  les pattes du cueille pomme en abs sont difficilement thermoformables (le pla n'étant pas envisageable car trop fragile) on peut envisagé de les réalisé à partir de plaque ou de tube d'un plastique plus standard (PVC)
--  par rapport au fichier : redimensionner le levier de fixation pour qu'il soit plus solide
--  améliorer le système de cran et son ajustage
--  exploration de la piste d'un mécanisme de réglage conique pour augmenter la surface de contact, abandonné car trop compliqué.
-  #+attr_html: :width 70% :align center
-  #+CAPTION: couplage conique
-  [[file:medias/laurent/PA213472.JPG]]
+- les pattes du cueille pomme en abs sont difficilement
+  thermoformables (le pla n'étant pas envisageable car trop fragile)
+  on peut envisagé de les réalisé à partir de plaque ou de tube d'un
+  plastique plus standard (PVC)
+- par rapport au fichier : redimensionner le levier de fixation pour
+  qu'il soit plus solide
+- améliorer le système de cran et son ajustage
+- exploration de la piste d'un mécanisme de réglage conique pour
+  augmenter la surface de contact, abandonné car trop compliqué.
+#+attr_html: :width 70% :align center
+#+CAPTION: couplage conique
+[[file:medias/laurent/PA213472.JPG]]
    
    
--  mettre au point un système de réglage et de blocage qui soit déporté sur le côté et pas sur le dessus ou autour. voir schéma. Solution dessiné qui n'a pas pu être testée. En plus des parties solidaires de la main et du moignon, une troisième partie mobile (en bleu sur le schéma) permettrait de dissocier la fixation du système d'indexage en rotation. (PA213470.JPG)
-  #+attr_html: :width 70% :align center
-  #+CAPTION: Une idée pour un futur prototype
-  [[file:medias/laurent/PA213470.JPG]]   
+- mettre au point un système de réglage et de blocage qui soit déporté
+  sur le côté et pas sur le dessus ou autour. voir schéma. Solution
+  dessiné qui n'a pas pu être testée. En plus des parties solidaires
+  de la main et du moignon, une troisième partie mobile (en bleu sur
+  le schéma) permettrait de dissocier la fixation du système
+  d'indexage en rotation. (PA213470.JPG)
+#+attr_html: :width 70% :align center
+#+CAPTION: Une idée pour un futur prototype
+[[file:medias/laurent/PA213470.JPG]]   
    
 * Améliorations
 ** Toucher conducteur pour les /smartphones/
@@ -1658,7 +1795,11 @@ branchements au circuit PCB:
   humaine. Une piste pour ceux qui n'auraient pas de contacts en vue: se
   renseigner auprès des [[https://fr.wikipedia.org/wiki/Fab_lab][Fab labs]] du coin...
 
-- Il est dommage que les participants n'ait pas eu un plus large accès à la documentation actuelle. Cela aurait permis d'être plus efficace pendant le montage mais surtout de pouvoir faire la critique de la documentation actuelle et l'améliorer. Sans instructions de montage, les participants se sont beaucoup servi de la main déjà montée.
+- Il est dommage que les participants n'ait pas eu un plus large accès
+  à la documentation actuelle. Cela aurait permis d'être plus efficace
+  pendant le montage mais surtout de pouvoir faire la critique de la
+  documentation actuelle et l'améliorer. Sans instructions de montage,
+  les participants se sont beaucoup servi de la main déjà montée.
 
 - Pour le montage des pièces conçues en impression 3D, il serait bon
   d'identifier chacune des pièces à monter, en le gravant sur la
