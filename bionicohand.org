@@ -1597,6 +1597,16 @@ courte, le signal en escalier correspond à la médiane longue.
 #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
 [[file:medias/laurent/PA203439.JPG]]        
 
+*** Réécriture du programme Arduino
+Avec la nouvelle procédure de filtrage et l'utilisation de deux
+capteurs myoélectriques apparaît assez vite la nécessité de réécrire
+le programme Arduino à partir de zéro plutôt que d'adapter l'existant.
+
+Le nouveau code arduino est mis à disposition sur un [[https://github.com/MHKit/mhk-exii][dépôt github]].
+
+Il est également disponible dans [[https://github.com/MHKit/HACKberry/tree/fabrikarium][la branche fabrikarium d'une copie
+(fork) du dépôt original]].
+
 ** Capteur de pression
    :PROPERTIES:
    :ID:       0ef446c9-d3b4-4bea-a8d5-da2c84c59175
