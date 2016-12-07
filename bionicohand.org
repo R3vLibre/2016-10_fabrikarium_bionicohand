@@ -52,16 +52,16 @@ réalisations des projets adressés au cours de ce /hackathon/, de sorte à
 pérenniser le savoir-faire et transmettre de quoi les perpétuer.
 
 Dans cette optique, une partie des tâches du travail documentaire est
-d'une part de vérifier que la documentation existante est suffisamment explicite,
-pour la compléter si besoin et d'autre part, de documenter les
-nouveautés ainsi que rapporter les avancées en R&D. C'est l'objet de
-ce contenu.
+d'une part de vérifier que la documentation existante est suffisamment
+explicite, pour la compléter si besoin et d'autre part, de documenter les
+nouveautés ainsi que rapporter les avancées en R&D. C'est l'objet de ce
+contenu.
 
 Le présent texte a été rédigé par Christophe Schockaert
-(http://createcnix.eu) et Laurent Malys (http://www.laurent-malys.fr)
-pour [[https://www.flossmanualsfr.net/][Flossmanuals Francophone]]. Il est placé sous licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative
-Commons "CC BY 4.0"]], de même que toutes les images et vidéos
-accompagnant la rédaction du manuel.
+(http://createcnix.eu) et Laurent Malys (http://www.laurent-malys.fr) pour
+[[https://www.flossmanualsfr.net/][Flossmanuals Francophone]]. Il est placé sous licence [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons "CC
+BY 4.0"]], de même que toutes les images et vidéos accompagnant la rédaction
+du manuel.
 
 ** Enjeux et programme du /Fabrikarium/
 L'origine du /Fabrikarium/ part du constat que les prothèses sont à la
@@ -111,10 +111,10 @@ soi-même.
   
   - Assurer un montage aisé de la main motorisée :
 
-    - Vérifier la faisabilité de montage de la main en suivant le
+    - vérifier la faisabilité de montage de la main en suivant le
       tutoriel (section [[id:8dfdeeca-f61d-4b87-bb17-fd181eb28fda][Assemblage de la main]])
 
-    - Valider la sélection des pièces référencées dans les catalogues
+    - valider la sélection des pièces référencées dans les catalogues
       européens (section [[id:270d0ed0-a92d-4e38-a12f-da9025505914][Adaptations aux pièces européennes]])
   
   - Utiliser une batterie et un chargeur du commerce plutôt qu'une
@@ -454,8 +454,8 @@ Au niveau électronique, il faut donc utiliser un amplificateur
 différentiel pour filtrer les signaux parasites en fonction de la longueur
 d'onde du signal.
 
-Sur la main myoélectrique, la pression de 10kg/cm2. Il y a également des
-différences homme/femme à prendre en compte dans l'élaboration de la
+Sur la main myoélectrique, la pression est de 10kg/cm2. Il y a également
+des différences homme/femme à prendre en compte dans l'élaboration de la
 prothèse.
 
 Il faut également savoir que depuis le bras, il n'est pas possible de
@@ -473,8 +473,8 @@ endroit que le cerveau interprète comme là où le membre était présent
 auparavant. C'est assez troublant et fait également l'objet d'un
 apprentissage.
 
-Dans la répartition, il y a un choix : 50% des gens portent des
-prothèses, et 50% n'en portent pas.
+Dans la répartition, il y a un choix s'opère chez les patients : 50% des
+gens portent des prothèses, et 50% n'en portent pas.
 
 * Montage de la main
 ** Plans de la main Bionico, composants et documentation existante
@@ -505,29 +505,40 @@ Plusieurs manuels d'assemblage sont à disposition:
 - le tutoriel de [[https://www.myhumankit.org][My Human Kit]] réalisé par Nicolas Huchet lors d'une
   résidence à Berlin (en français et en anglais) :
   http://myhumankit.org/tutoriels/main-hackberry-exiii/
+
 - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble][la documentation en anglais et japonais d'exiii]], l'équipe japonaise
   qui développe le projet HACKberry original. Sur la partie mécanique
   elle est principalement constituée de vues 3d pour chaque étape du
   montage, avec des références précises de chaque pièce à utilisée. La
   documentation qui nous intéresse lors du /Fabrikarium/ est séparée en
   3 pages :
+
   - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:circuit][réalisation du circuit et téléversement du code]],
+
   - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:fingers][assemblage des doigts]],
+
   - [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][assemblage de la main]].
 
-Sur le dépôt github du projet, on trouveras également :
-- la liste des pièces (BOM = /bills of material/)
-- les sources du programme arduino
-- les schémas des circuits imprimés 
-- les fichiers des pièces à imprimer (.stl)
-- les fichiers d'assemblage au formats step et igs.
 
-Ces derniers fichiers sont particulièrement intéressants pour le
-montage car ils permettent de visualiser l'assemblage complet de
-toutes les pièces qu'il s'agisse de pièces imprimées, de pièces
-mécaniques conventionnelles (vis, entretoise...) ou d'électronique. Le
-format Step est un standard ouvert qui peut être lu par le logiciel de
-CAO libre [[http://www.freecadweb.org][FreeCAD]].
+Sur le dépôt GitHub du projet, on trouveras également :
+
+  - la liste des pièces (BOM = /bills of material/)
+
+  - les sources du programme arduino
+
+  - les schémas des circuits imprimés 
+
+  - les fichiers des pièces à imprimer (.stl)
+
+  - les fichiers d'assemblage aux formats "step" et "igs".
+
+
+Ces derniers fichiers sont particulièrement intéressants pour le montage
+car ils permettent de visualiser l'assemblage complet de toutes les
+pièces, qu'il s'agisse de pièces imprimées, de pièces mécaniques
+conventionnelles (vis, entretoise, ...) ou d'électronique. Le format
+"Step" est un standard ouvert qui peut être lu par le logiciel de CAO
+libre [[http://www.freecadweb.org][FreeCAD]].
 
 La documentation ici présente fournira un mode d'emploi qui viendra
 compléter les informations qui pourraient manquer dans ces guides. 
@@ -535,13 +546,16 @@ compléter les informations qui pourraient manquer dans ces guides.
 Elle s'attardera également sur les différences et difficultés
 particulières rencontrées lors du montage des deux mains au
 /Fabrikarium/. Ces différences ont deux causes principales :
--  elles peuvent être dûes à des composants non disponibles en Europe,
-   et pour lesquels l'adaptation avec des produits disponibles plus
-   localement est un objectif du workshop,
--  elles peuvent être dues à des erreurs de commandes, auquel cas les
-   solutions trouvées lors du workshop seront tout de même détaillées.
 
-Les nouveautés ou nouvelles fonctionnalités mises en places lors du
+  - elles peuvent être dûes à des composants non disponibles en Europe, et
+    pour lesquels l'adaptation avec des produits disponibles plus
+    localement est un objectif du workshop,
+
+  - elles peuvent être dues à des erreurs de commandes, auquel cas les
+    solutions trouvées lors du workshop seront tout de même détaillées.
+
+
+Les nouveautés ou nouvelles fonctionnalités mises en place lors du
 /Fabrikarium/ seront l'objet des chapitres suivants.
 
 Deux mains (rouge et jaune) sont montées en parallèle par chacune des
@@ -597,7 +611,7 @@ retrouve différente et a pour effet de faciliter le repérage des pièces.
 Au travers de ces photos, les particularité suivantes sont
 mises en évidence :
 
- - forer les pièces pour les agrandir : certains trous doivent être
+ - Forer les pièces pour les agrandir : certains trous doivent être
    agrandis pour être à dimension des axes
 
  - Assemblage des axes dans les entretoises, visser avec précaution: les
@@ -620,32 +634,35 @@ mises en évidence :
    :PROPERTIES:
    :ID:       270d0ed0-a92d-4e38-a12f-da9025505914
    :END:
-*** les vis
+*** Les vis
 Le premier problème rencontré par les deux équipes est la casse
-d'entretoises en plastiques et de pas de vis. Il s'agit sans doute
-d'un problème de commande : les vis utilisées ont un diamètre de
-2.2mm au lieu de 2mm. De plus, il est précisé dans la documentation
-en anglais qu'il s'agit de vis autoforeuse ("tapping screw") ce qui
-n'était pas le cas des vis utilisées lors de ce montage.
+d'entretoises en plastiques et de pas de vis. Il s'agit sans doute d'un
+problème de commande : les vis utilisées ont un diamètre de 2.2mm au lieu
+de 2mm. De plus, il est précisé dans la documentation en anglais qu'il
+s'agit de vis autoforeuse ("tapping screw") ce qui n'était pas le cas des
+vis utilisées lors de ce montage.
     
 #+attr_html: :width 70% :align center
 #+CAPTION: Agrandissement du trou d'une des entretoise en plastique cassée
 [[file:medias/laurent/PA193393.JPG]]
    
 Compte tenu de la précision de l'impression 3d, il est de toute façon
-nécessaire d'agrandir les perçages de vis. Cet agrandissement se fera
-donc avec un forêt de 2,2mm, voire 2,4mm, au lieu du foret de 2mm
-préconisé dans les tutoriels.
+nécessaire d'agrandir les perçages de vis. Cet agrandissement se fera donc
+avec un forêt de 2,2mm, voire 2,4mm, au lieu du foret de 2mm préconisé
+dans les tutoriels.
     
-*** les entretoises
+*** Les entretoises
    
-Les 6 entretoises métalliques ("Metal Collar" dans la BOM) utilisées
-pour les glissement des axes au niveaux des phalanges et des bielles
-n'ont pas le même diamètres que celles du projet original.
+Les 6 entretoises métalliques ("Metal Collar" dans la BOM) utilisées pour
+les glissement des axes au niveaux des phalanges et des bielles n'ont pas
+le même diamètres que celles du projet original.
    
 Cela concerne les pièces :
+
 -  HbFingerMainCouplerLink
+
 -  HbMiddle-RingCouplerLink
+
 -  HbRing-LittleCouplerLink
    
 
@@ -673,20 +690,19 @@ Il faut donc agrandir les trous qui doivent les recevoir.
 #+CAPTION: Insertion à la presse
 [[file:medias/laurent/PA193401.JPG]]
  
-À terme, il faudrait donc agrandir les trous dans les modèles
-géométriques pour que les pièces imprimées soient directement adaptées
-à ces entretoires.
+À terme, il faudrait donc agrandir les trous dans les modèles géométriques
+pour que les pièces imprimées soient directement adaptées à ces
+entretoires.
   
 En raison du diamètre des vis (2,2mm au lieu de 2mm), il est également
-nécessaire d'agrandir, à la perceuse à colonne, le diamètre intérieur
-des bagues à 2,2mm.
+nécessaire d'agrandir, à la perceuse à colonne, le diamètre intérieur des
+bagues à 2,2mm.
   
 *** Les axes de rotations des doigts
 # TODO ref bom    
-Les axes qui permettent l'articulation entre la paume et les doigts
-font 16mm au lieu de 15mm comme précisés dans la BOM. Il s'agit de la
-référence Shaft "d2L15" dans la BOM et "HbFingerPosture01" dans les
-fichiers 3d.
+Les axes qui permettent l'articulation entre la paume et les doigts font
+16mm au lieu de 15mm comme précisés dans la BOM. Il s'agit de la référence
+Shaft "d2L15" dans la BOM et "HbFingerPosture01" dans les fichiers 3d.
 
 Il est donc nécessaire de les limer. À voir si des axes de 15mm sont
 disponibles dans le commerce, ou si des axes de 14mm qui seraient
@@ -719,8 +735,8 @@ TGY-90S) ne sont pas aux bonnes côtes : 3 mm de plus dans l'épaisseur
 fixation à la paume et leur liaison au niveau de l'arbre de sortie.
     
 Finalement, nous avons pu récupérer un autre servomoteur (modèle
-SM-S2309S), dont les dimensions sont plus proches de celles attendues
-s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur
+SM-S2309S), dont les dimensions sont plus proches de celles attendues et
+qui s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur
 une des deux mains.
 
 #+attr_html: :width 70% :align center
@@ -734,7 +750,7 @@ directement sur la sortie du servomoteur)
 
 Il y a de la place pour décaler la fixation de la sortie du servo du
 côté du pouce. Pour éviter de changer l'axe de rotation du pouce, nous
-avons un petit peu usiné à la dremel la partie de la paume à laquelle
+avons un petit peu usiné à la Dremel la partie de la paume à laquelle
 est fixée de bras du servomoteur.
 
 #+attr_html: :width 70% :align center
@@ -773,7 +789,7 @@ surfaces sur lesquelles est fixée le servo ont donc été déplacées de
 6mm et le fond de 3mm (sauf que la différence a été oubliée lors de la
 modification de la pièce, il a donc fallu réusiner le fond de 3mm).
 
-La pièce HBMotorHolder01 a donc été modifiée avec blender et
+La pièce HBMotorHolder01 a donc été modifiée avec Blender et
 réimprimée en blanc.
 
 #+attr_html: :width 70% :align center
@@ -1269,13 +1285,13 @@ La video montre également que 4 fils sont rassemblés et solidarisés pour
 :END:
 
 La modification du PCB pour permettre de brancher le nouveau capteur a
-entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas
-du schéma du nouveau circuit, il a fallu retrouver une par une à quoi
-les bornes étaient reliés.
+entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas du
+schéma du nouveau circuit, il a fallu retrouver une par une à quoi les
+bornes étaient reliées.
 
-Voici la table de correspondance obtenu entre l'adressage Arduino du circuit
-[[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que réalisée
-au /Fabrikarium d'octobre 2016/ :
+Voici la table de correspondance obtenue entre l'adressage Arduino du
+circuit [[http://exiii-hackberry.com][exiii HACKberry]] original, et celui de la la [[http://www.bionico.org][Bionicohand]] telle que
+réalisée au /Fabrikarium d'octobre 2016/ :
 
 | borne | ancienne affectation | nouvelle affectation |
 |-------+----------------------+----------------------|
@@ -1289,7 +1305,7 @@ au /Fabrikarium d'octobre 2016/ :
 thumbPin, fingerPin et calibPin0 correspondent aux boutons situés sur
 le dessus de la main. Le nouveau programme arduino ne nécessitant pas
 de calibrage, le bouton de calibrage est affecté à une fonction de
-reset, qui permet de réinitialiser le programme en cas de
+/reset/, qui permet de réinitialiser le programme en cas de
 dysfonctionnement.
 
 Les bornes affectées au contrôle des servomoteurs restent inchangées :
@@ -1301,9 +1317,9 @@ Les bornes affectées au contrôle des servomoteurs restent inchangées :
 |     6 | servo thumb  |
 
 
-# #+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
-# #+attr_html: :width 30% :align center
-[[# file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
+#+CAPTION: Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016
+#+attr_html: :width 30% :align center
+[[file:medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg]]
 
 *** Tests et calibration
 Lorsque les circuits sont mis en place, les servomoteurs peuvent être installés
@@ -1393,15 +1409,15 @@ prothèse :
 Vous pouvez consulter les autres photos sur ce thème sous
 [[file:medias/05_tests_et_calibrations/03_tests_montage_complet]].
 
-La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Emboiture : conception d'une prise rapide de poignée]]" décrira comment concevoir une
-prothèse de main et son Emboiture à monter soi-même.
+La section "[[id:41d49b6a-e462-4640-b453-00591c6706e8][Emboiture : conception d'une prise rapide de poignée]]" décrira
+comment concevoir une prothèse de main et son Emboiture à monter soi-même.
 
 ** Installation des capteurs sur la prothèse de main
 Les capteurs de pression seront installés sur la prothèse ainsi
 confectionnée.
 
 Des boutons-pression seront utilisés pour établir un contact amovible
-entre le bras et le capteur, comme expliqué dans ces deux vidéos :
+entre le bras et le capteur, comme expliqué dans cette vidéo :
 
 #+CAPTION: Système de bouton-pression pour le contact entre le bras et le capteur
 #+attr_html: :controls controls :width 800
@@ -1414,7 +1430,7 @@ Pour que la réalisation soit fonctionnelle, il faut que le capteur soit
 localisé au bon endroit. Dans un premier temps, l'endroit a été localisé à
 partir de la prothèse industrielle pour être marqué par souci de
 fiabilité, sachant que ce qui nous intéresse, c'est la zone musculaire
-active, comme le montre ces deux vidéos :
+active, comme le montrent ces vidéos :
 
 
 #+CAPTION: Où installer le bouton-pression sur la prothèse pour le contact du capteur
@@ -1526,21 +1542,25 @@ l'actionnement d'un des servomoteur.
 #+CAPTION: Le nouveau support du servo monté sur la paume.
 [[file:medias/laurent/myoware.jpg]]
         
-Un travail a été effectué afin de filtrer leur signal de sortie pour
-le rendre plus lisse et que les événements déclencheur soit bien
-identifiés. Lorsqu'ils fonctionnent correctement, le signal est
-maintenant tout à fait exploitable et permet bien de régler la
-position de la main progressivement et non pas en tout ou rien.
+Un travail a été effectué afin de filtrer leur signal de sortie pour le
+rendre plus lisse et que les événements déclencheurs soient bien
+identifiés. Maintenant qu'ils fonctionnent correctement, le signal est
+tout à fait exploitable et permet bien de régler la position de la main
+progressivement et non pas en tout ou rien.
      
 Certains paramètres restent critiques dans le bon fonctionnement de
 ces capteurs :
--  la position des électrodes sur le muscle
--  le type de contact avec la peau (patch adhésif, pâte conductrice,
-   contact métalliques...) et aussi l'humidité de la peau.
--  la pression exercée sur le capteur, qui doivent être serré avec une
-   bande de scratch.
-   
-Tout ces facteurs font qu'il est difficilement envisageable dans
+
+  - la position des électrodes sur le muscle
+
+  - le type de contact avec la peau (patch adhésif, pâte conductrice,
+    contact métalliques...) et aussi l'humidité de la peau.
+
+  - la pression exercée sur le capteur, qui doivent être serrés avec une
+    bande de scratch.
+
+
+Tous ces facteurs font qu'il est difficilement envisageable dans
 l'état actuel d'utiliser ces capteurs à l'intérieur d'une
 emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
    
@@ -1550,59 +1570,60 @@ emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
         
 *** Protocole
     
-Le filtrage a été mis au point par essai erreur, en testant
-successivement plusieurs techniques. On utilise un utilitaire présent
-dans les versions récents de l'IDE d'Arduino (version supérieures à
-1.6.6) : /serialPlotter/. Cet utilitaire représente en temps réel des
-valeurs reçues sur le port série avec une échelle verticale qui s'adapte
-à l'évolution du signal (ou des signaux).
+Le filtrage a été mis au point par essais et erreurs, en testant
+successivement plusieurs techniques. On utilise un utilitaire présent dans
+les versions récentes de l'IDE d'Arduino (versions supérieures à 1.6.6) :
+/serialPlotter/. Cet utilitaire représente en temps réel des valeurs
+reçues sur le port série avec une échelle verticale qui s'adapte à
+l'évolution du signal (ou des signaux).
     
 Par défaut, l'exemple [[https://www.arduino.cc/en/Tutorial/AnalogReadSerial][AnalogReadSerial]] permet effectivement de tracer
-directement l'évolution d'un signal analogique, reçu par
-l'intermédiaire du port série.
+directement l'évolution d'un signal analogique, reçu par l'intermédiaire
+du port série.
 
 *** Méthode de filtrage
     
 Sur le programme arduino d'origine, une moyenne est appliquée sur une
-certain nombre de valeurs à suivre (une vingtaine) ce qui n'empêche
-pas l'apparition d'une variation brusque entre le premier lot de
-valeurs et celui qui arrivent ensuite. On utilisera plutôt des
-moyennes (ou des médianes) flottantes, c'est à dire que ce sont
-toujours les vingt dernières valeurs reçues qui sont prises en compte
-dans le traitement. Chaque nouvelle valeur ne modifiera donc la
-moyenne qu'à la marge et le signal résultant évoluera de façon plus
-continue.
+certain nombre de valeurs à suivre (une vingtaine), ce qui n'empêche pas
+l'apparition d'une variation brusque entre le premier lot de valeurs et
+celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des
+médianes) flottantes, c'est-à-dire que ce sont toujours les vingt
+dernières valeurs reçues qui sont prises en compte dans le
+traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la
+marge et le signal résultant évoluera de façon plus continue.
 
 [[http://playground.arduino.cc/Main/RunningMedian][RunningMedian]] est une librairie arduino qui permet de réaliser
 simplement des médianes flottantes.
 
 Finalement, deux médianes flottantes sont utilisées :
--  la médiane courte correspond à un premier filtrage où tous les
-   signaux reçus par le capteur sont pris en compte. Elle permet de
-   supprimer les bruits et d'obtenir un signal relativement lisse.
--  la médiane longue est une médiane flottantes des médianes
-   courtes. Il s'agit d'obtenir une référence qui évolue en fonction
-   du temps et à partir de laquelle on va détecter des changements sur
-   de plus courtes échelles de temps.
+
+  - la médiane courte correspond à un premier filtrage où tous les signaux
+    reçus par le capteur sont pris en compte. Elle permet de supprimer les
+    bruits et d'obtenir un signal relativement lisse.
+
+  - la médiane longue est une médiane flottantes des médianes courtes. Il
+    s'agit d'obtenir une référence qui évolue en fonction du temps et à
+    partir de laquelle on va détecter des changements sur de plus courtes
+    échelles de temps.
    
 C'est donc à partir des variations de cette différence que nous allons
 détecter des événements correspondant à contraction du muscle
 correspondant.
 
-Sur la photo suivant, on voit l'évolution des médianes obtenues pour
-deux capteurs musculaires. Le signal lisse correspond à la médiane
-courte, le signal en escalier correspond à la médiane longue.
+Sur la photo suivante, on voit l'évolution des médianes obtenues pour deux
+capteurs musculaires. Le signal lisse correspond à la médiane courte, le
+signal en escalier correspond à la médiane longue.
 
 #+attr_html: :width 70% :align center
 #+CAPTION: Les médianes courtes et longues pour deux capteurs myoélectriques
 [[file:medias/laurent/PA203439.JPG]]        
 
 *** Réécriture du programme Arduino
-Avec la nouvelle procédure de filtrage et l'utilisation de deux
-capteurs myoélectriques apparaît assez vite la nécessité de réécrire
-le programme Arduino à partir de zéro plutôt que d'adapter l'existant.
+Avec la nouvelle procédure de filtrage et l'utilisation de deux capteurs
+myoélectriques apparaît assez vite la nécessité de réécrire le programme
+Arduino à partir de zéro plutôt que d'adapter l'existant.
 
-Le nouveau code arduino est mis à disposition sur un [[https://github.com/MHKit/mhk-exii][dépôt github]].
+Le nouveau code arduino est mis à disposition sur un [[https://github.com/MHKit/mhk-exii][dépôt GitHub]].
 
 Il est également disponible dans [[https://github.com/MHKit/HACKberry/tree/fabrikarium][la branche fabrikarium d'une copie
 (fork) du dépôt original]].
@@ -1630,11 +1651,11 @@ contact avec le bras du porteur.
 [[file:medias/laurent/PA213463.JPG]]
    
 On dimensionne ainsi la résistance du circuit : il faut qu'elle soit
-supérieure à la résistance du capteur lorsque celui ci est chargé. Une
+supérieure à la résistance du capteur lorsque celui-ci est chargé. Une
 autre solution est de la remplacer par une résistance variable afin de
 pouvoir la calibrer directement.
 
-* Emboiture : conception d'une prise rapide de poignée
+* Emboîture : conception d'une prise rapide de poignée
 :PROPERTIES:
 :ID:       41d49b6a-e462-4640-b453-00591c6706e8
 :END:
@@ -1648,24 +1669,31 @@ Deux modèles de prise rapide ont été prototypés.
 
 ** Objectifs
     
-L'objectif est de prototyper Un système mécanique qui permet :
-- d'adapter plusieurs types de mains ou d'outils sur une seule
-  emboîture,
-- de pouvoir régler la rotation de la main dans différentes positions,
-- de bloquer la main ou l'outil dans une position donnée,
-- d'avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
-- d'avoir un système le plus fin possible en épaisseur pour raccourcir
-  la distance entre l'extrémité du moignon et la base de la main.
+L'objectif est de prototyper un système mécanique qui permet :
+
+  - d'adapter plusieurs types de mains ou d'outils sur une seule
+    emboîture,
+
+  - de pouvoir régler la rotation de la main dans différentes positions,
+
+  - de bloquer la main ou l'outil dans une position donnée,
+
+  - d'avoir une base qu'on puisse adapter sur n'importe quelle emboîture,
+
+  - d'avoir un système le plus fin possible en épaisseur pour raccourcir
+    la distance entre l'extrémité du moignon et la base de la main.
   
 ** Solution proposée
    
 La solution proposée est un assemblage de deux pièces :
-- au niveau de l'emboîture : adaptation d'un "cueille pomme" avec
-  trois pattes thermoformables permettant de se fixer sur n'importe
-  quel emboîture,
-- au niveau de la rotation du poignée : deux pièces crantées
-  cylindriques (côté emboîture / côté main) qui s'accouplent dans
-  différentes position.
+
+  - au niveau de l'emboîture : adaptation d'un "cueille pomme" avec
+    trois pattes thermoformables permettant de se fixer sur n'importe
+    quel emboîture,
+
+  - au niveau de la rotation du poignée : deux pièces crantées
+    cylindriques (côté emboîture / côté main) qui s'accouplent dans
+    différentes position.
   
 Pour un des prototype, le blocage de ces deux pièces est réalisé par
 un système de levier à biellette mais il peut enccore être renforcé et
@@ -1677,7 +1705,7 @@ optimisé.
 
 Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le
 système. Deux plaques ont été imprimées à cet effet pour la fixation
-d'une des main réalisée lors du /Fabrikarium/.
+d'une des mains réalisées lors du /Fabrikarium/.
   
 #+attr_html: :width 70% :align center
 #+CAPTION: Deux plaques sont imprimées pour renforcer le poignée
@@ -1695,14 +1723,17 @@ en ABS.
 ** Les prototypes
     
 Deux prototypes fonctionnels sont finalement réalisés :
+
 - le premier, qui a été fixé sur le moignon court de Sylvie, ne
   comporte pas de système de blocage
+
 #+attr_html: :width 70% :align center
 #+CAPTION: Prototype d'attache rapide sans système de blocage
 [[file:medias/laurent/PA213467.JPG]]
 
 - Le second a pu être être adapté sur le moignon long de Nicolas est
   complètement fonctionnel bien que fragile
+
 #+attr_html: :width 70% :align center
 #+CAPTION: Avec système de blocage
 [[file:medias/laurent/PA213469.JPG]]
@@ -1711,15 +1742,19 @@ Deux prototypes fonctionnels sont finalement réalisés :
 
 Voici la liste des améliorations possibles et envisagées :
 
-- les pattes du cueille pomme en abs sont difficilement
-  thermoformables (le pla n'étant pas envisageable car trop fragile)
-  on peut envisager de les réaliser à partir de plaque ou de tube d'un
-  plastique plus standard (PVC)
-- par rapport au fichier : redimensionner le levier de fixation pour
-  qu'il soit plus solide
-- améliorer le système de cran et son ajustage
-- exploration de la piste d'un mécanisme de réglage conique pour
-  augmenter la surface de contact, abandonné car trop compliqué.
+  - les pattes du cueille pomme en abs sont difficilement
+    thermoformables (le pla n'étant pas envisageable car trop fragile)
+    on peut envisager de les réaliser à partir de plaque ou de tube d'un
+    plastique plus standard (PVC)
+
+  - par rapport au fichier : redimensionner le levier de fixation pour
+    qu'il soit plus solide
+
+  - améliorer le système de cran et son ajustage
+
+  - exploration de la piste d'un mécanisme de réglage conique pour
+    augmenter la surface de contact, abandonné car trop compliqué.
+
 #+attr_html: :width 70% :align center
 #+CAPTION: couplage conique
 [[file:medias/laurent/PA213472.JPG]]
@@ -1727,10 +1762,11 @@ Voici la liste des améliorations possibles et envisagées :
    
 - mettre au point un système de réglage et de blocage qui soit déporté
   sur le côté et pas sur le dessus ou autour. La solution a été
-  dessiné mais n'a pas pu être testée. En plus des parties solidaires
+  dessinée mais n'a pas pu être testée. En plus des parties solidaires
   de la main et du moignon, une troisième partie mobile (en bleu sur
   le schéma) permettrait de dissocier la fixation du système
-  d'indexage en rotation. (PA213470.JPG)
+  d'indexage en rotation.
+
 #+attr_html: :width 70% :align center
 #+CAPTION: Une idée pour un futur prototype
 [[file:medias/laurent/PA213470.JPG]]   
@@ -1825,8 +1861,8 @@ branchements au circuit PCB :
 #+attr_html: :width 70% :align center
 [[file:medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_329.jpg]]
 
-* Retours d'expérience
-** Généralités
+* Retours d'expérience: Généralités
+
 - La documentation telle qu'elle est s'adresse à des connaisseurs, il y a
   besoin d'une documentation pas à pas pour la rendre plus accessible.
 
@@ -1834,8 +1870,8 @@ branchements au circuit PCB :
   assembler, avec la présentation de chaque pièce avant chacune des
   étapes, puis la réalisation de l'étape en question.
 
-  Il est à noter que c'est déjà existant pour le [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][montage de la main]] et 
-[[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][des doigts]] sur le projet [[http://exiii-hackberry.com][exiii HACKberry]] qui a été mis à jour récemment. Les
+  Il est à noter que c'est déjà existant pour le [[http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand][montage de la main]] et [[http://exiii-hackberry.com/dw/doku.php?id%3Dhow_to_assemble:hand][des
+  doigts]] sur le projet [[http://exiii-hackberry.com][exiii HACKberry]] qui a été mis à jour récemment. Les
   montages électriques sont par contre mieux détaillés sur le [[http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-16][tutoriel My
   Human Kit]].
 
@@ -1861,22 +1897,3 @@ branchements au circuit PCB :
   circuits, moteurs, ...), il serait judicieux de les caractériser
   exactement (référence, grandeurs physiques, caractéristiques
   spécifiques)
-
-** Technique
-# est-ce nécessaire par rapport à ce qui est déjà dans la partie 
-# [[*Assemblage%20de%20la%20main][Assemblage de la main]] ?
-
-- Envisager de prendre des vis au pas de vis plus fin pour induire moins
-  de contraintes lors du vissage, car celui-ci peut devenir destructeur en
-  regard de la solidité des composants 3D à assembler (entretoises qui
-  peuvent se désolidariser de la pièce lors du passage de la vis)
-
-
-- Les axes pour fixer les doigts de la main doivent être de longueur de 14
-  mm cm plutôt que de 16mm, autrement ils dépassent s'ils se trouvent en
-  butée
-
-- Pour le choix des moteurs, veiller à réunir toutes les caractéristiques
-  nécessaires: moteur électrique à courant continu, avec position de
-  consigne, et de dimensions adéquates pour le logement dans la main
-  motorisée

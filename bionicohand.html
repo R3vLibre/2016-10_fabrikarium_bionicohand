@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- 2016-11-07 lun. 23:24 -->
+<!-- 2016-12-07 mer. 23:51 -->
 <meta  charset="utf-8">
 <meta  name="viewport" content="width=device-width, initial-scale=1">
 <title>Fabrikarium - Projet Bionico</title>
@@ -149,74 +149,109 @@ for the JavaScript code in this tag.
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline1">1. Contexte</a></li>
-<li><a href="#orgheadline4">2. Le projet "Bionicohand"</a>
+<li><a href="#orgheadline11">1. Présentation du projet "bionicohand"</a>
 <ul>
-<li><a href="#orgheadline2">2.1. Présentation</a></li>
-<li><a href="#orgheadline3">2.2. Enjeux et programme du <i>Fabrikarium</i></a></li>
+<li><a href="#orgheadline1">1.1. Bionicohand</a></li>
+<li><a href="#orgheadline10">1.2. Enjeux et programme du <i>Fabrikarium</i></a></li>
 </ul>
 </li>
-<li><a href="#orgheadline34">3. Réalisation et montage</a>
+<li><a href="#orgheadline18">2. La prothétique bionique de la main : présentation et enjeux</a>
 <ul>
-<li><a href="#orgheadline5">3.1. Plans de la main Bionico et composants</a></li>
-<li><a href="#orgheadline8">3.2. Assemblage de la main</a>
-<ul>
-<li><a href="#orgheadline6">3.2.1. Identification des pièces</a></li>
-<li><a href="#orgheadline7">3.2.2. Montage des doigts et de la main</a></li>
+<li><a href="#orgheadline12">2.1. Généralités</a></li>
+<li><a href="#orgheadline13">2.2. Prothèse esthétique</a></li>
+<li><a href="#orgheadline14">2.3. L'emboîture</a></li>
+<li><a href="#orgheadline15">2.4. Fixation de l'emboîture</a></li>
+<li><a href="#orgheadline16">2.5. Reproduire les mouvements de la mains</a></li>
+<li><a href="#orgheadline17">2.6. Capteurs musculaires</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline13">3.3. Montage des moteurs</a>
+<li><a href="#orgheadline34">3. Montage de la main</a>
 <ul>
-<li><a href="#orgheadline10">3.3.1. Protection des moteurs</a></li>
-<li><a href="#orgheadline11">3.3.2. Test des moteurs</a></li>
-<li><a href="#orgheadline12">3.3.3. Installation des moteurs</a></li>
+<li><a href="#orgheadline19">3.1. Plans de la main Bionico, composants et documentation existante</a></li>
+<li><a href="#orgheadline2">3.2. Assemblage de la main</a>
+<ul>
+<li><a href="#orgheadline20">3.2.1. Identification des pièces</a></li>
+<li><a href="#orgheadline21">3.2.2. Montage des doigts et de la main</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline24">3.4. Réalisation des circuits électriques</a>
+<li><a href="#orgheadline3">3.3. Adaptations aux pièces européennes</a>
 <ul>
-<li><a href="#orgheadline16">3.4.1. Alimentation</a></li>
-<li><a href="#orgheadline23">3.4.2. Montage du circuit intégré</a></li>
+<li><a href="#orgheadline22">3.3.1. Les vis</a></li>
+<li><a href="#orgheadline23">3.3.2. Les entretoises</a></li>
+<li><a href="#orgheadline24">3.3.3. Les axes de rotations des doigts</a></li>
+<li><a href="#orgheadline25">3.3.4. Problème du gros servomoteur (index)</a></li>
+<li><a href="#orgheadline28">3.3.5. Gros problèmes des petits servomoteurs (pouce et auriculaire)</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline29">3.5. Tests, calibration, ajustement des commandes et capteurs</a>
+<li><a href="#orgheadline33">3.4. Montage des servomoteurs</a>
 <ul>
-<li><a href="#orgheadline25">3.5.1. Tests de commande des moteurs</a></li>
-<li><a href="#orgheadline17">3.5.2. Ajustement dans l'adressage des bornes du processeur Arduino</a></li>
-<li><a href="#orgheadline27">3.5.3. Tests du montage complet</a></li>
-<li><a href="#orgheadline28">3.5.4. Capteur de pression</a></li>
-</ul>
-</li>
-<li><a href="#orgheadline31">3.6. Support de la main</a>
-<ul>
-<li><a href="#orgheadline26">3.6.1. Confection d'un support de main (R&amp;D)</a></li>
-<li><a href="#orgheadline30">3.6.2. Installation des capteurs sur la prothèse de main</a></li>
-</ul>
-</li>
-<li><a href="#orgheadline33">3.7. Améliorations</a>
-<ul>
-<li><a href="#orgheadline32">3.7.1. Toucher conducteur pour les <i>smartphones</i></a></li>
+<li><a href="#orgheadline30">3.4.1. Protection des servomoteurs</a></li>
+<li><a href="#orgheadline31">3.4.2. Test des servomoteurs</a></li>
+<li><a href="#orgheadline32">3.4.3. Installation des servomoteurs</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgheadline35">4. Savoir-faire techniques</a>
+<li><a href="#orgheadline51">4. Réalisation et modifications de l'électronique</a>
 <ul>
-<li><a href="#orgheadline9">4.1. Brasure et soudure</a></li>
+<li><a href="#orgheadline36">4.1. Alimentation</a>
+<ul>
+<li><a href="#orgheadline4">4.1.1. Connectique de la batterie</a></li>
+<li><a href="#orgheadline35">4.1.2. Confection d'un régulateur de tension</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline38">5. Retours d'expérience</a>
+<li><a href="#orgheadline5">4.2. Circuit imprimé : ajout d'un deuxième capteur myoélectrique</a>
 <ul>
-<li><a href="#orgheadline36">5.1. Généralités</a></li>
-<li><a href="#orgheadline37">5.2. Technique</a></li>
+<li><a href="#orgheadline38">4.2.1. Branchement des éléments du circuit imprimé</a></li>
+<li><a href="#orgheadline41">4.2.2. Deux approches pour la connexion des capteurs</a></li>
+<li><a href="#orgheadline42">4.2.3. Montage des circuits</a></li>
+<li><a href="#orgheadline37">4.2.4. Ajustement dans l'adressage des bornes du microcontrôleur Arduino</a></li>
+<li><a href="#orgheadline45">4.2.5. Tests et calibration</a></li>
 </ul>
 </li>
+<li><a href="#orgheadline46">4.3. Installation des capteurs sur la prothèse de main</a></li>
+<li><a href="#orgheadline6">4.4. Filtrage du signal des capteurs myoélectriques</a>
+<ul>
+<li><a href="#orgheadline47">4.4.1. Problématique</a></li>
+<li><a href="#orgheadline48">4.4.2. Protocole</a></li>
+<li><a href="#orgheadline49">4.4.3. Méthode de filtrage</a></li>
+<li><a href="#orgheadline50">4.4.4. Réécriture du programme Arduino</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline7">4.5. Capteur de pression</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline9">5. Emboîture : conception d'une prise rapide de poignée</a>
+<ul>
+<li><a href="#orgheadline52">5.1. Objectifs</a></li>
+<li><a href="#orgheadline53">5.2. Solution proposée</a></li>
+<li><a href="#orgheadline54">5.3. Fabrication</a></li>
+<li><a href="#orgheadline55">5.4. Les prototypes</a></li>
+<li><a href="#orgheadline56">5.5. Problèmes rencontrés / améliorations possibles</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline57">6. Améliorations</a>
+<ul>
+<li><a href="#orgheadline8">6.1. Toucher conducteur pour les <i>smartphones</i></a></li>
+</ul>
+</li>
+<li><a href="#orgheadline58">7. Savoir-faire techniques</a>
+<ul>
+<li><a href="#orgheadline29">7.1. Brasure et soudure</a></li>
+</ul>
+</li>
+<li><a href="#orgheadline59">8. Retours d'expérience: Généralités</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1"><a id="ID-201ee7a5-060b-4743-927f-0e11a2faec9b"></a><span class="section-number-2">1</span> Contexte</h2>
+<div id="outline-container-orgheadline11" class="outline-2">
+<h2 id="orgheadline11"><a id="ID-201ee7a5-060b-4743-927f-0e11a2faec9b"></a><span class="section-number-2">1</span> Présentation du projet "bionicohand"</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1"><span class="section-number-3">1.1</span> Bionicohand</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
 <a href="https://bionico.org/">Bionico</a> est un projet de prothèse de main à commande électronique, dite
 "prothèse myoélectrique", conçu pour être réalisé à partir de matériaux
@@ -224,7 +259,7 @@ accessibles pour une fabrication personnelle.
 </p>
 
 <p>
-Ce projet s'inspire de projets <i>Open Source</i> autour de la réalisation de
+Ce projet s'inspire de projets <i>open source</i> autour de la réalisation de
 mains commandées électroniquement, notamment <a href="http://www.openbionics.com/">OpenBionics</a> et <a href="http://exiii.jp/handiii-eng.html">Hackberry</a>, et
 s'appuie sur ce qui se fait dans l'industrie médicale.
 </p>
@@ -246,7 +281,7 @@ Pour répondre au besoin de documentation des projets, une équipe de
 <p>
 L'objectif de cette documentation est de rendre compte des méthodes de
 réalisations des projets adressés au cours de ce <i>hackathon</i>, de sorte à
-péréniser le savoir-faire et transmettre de quoi les perpétuer.
+pérenniser le savoir-faire et transmettre de quoi les perpétuer.
 </p>
 
 <p>
@@ -259,22 +294,161 @@ contenu.
 
 <p>
 Le présent texte a été rédigé par Christophe Schockaert
-(<a href="http://createcnix.eu/">http://createcnix.eu/</a>) pour <a href="https://www.flossmanualsfr.net/">Flossmanuals Francophone</a>. Il est placé sous
-licence <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons "CC BY 4.0"</a>, de même que toutes les images et
-videos accompagnant la rédaction du manuel.
+(<a href="http://createcnix.eu/">http://createcnix.eu/</a>) et Laurent Malys (<a href="http://www.laurent-malys.fr/">http://www.laurent-malys.fr/</a>) pour
+<a href="https://www.flossmanualsfr.net/">Flossmanuals Francophone</a>. Il est placé sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons "CC
+BY 4.0"</a>, de même que toutes les images et vidéos accompagnant la rédaction
+du manuel.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgheadline4" class="outline-2">
-<h2 id="orgheadline4"><span class="section-number-2">2</span> Le projet "Bionicohand"</h2>
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10"><span class="section-number-3">1.2</span> Enjeux et programme du <i>Fabrikarium</i></h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+L'origine du <i>Fabrikarium</i> part du constat que les prothèses sont à la
+fois une nécessité pour celui qui en a besoin, qu'elles ont un coût élevé
+et une étendue de fonctions limitées par les choix de recherches et
+investissements menés par les entreprises spécialisées.
+</p>
+
+<p>
+Des recherches et expériences ont été menées en laboratoires académiques
+ou par des amateurs, notamment pour des applications en robotique. Si la
+proximité semblait évidente, ce n'est pas le cas du tout, les champs
+d'application de la robotique et de la prothèse médicale sont complètement
+différents.
+</p>
+
+<p>
+Le mode de fonctionnement de l'<i>open source</i> et l'émergence des fab lab est
+venu mettre un coup de pied dans l'accessibilité de fabrication et apporte
+des nouveautés dans les possibilités de confection de prothèses.
+</p>
+
+<p>
+Voici par exemples un projet anglais (orange) et un projet japonais
+(blanc) pour la construction d'une prothèse de main motorisée, tous deux
+issus des fab labs et de l'/open source/ :
+</p>
+
+
+<div class="figure">
+<p><img src="medias/01_Presentation_projet/20161020_086.jpg" alt="20161020_086.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;1&nbsp;:</span> Projets de prothèses de mains motorisées issues des fab labs</p>
+</div>
+
+
+<p>
+Le modèle anglais est construit dans un matériau souple et commandé par un
+moteur pour chaque doigt.
+</p>
+
+<p>
+Pour l'atelier du <i>Fabrikarium</i>, c'est le modèle japonais qui a été retenu
+comme point de départ, c'est celui du projet <a href="http://exiii-hackberry.com/">exiii HACKberry</a>.
+</p>
+
+<p>
+Une première version a été adaptée lors d'un séjour de Nicolas Huchet de
+<a href="http://myhumankit.org/">My Human Kit</a> en immersion dans le fab lab de Berlin en Allemagne, elle
+vient se fixer sur sa prothèse médicale professionnelle.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/01_Presentation_projet/20161021_018.jpg" alt="20161021_018.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;2&nbsp;:</span> Première version de la Bionicohand fabriquée à Berlin sur le modèle du projet exiii HACKberry</p>
+</div>
+
+
+<p>
+L'objectif du <i>Fabrikarium</i> est d'améliorer cette première version et
+d'aboutir à un prototype de prothèse complète, entièrement réalisable
+soi-même.
+</p>
+
+<p>
+À ce titre, les enjeux de cet atelier sont :
+</p>
+
+<ul class="org-ul">
+<li>Assurer un montage aisé de la main motorisée :
+
+<ul class="org-ul">
+<li>vérifier la faisabilité de montage de la main en suivant le
+tutoriel (section <a href="#orgheadline2">Assemblage de la main</a>)</li>
+
+<li>valider la sélection des pièces référencées dans les catalogues
+européens (section <a href="#orgheadline3">Adaptations aux pièces européennes</a>)</li>
+</ul></li>
+
+<li>Utiliser une batterie et un chargeur du commerce plutôt qu'une
+batterie et un chargeur spécifiques au constructeur (section
+<a href="#orgheadline4">Connectique de la batterie</a>)</li>
+
+<li>Valider le nouveau circuit imprimé et le fonctionnement de ses
+branchements avec le microcontrôleur Arduino :
+
+<ul class="org-ul">
+<li>présence de deux capteurs myoélectriques désormais (section
+<a href="#orgheadline5">Circuit imprimé : ajout d'un deuxième capteur myoélectrique</a>)</li>
+
+<li>améliorer la commande des servomoteurs :
+
+<ul class="org-ul">
+<li>améliorer le filtrage du signal des capteurs myoélectriques
+(section <a href="#orgheadline6">Filtrage du signal des capteurs myoélectriques</a>)</li>
+
+<li>ouvrir et fermer par paliers, en restant en position à chaque
+étape, plutôt qu'avoir une commande d'ouverture et une de
+fermeture</li>
+</ul></li>
+
+<li>fournir un retour de sensibilité simple sur la main :
+
+<ul class="org-ul">
+<li>éclairage d'une LED bleue si contact avec un objet froid, rouge
+s'il est chaud</li>
+
+<li>capteur de pression au bout du pouce avec un retour sensible
+au niveau de l'avant-bras (section <a href="#orgheadline7">Capteur de pression</a>)</li>
+</ul></li>
+</ul></li>
+
+<li>Tester l'utilisation d'un <i>smartphone</i> grâce à un filtre capacitif sur
+l'index de la main (section <a href="#orgheadline8">Toucher conducteur pour les <i>smartphones</i></a>)</li>
+
+<li>Prévoir une prothèse et son emboîture, réalisable soi-même avec un
+procédé simple et des matériaux accessibles :
+
+<ul class="org-ul">
+<li>veiller à l'autonomie de la personne pour le chaussage</li>
+
+<li>permettre le changement d'équipements sur la main (section
+<a href="#orgheadline9">Emboiture : conception d'une prise rapide de poignée</a>)</li>
+</ul></li>
+
+<li>Récolter les retours de patients qui testeront le projet</li>
+
+<li>Rendre compte sous forme de documentation des étapes de réalisation et
+des expériences menées</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline18" class="outline-2">
+<h2 id="orgheadline18"><span class="section-number-2">2</span> La prothétique bionique de la main : présentation et enjeux</h2>
 <div class="outline-text-2" id="text-2">
-</div><div id="outline-container-orgheadline2" class="outline-3">
-<h3 id="orgheadline2"><span class="section-number-3">2.1</span> Présentation</h3>
+</div><div id="outline-container-orgheadline12" class="outline-3">
+<h3 id="orgheadline12"><span class="section-number-3">2.1</span> Généralités</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Les prothèses médicales sont des équipements élaborés, réalisés par des
-entreprises spécialisées, mettant souvent en oeuvre des technologies de
+entreprises spécialisées, mettant souvent en œuvre des technologies de
 pointe. Leur coût est dès lors très élevé. S'il est pris en charge par la
 sécurité sociale dans nos pays, il ne l'est pas partout.
 </p>
@@ -299,7 +473,7 @@ pour une prothèse de main. C'est là qu'intervient la "<a href="http://bionico.
 Un tel projet fait intervenir des domaines de compétences très variées,
 médicales, ergonomiques, techniques et artistiques. L'écoute des besoins
 du patient et de ses désirs sont également au coeur du sujet. C'est donc
-une approche multi-disciplinaire.
+une approche multidisciplinaire.
 </p>
 
 <p>
@@ -313,7 +487,7 @@ Elle a également la particularité d'être difficile à reproduire.
 
 <p>
 En conséquence, quelques soient les prouesses d'ingénierie et les
-connaissances médicales mises-en-oeuvre, il faut garder beaucoup
+connaissances médicales mises en œuvre, il faut garder beaucoup
 d'humilité pour aborder un tel projet: il ne sera jamais possible de
 reconstruire une main telle qu'elle a été façonnée par la nature.
 </p>
@@ -331,46 +505,51 @@ aisément possible.
 
 <p>
 Pour une prothèse de main, il y a des myriades de possibilités, il va donc
-falloir caratériser son usage.
+falloir caractériser son usage.
 </p>
+</div>
+</div>
 
+<div id="outline-container-orgheadline13" class="outline-3">
+<h3 id="orgheadline13"><span class="section-number-3">2.2</span> Prothèse esthétique</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
-La première facette, c'est celle de la prothèse esthétique:
+La première facette, c'est celle de la prothèse esthétique :
 </p>
 
 
 <div class="figure">
-<p><a href="images/20161019_001.jpg" width="70%" align="center"><img src="medias/01_Presentation_projet/20161019_001.jpg" alt="20161019_001.jpg" width="70%" align="center"></a>
+<p><img src="medias/01_Presentation_projet/20161019_001.jpg" alt="20161019_001.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;1&nbsp;:</span> Présentation d'une prothèse de main esthétique</p>
+<p><span class="figure-number">Figure&nbsp;3&nbsp;:</span> Présentation d'une prothèse de main esthétique</p>
 </div>
 
 
 <div class="figure">
-<p><a href="images/20161019_002.jpg" width="70%" align="center"><img src="medias/01_Presentation_projet/20161019_002.jpg" alt="20161019_002.jpg" width="70%" align="center"></a>
+<p><img src="medias/01_Presentation_projet/20161019_002.jpg" alt="20161019_002.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;2&nbsp;:</span> Présentation d'une prothèse de main esthétique</p>
+<p><span class="figure-number">Figure&nbsp;4&nbsp;:</span> Présentation d'une prothèse de main esthétique</p>
 </div>
 
 
 <div class="figure">
-<p><a href="images/20161019_004.jpg" width="70%" align="center"><img src="medias/01_Presentation_projet/20161019_004.jpg" alt="20161019_004.jpg" width="70%" align="center"></a>
+<p><img src="medias/01_Presentation_projet/20161019_004.jpg" alt="20161019_004.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;3&nbsp;:</span> Prothèse de main esthétique, vue intérieure de sa composition</p>
+<p><span class="figure-number">Figure&nbsp;5&nbsp;:</span> Prothèse de main esthétique, vue intérieure de sa composition</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_005.jpg" alt="20161019_005.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;4&nbsp;:</span> Prothèse de main esthétique</p>
+<p><span class="figure-number">Figure&nbsp;6&nbsp;:</span> Prothèse de main esthétique</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_006.jpg" alt="20161019_006.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;5&nbsp;:</span> Prothèse de main esthétique, vue de l'emboîture</p>
+<p><span class="figure-number">Figure&nbsp;7&nbsp;:</span> Prothèse de main esthétique, vue de l'emboîture</p>
 </div>
 
 
@@ -390,24 +569,28 @@ prothèse aura des limitations aussi. Le patient va donc devoir accepter
 les limites dans la réalisation d'une prothèse.
 </p>
 
-
 <p>
-Vient alors la question technique: comment concevoir une prothèse ?
+Vient alors la question technique : comment concevoir une prothèse ?
 </p>
+</div>
+</div>
 
+<div id="outline-container-orgheadline14" class="outline-3">
+<h3 id="orgheadline14"><span class="section-number-3">2.3</span> L'emboîture</h3>
+<div class="outline-text-3" id="text-2-3">
 <p>
 L'élément essentiel de la prothèse est l'emboîture. C'est sa structure, sa
 fondation, il est important qu'elle soit confortable et adaptée à la
 morphologie de la personne.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/01_Presentation_projet/20161019_021.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 
 <p>
@@ -416,7 +599,12 @@ sera obtenu (il sera à l'envers pour l'obtention de la prothèse), duquel
 sera créé un positif. Ce moulage doit être fin pour s'adapter parfaitement
 au corps de la personne.
 </p>
+</div>
+</div>
 
+<div id="outline-container-orgheadline15" class="outline-3">
+<h3 id="orgheadline15"><span class="section-number-3">2.4</span> Fixation de l'emboîture</h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 Il faut également travailler le système de fixation. En observant le
 coude, en le palpant, nous pouvons observer trois pointes osseuses. 
@@ -480,21 +668,21 @@ entre la main et le poignet pour apporter une certaine flexibilité.
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_090.jpg" alt="20161019_090.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;6&nbsp;:</span> Prothèse de main esthétique, vue du dessus, avec aperçu de la fabrication</p>
+<p><span class="figure-number">Figure&nbsp;8&nbsp;:</span> Prothèse de main esthétique, vue du dessus, avec aperçu de la fabrication</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_088.jpg" alt="20161019_088.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;7&nbsp;:</span> Prothèse de main esthétique, fabrication intérieure</p>
+<p><span class="figure-number">Figure&nbsp;9&nbsp;:</span> Prothèse de main esthétique, fabrication intérieure</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_089.jpg" alt="20161019_089.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;8&nbsp;:</span> Prothèse de main esthétique, vue de l'emboîture</p>
+<p><span class="figure-number">Figure&nbsp;10&nbsp;:</span> Prothèse de main esthétique, vue de l'emboîture</p>
 </div>
 
 
@@ -510,7 +698,7 @@ La conception de la prothèse dépend également de l'endroit où elle sera
 fixée. Aujourd'hui, les chirurgiens s'adressent de plus en plus souvent
 aux prothésistes afin de déterminer le meilleur endroit pour
 l'amputation. Ainsi, le choix dépendra à la fois des critères médicaux et
-des critères mécaniques pour le prothésite, sachant que pour lui, la
+des critères mécaniques pour le prothésiste, sachant que pour lui, la
 situation la plus facile à gérer, est celle où l'amputation a lieu entre
 le tiers-moyen et le tiers-long.
 </p>
@@ -526,28 +714,28 @@ prothèse de travail, dont l'outil est interchangeable.
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_008.jpg" alt="20161019_008.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;9&nbsp;:</span> Prothèse de main utilitaire, d'apparence simple, elle remplit bien un usage fonctionnel jusqu'à une certaine force</p>
+<p><span class="figure-number">Figure&nbsp;11&nbsp;:</span> Prothèse de main utilitaire, d'apparence simple, elle remplit bien un usage fonctionnel jusqu'à une certaine force</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_027.jpg" alt="20161019_027.jpg" width="30%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;10&nbsp;:</span> Prothèse de main utilitaire, mécanique à trois doigts</p>
+<p><span class="figure-number">Figure&nbsp;12&nbsp;:</span> Prothèse de main utilitaire, mécanique à trois doigts</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_033.jpg" alt="20161019_033.jpg" width="30%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;11&nbsp;:</span> Prothèse de main motorisée, à droite</p>
+<p><span class="figure-number">Figure&nbsp;13&nbsp;:</span> Prothèse de main motorisée, à droite</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_030.jpg" alt="20161019_030.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;12&nbsp;:</span> Réplique 3D d'une prothèse de main Michel-Angelo utilitaire</p>
+<p><span class="figure-number">Figure&nbsp;14&nbsp;:</span> Réplique 3D d'une prothèse de main Michel-Angelo utilitaire</p>
 </div>
 
 <p>
@@ -558,7 +746,7 @@ main à commande myoélectrique est apparu en 1967.
 <p>
 La main Michel-Angelo est une des plus coûteuse aujourd'hui. Les photos en
 présentent une réplique 3D. Dans le modèle réel, elle est équipée de 3
-moteurs: un moteur au sein de la mein, un pour la rotation et un pour la
+moteurs: un moteur au sein de la main, un pour la rotation et un pour la
 préhension.
 </p>
 
@@ -566,13 +754,18 @@ préhension.
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_031.jpg" alt="20161019_031.jpg" width="30%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;13&nbsp;:</span> Réplique 3D d'une prothèse de main Michel-Angelo, normalement équipée de 3 moteurs</p>
+<p><span class="figure-number">Figure&nbsp;15&nbsp;:</span> Réplique 3D d'une prothèse de main Michel-Angelo, normalement équipée de 3 moteurs</p>
+</div>
+</div>
 </div>
 
+<div id="outline-container-orgheadline16" class="outline-3">
+<h3 id="orgheadline16"><span class="section-number-3">2.5</span> Reproduire les mouvements de la mains</h3>
+<div class="outline-text-3" id="text-2-5">
 <p>
 Dans la prise en compte du réalisme du mouvement de la main, il y a un
 réel défi sur la rotation. En effet, les mouvements sont limités du fait
-de la consitution des os et des muscles du bras et de la main. Le
+de la constitution des os et des muscles du bras et de la main. Le
 mouvement de rotation de la main met en jeu un mouvement qui démarre dès
 le début de l'avant-bras. 
 </p>
@@ -588,13 +781,13 @@ C'est ce que vous pouvez voir sur la video et la série d'images qui suivent.
 </p>
 
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/01_Presentation_projet/20161019_020.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 
 <div class="figure">
@@ -640,7 +833,7 @@ Your browser does not support the video tag.
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_019.jpg" alt="20161019_019.jpg" width="30%" align="left" style="display:inline">
 </p>
-<p><span class="figure-number">Figure&nbsp;22&nbsp;:</span> Démonstration des mouvements des os du bras en photos</p>
+<p><span class="figure-number">Figure&nbsp;24&nbsp;:</span> Démonstration des mouvements des os du bras en photos</p>
 </div>
 
 <br style="clear:both;" />
@@ -650,15 +843,19 @@ Les caractéristiques du mouvement induisent donc des contraintes
 spécifiques à la tenue de la prothèse au bras:
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/01_alimentation/20161019_021.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
+</div>
+</div>
 
-
+<div id="outline-container-orgheadline17" class="outline-3">
+<h3 id="orgheadline17"><span class="section-number-3">2.6</span> Capteurs musculaires</h3>
+<div class="outline-text-3" id="text-2-6">
 <p>
 La commande d'une main motorisée se réalise à l'aide de capteurs
 musculaires. Dans le corps, les signaux électriques musculaires ont pour
@@ -680,7 +877,7 @@ musculaire, le contrôle du mouvement est donc subtil.
 <div class="figure">
 <p><img src="medias/01_Presentation_projet/20161019_019.jpg" alt="20161019_019.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;23&nbsp;:</span> Commande d'un doigt motorisé au moyen d'un capteur musculaire</p>
+<p><span class="figure-number">Figure&nbsp;25&nbsp;:</span> Commande d'un doigt motorisé au moyen d'un capteur musculaire</p>
 </div>
 
 
@@ -699,8 +896,8 @@ d'onde du signal.
 </p>
 
 <p>
-Sur la main myoléctrique, la pression de 10kg/cm2. Il y a également des
-différences homme/femme à prendre en compte dans l'élaboration de la
+Sur la main myoélectrique, la pression est de 10kg/cm2. Il y a également
+des différences homme/femme à prendre en compte dans l'élaboration de la
 prothèse.
 </p>
 
@@ -726,144 +923,18 @@ apprentissage.
 </p>
 
 <p>
-Dans la répartition, il y a un choix: 50% des gens portent des
-prothèses, et 50% n'en portent pas.
+Dans la répartition, il y a un choix s'opère chez les patients : 50% des
+gens portent des prothèses, et 50% n'en portent pas.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="orgheadline3"><span class="section-number-3">2.2</span> Enjeux et programme du <i>Fabrikarium</i></h3>
-<div class="outline-text-3" id="text-2-2">
-<p>
-L'origine du <i>Fabrikarium</i> part du constat que les prothèses sont à la
-fois une nécessité pour celui qui en a besoin, qu'elles ont un coût élevé
-et une étendue de fonctions limitées par les choix de recherches et
-investissements menés par les entreprises spécialisées.
-</p>
-
-<p>
-Des recherches et expériences ont été menées en laboratoires académiques
-ou par des amateurs, notamment pour des applications en robotique. Si la
-proximité semblait évidente, ce n'est pas le cas du tout, les champs
-d'application de la robotique et de la prothèse médicale sont complètement
-différents.
-</p>
-
-<p>
-Le mode de fonctionnement de l'OpenSource et l'émergence des fab lab est
-venu mettre un coup-de-pied dans l'accessibilité de fabrication et apporte
-des nouveautés dans les possibilités de confection de prothèses.
-</p>
-
-<p>
-Voici par exemples un projet anglais (orange) et un projet japonais
-(blanc) pour la construction d'une prothèse de main motorisée, tous deux
-issus des fab labs et de l'OpenSource:
-</p>
-
-
-<div class="figure">
-<p><img src="medias/01_Presentation_projet/20161020_086.jpg" alt="20161020_086.jpg" width="70%" align="center">
-</p>
-<p><span class="figure-number">Figure&nbsp;24&nbsp;:</span> Projets de prothèses de mains motorisées issues des fab labs</p>
 </div>
 
-
-<p>
-Le modèle anglais est construit dans un matériau souple et commandé par un
-moteur pour chaque doigt.
-</p>
-
-<p>
-Pour l'atelier du <i>Fabrikarium</i>, c'est le modèle japonais qui a été retenu
-comme point de départ, c'est celui du projet <a href="http://exiii-hackberry.com/">exiii HACKberry</a>.
-</p>
-
-<p>
-Une première version a été adaptée lors d'un séjour de Nicolas Huchet de
-<a href="http://myhumankit.org/">My Human Kit</a> en immersion dans le fab lab de Berlin en Allemagne, elle
-vient se fixer sur sa prothèse médicale professionnelle.
-</p>
-
-
-<div class="figure">
-<p><img src="medias/01_Presentation_projet/20161021_018.jpg" alt="20161021_018.jpg" width="70%" align="center">
-</p>
-<p><span class="figure-number">Figure&nbsp;25&nbsp;:</span> Première version de la Bionicohand fabriquée à Berlin sur le modèle du projet exiii HACKberry</p>
-</div>
-
-
-<p>
-L'objectif du <i>Fabrikarium</i> est d'améliorer cette première version et
-d'aboutir à un prototype de prothèse complète, entièrement réalisable
-soi-même.
-</p>
-
-<p>
-A ce titre, les enjeux de cet atelier sont:
-</p>
-
-<ul class="org-ul">
-<li>Prévoir une prothèse et son emboîture, réalisable soi-même avec un
-procédé simple et des matériaux accessibles:
-
-<ul class="org-ul">
-<li>veiller à l'autonomie de la personne pour le chaussage</li>
-
-<li>permettre le changement d'équipements sur la main</li>
-</ul></li>
-
-<li>Assurer un montage aisé de la main motorisée:
-
-<ul class="org-ul">
-<li>Vérifier la faisabilité de montage de la main en suivant le tutoriel</li>
-
-<li>Valider la sélection des pièces référencées dans les catalogues
-européens</li>
-</ul></li>
-
-<li>Utiliser une batterie et un chargeur du commerce plutôt qu'une
-batterie et un chargeur spécifiques au constructeur</li>
-
-<li>Valider le nouveau circuit imprimé et le fonctionnement de ses
-branchements avec le processeur Arduino:
-
-<ul class="org-ul">
-<li>présence de deux capteurs désormais</li>
-
-<li>améliorer la commande des moteurs:
-
-<ul class="org-ul">
-<li>ouvrir et fermer par palliers, en restant en position à chaque
-étape, plutôt qu'avoir une commande d'ouverture et une de
-fermeture</li>
-</ul></li>
-
-<li>fournir un retour de sensibilité simple sur la main :
-
-<ul class="org-ul">
-<li>éclairage d'une led bleue si contact avec un objet froid, rouge
-s'il est chaud</li>
-</ul></li>
-</ul></li>
-
-<li>Tester l'utilisation d'un <i>smartphone</i> grâce à un filtre capacitif sur
-l'index de la main</li>
-
-<li>Récolter les retours de patients qui testeront le projet</li>
-
-<li>Rendre compte sous forme de documentation des étapes de réalisation et
-des expériences menées</li>
-</ul>
-</div>
-</div>
-</div>
 <div id="outline-container-orgheadline34" class="outline-2">
-<h2 id="orgheadline34"><span class="section-number-2">3</span> Réalisation et montage</h2>
+<h2 id="orgheadline34"><span class="section-number-2">3</span> Montage de la main</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-orgheadline5" class="outline-3">
-<h3 id="orgheadline5"><span class="section-number-3">3.1</span> Plans de la main Bionico et composants</h3>
+</div><div id="outline-container-orgheadline19" class="outline-3">
+<h3 id="orgheadline19"><span class="section-number-3">3.1</span> Plans de la main Bionico, composants et documentation existante</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Le projet est présenté et documenté sur <a href="http://myhumankit.org/">http://myhumankit.org/</a> et
@@ -904,62 +975,126 @@ Plusieurs manuels d'assemblage sont à disposition:
 </p>
 
 <ul class="org-ul">
-<li>le tutoriel de <a href="https://www.myhumankit.org/">My Human Kit</a>:
+<li>le tutoriel de <a href="https://www.myhumankit.org/">My Human Kit</a> réalisé par Nicolas Huchet lors d'une
+résidence à Berlin (en français et en anglais) :
 <a href="http://myhumankit.org/tutoriels/main-hackberry-exiii/">http://myhumankit.org/tutoriels/main-hackberry-exiii/</a></li>
 
-<li>les manuels originaux du projet "<a href="http://exiii-hackberry.com/">exiii HACKberry</a>":
+<li><a href="http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble">la documentation en anglais et japonais d'exiii</a>, l'équipe japonaise
+qui développe le projet HACKberry original. Sur la partie mécanique
+elle est principalement constituée de vues 3d pour chaque étape du
+montage, avec des références précises de chaque pièce à utilisée. La
+documentation qui nous intéresse lors du <i>Fabrikarium</i> est séparée en
+3 pages :
 
 <ul class="org-ul">
-<li><a href="http://exiii-hackberry.com/dw/doku.php?id=start">http://exiii-hackberry.com/dw/doku.php?id=start</a> pour l'ensemble du
-projet</li>
+<li><a href="http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:circuit">réalisation du circuit et téléversement du code</a>,</li>
 
-<li><a href="http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble">http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble</a> pour les
-instructions d'assemblage</li>
+<li><a href="http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:fingers">assemblage des doigts</a>,</li>
+
+<li><a href="http://exiii-hackberry.com/dw/doku.php?id=how_to_assemble:hand">assemblage de la main</a>.</li>
 </ul></li>
 </ul>
 
 
 <p>
-La documentation ici présente fournira un mode d'emploi qui viendra
-compléter les informations qui pourraient manquer dans ces guides, ou qui
-viendra documenter des nouveautés ou des nouvelles fonctionnalités mises
-en place.
+Sur le dépôt GitHub du projet, on trouveras également :
 </p>
+
+<ul class="org-ul">
+<li>la liste des pièces (BOM = <i>bills of material</i>)</li>
+
+<li>les sources du programme arduino</li>
+
+<li>les schémas des circuits imprimés</li>
+
+<li>les fichiers des pièces à imprimer (.stl)</li>
+
+<li>les fichiers d'assemblage aux formats "step" et "igs".</li>
+</ul>
+
+
+<p>
+Ces derniers fichiers sont particulièrement intéressants pour le montage
+car ils permettent de visualiser l'assemblage complet de toutes les
+pièces, qu'il s'agisse de pièces imprimées, de pièces mécaniques
+conventionnelles (vis, entretoise, &#x2026;) ou d'électronique. Le format
+"Step" est un standard ouvert qui peut être lu par le logiciel de CAO
+libre <a href="http://www.freecadweb.org/">FreeCAD</a>.
+</p>
+
+<p>
+La documentation ici présente fournira un mode d'emploi qui viendra
+compléter les informations qui pourraient manquer dans ces guides. 
+</p>
+
+<p>
+Elle s'attardera également sur les différences et difficultés
+particulières rencontrées lors du montage des deux mains au
+<i>Fabrikarium</i>. Ces différences ont deux causes principales :
+</p>
+
+<ul class="org-ul">
+<li>elles peuvent être dûes à des composants non disponibles en Europe, et
+pour lesquels l'adaptation avec des produits disponibles plus
+localement est un objectif du workshop,</li>
+
+<li>elles peuvent être dues à des erreurs de commandes, auquel cas les
+solutions trouvées lors du workshop seront tout de même détaillées.</li>
+</ul>
+
+
+<p>
+Les nouveautés ou nouvelles fonctionnalités mises en place lors du
+<i>Fabrikarium</i> seront l'objet des chapitres suivants.
+</p>
+
+<p>
+Deux mains (rouge et jaune) sont montées en parallèle par chacune des
+équipes avec quelques différences dans les solutions trouvées.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193408.JPG" alt="PA193408.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;26&nbsp;:</span> Les deux mains montées lors du Fabrikarium (sans les servomoteurs ni l'électronique)</p>
+</div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline8" class="outline-3">
-<h3 id="orgheadline8"><span class="section-number-3">3.2</span> Assemblage de la main</h3>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2"><a id="ID-8dfdeeca-f61d-4b87-bb17-fd181eb28fda"></a><span class="section-number-3">3.2</span> Assemblage de la main</h3>
 <div class="outline-text-3" id="text-3-2">
-</div><div id="outline-container-orgheadline6" class="outline-4">
-<h4 id="orgheadline6"><span class="section-number-4">3.2.1</span> Identification des pièces</h4>
+</div>
+<div id="outline-container-orgheadline20" class="outline-4">
+<h4 id="orgheadline20"><span class="section-number-4">3.2.1</span> Identification des pièces</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 Une première étape pour organiser le travail d'assemblage est d'identifier
-et rasssembler les pièces dont nous aurons besoin pour la réalisation.
+et rassembler les pièces dont nous aurons besoin pour la réalisation.
 </p>
 
 <p>
-Par méthode, les pièces seront régroupées pour chaque doigt:
+Par méthode, les pièces seront regroupées pour chaque doigt :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/02_montage_mecanique/01_plan_disposition_pieces/20161019_046.jpg" alt="20161019_046.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;26&nbsp;:</span> Regroupement des pièces pour la construction de la main</p>
+<p><span class="figure-number">Figure&nbsp;27&nbsp;:</span> Regroupement des pièces pour la construction de la main</p>
 </div>
 
 <p>
 Attention à séparer le doigt de l'index, qui a une rainure
-supplémentaire au milieu:
+supplémentaire au milieu :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/02_montage_mecanique/01_plan_disposition_pieces/20161019_109.jpg" alt="20161019_109.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;27&nbsp;:</span> Repérage de l'index au moyen de la rainure</p>
+<p><span class="figure-number">Figure&nbsp;28&nbsp;:</span> Repérage de l'index au moyen de la rainure</p>
 </div>
 
 <p>
@@ -968,8 +1103,8 @@ sous <a href="medias/02_montage_mecanique/01_plan_disposition_pieces">medias/02_
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline7" class="outline-4">
-<h4 id="orgheadline7"><span class="section-number-4">3.2.2</span> Montage des doigts et de la main</h4>
+<div id="outline-container-orgheadline21" class="outline-4">
+<h4 id="orgheadline21"><span class="section-number-4">3.2.2</span> Montage des doigts et de la main</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 Le montage des doigts et de la main est décrit dans le tutoriel
@@ -989,7 +1124,7 @@ Le montage des doigts et de la main est décrit dans le tutoriel
 
 <p>
 Au cours du <i>Fabrikarium</i>, une série de photos sur le montage ont été
-prises: "<a href="medias/02_montage_mecanique/02_montage_main">medias/02_montage_mecanique/02_montage_main</a>".
+prises : "<a href="medias/02_montage_mecanique/02_montage_main">medias/02_montage_mecanique/02_montage_main</a>".
 </p>
 
 <p>
@@ -1000,14 +1135,14 @@ retrouve différente et a pour effet de faciliter le repérage des pièces.
 
 <p>
 Au travers de ces photos, les particularité suivantes sont
-mises-en-évidence:
+mises en évidence :
 </p>
 
 <ul class="org-ul">
-<li>forer les pièces pour les agrandir: certains trous doivent être
+<li>Forer les pièces pour les agrandir : certains trous doivent être
 agrandis pour être à dimension des axes</li>
 
-<li>Assemblage des axes dans les entretoîses, visser avec précaution: les
+<li>Assemblage des axes dans les entretoises, visser avec précaution: les
 pièces sont en plastique, il ne faut pas serrer trop fort pur ne pas
 déformer les pièces et l'entretoise (le passage des vis et axes), mais
 suffisamment pour que l'assemblage tienne</li>
@@ -1016,7 +1151,7 @@ suffisamment pour que l'assemblage tienne</li>
 
 <li>Montage des 4 doigts pour la paume</li>
 
-<li>Montage du pouce: celui-ci est légèrement différent par rapport au
+<li>Montage du pouce : celui-ci est légèrement différent par rapport au
 tutoriel, il y a deux pièces circulaires à "sertir" entre elles, là où
 le tutoriel désignait 2 pièces également, mais conçues autrement (l'une
 avec un double anneau, l'autre avec un anneau simple)</li>
@@ -1026,19 +1161,329 @@ avec un double anneau, l'autre avec un anneau simple)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline13" class="outline-3">
-<h3 id="orgheadline13"><span class="section-number-3">3.3</span> Montage des moteurs</h3>
+
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3"><a id="ID-270d0ed0-a92d-4e38-a12f-da9025505914"></a><span class="section-number-3">3.3</span> Adaptations aux pièces européennes</h3>
 <div class="outline-text-3" id="text-3-3">
-</div><div id="outline-container-orgheadline10" class="outline-4">
-<h4 id="orgheadline10"><span class="section-number-4">3.3.1</span> Protection des moteurs</h4>
+</div>
+<div id="outline-container-orgheadline22" class="outline-4">
+<h4 id="orgheadline22"><span class="section-number-4">3.3.1</span> Les vis</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
-C'est l'opération décrite à l'étape 8 du tutoriel:
+Le premier problème rencontré par les deux équipes est la casse
+d'entretoises en plastiques et de pas de vis. Il s'agit sans doute d'un
+problème de commande : les vis utilisées ont un diamètre de 2.2mm au lieu
+de 2mm. De plus, il est précisé dans la documentation en anglais qu'il
+s'agit de vis autoforeuse ("tapping screw") ce qui n'était pas le cas des
+vis utilisées lors de ce montage.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193393.JPG" alt="PA193393.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;29&nbsp;:</span> Agrandissement du trou d'une des entretoise en plastique cassée</p>
+</div>
+
+<p>
+Compte tenu de la précision de l'impression 3d, il est de toute façon
+nécessaire d'agrandir les perçages de vis. Cet agrandissement se fera donc
+avec un forêt de 2,2mm, voire 2,4mm, au lieu du foret de 2mm préconisé
+dans les tutoriels.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline23" class="outline-4">
+<h4 id="orgheadline23"><span class="section-number-4">3.3.2</span> Les entretoises</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+Les 6 entretoises métalliques ("Metal Collar" dans la BOM) utilisées pour
+les glissement des axes au niveaux des phalanges et des bielles n'ont pas
+le même diamètres que celles du projet original.
+</p>
+
+<p>
+Cela concerne les pièces :
+</p>
+
+<ul class="org-ul">
+<li>HbFingerMainCouplerLink</li>
+
+<li>HbMiddle-RingCouplerLink</li>
+
+<li>HbRing-LittleCouplerLink</li>
+</ul>
+
+
+<p>
+Il faut donc agrandir les trous qui doivent les recevoir. 
+</p>
+
+<ul class="org-ul">
+<li>On commence par percer à 3,8mm à la perceuse à colonne</li>
+</ul>
+
+<div class="figure">
+<p><img src="medias/laurent/PA193399.JPG" alt="PA193399.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;30&nbsp;:</span> Perçage à 3.8mm toujours un peu trop petit malgré le chauffage de la pièce</p>
+</div>
+
+<ul class="org-ul">
+<li>Le trou est ensuite agrandi puis chanfreiné du côté où on introduit
+l'entretoise</li>
+</ul>
+
+<div class="figure">
+<p><img src="medias/laurent/PA193402.JPG" alt="PA193402.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;31&nbsp;:</span> Agrandissement à 4mm</p>
+</div>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193404.JPG" alt="PA193404.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;32&nbsp;:</span> Les outils pour percer, puis chanfreiner</p>
+</div>
+
+<ul class="org-ul">
+<li>L'entretoise est ensuite insérée "à la presse", avec l'aide de
+l'étau de la perceuse à colonne.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193401.JPG" alt="PA193401.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;33&nbsp;:</span> Insertion à la presse</p>
+</div>
+
+<p>
+À terme, il faudrait donc agrandir les trous dans les modèles géométriques
+pour que les pièces imprimées soient directement adaptées à ces
+entretoires.
+</p>
+
+<p>
+En raison du diamètre des vis (2,2mm au lieu de 2mm), il est également
+nécessaire d'agrandir, à la perceuse à colonne, le diamètre intérieur des
+bagues à 2,2mm.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline24" class="outline-4">
+<h4 id="orgheadline24"><span class="section-number-4">3.3.3</span> Les axes de rotations des doigts</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<p>
+Les axes qui permettent l'articulation entre la paume et les doigts font
+16mm au lieu de 15mm comme précisés dans la BOM. Il s'agit de la référence
+Shaft "d2L15" dans la BOM et "HbFingerPosture01" dans les fichiers 3d.
+</p>
+
+<p>
+Il est donc nécessaire de les limer. À voir si des axes de 15mm sont
+disponibles dans le commerce, ou si des axes de 14mm qui seraient
+disponibles pourraient suffire pour les remplacer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline25" class="outline-4">
+<h4 id="orgheadline25"><span class="section-number-4">3.3.4</span> Problème du gros servomoteur (index)</h4>
+<div class="outline-text-4" id="text-3-3-4">
+<p>
+Les dimensions ont l'air correctes mais il y a juste une petite
+excroissance qu'il suffit de limer
+</p>
+
+<p width="70%" align="center">
+#+CAPTION Limage de l'excroissance à la dremel (1)
+<img src="medias/laurent/PA193410.JPG" alt="PA193410.JPG" width="70%" align="center">
+</p>
+
+<p width="70%" align="center">
+#+CAPTION Limage de l'excroissance à la dremel (1)
+<img src="medias/laurent/PA193412.JPG" alt="PA193412.JPG" width="70%" align="center">
+</p>
+
+<p>
+Un autre problème est plus critique : les servomoteurs commandés
+(modèle SM-S4303R) sont continus, et tournent à 360° sans butée
+mécanique. Il n'est donc pas possible de connaître leur position
+absolue et ils sont inutilisables pour la main bionique. Ils sont
+remplacés par un modèle Hitec FS-5106B.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline28" class="outline-4">
+<h4 id="orgheadline28"><span class="section-number-4">3.3.5</span> Gros problèmes des petits servomoteurs (pouce et auriculaire)</h4>
+<div class="outline-text-4" id="text-3-3-5">
+<p>
+Les petits servomoteurs disponibles pour le <i>Fabrikarium</i> (modèle
+TGY-90S) ne sont pas aux bonnes côtes : 3 mm de plus dans l'épaisseur
+(dans l'axe de l'arbre du servo).  Il a donc fallu adapter leur
+fixation à la paume et leur liaison au niveau de l'arbre de sortie.
+</p>
+
+<p>
+Finalement, nous avons pu récupérer un autre servomoteur (modèle
+SM-S2309S), dont les dimensions sont plus proches de celles attendues et
+qui s'adapte correctement pour l'auriculaire. Il a donc été utilisé sur
+une des deux mains.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193424.JPG" alt="PA193424.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;34&nbsp;:</span> Deux modèles de servomoteurs : le TGY-90S (à droite) s'adapte difficilement, le modèle SM-S2309S un peu mieux.</p>
+</div>
+
+<p>
+(aparté lexicale : on appelle "bras" ou "croix" la petite bielle fixée
+directement sur la sortie du servomoteur)
+</p>
+</div>
+
+<ol class="org-ol"><li><a id="orgheadline26"></a>Du côté du pouce<br ><div class="outline-text-5" id="text-3-3-5-1">
+<p>
+Il y a de la place pour décaler la fixation de la sortie du servo du
+côté du pouce. Pour éviter de changer l'axe de rotation du pouce, nous
+avons un petit peu usiné à la Dremel la partie de la paume à laquelle
+est fixée de bras du servomoteur.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193418.JPG" alt="PA193418.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;35&nbsp;:</span> Usinage de la paume pour ajuster l'axe de rotation du pouce</p>
+</div>
+
+<p>
+Il a également fallu arrondir certains angles des languettes de
+fixation du servomoteur
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193420.JPG" alt="PA193420.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;36&nbsp;:</span> Arrondissement des languettes de fixations du servomoteur</p>
+</div>
+
+<p>
+Une cale formée par deux petits morceaux d'une croix en plastique de servo
+superposée à été intercalée. D'abord maintenu en place à l'adhésif
+double face, elle est finalement fixée avec de la colle cyanoacrylate
+(super glue).
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193421.JPG" alt="PA193421.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;37&nbsp;:</span> Fixation de l'arbre du servomoteur à la paume, vue 1</p>
+</div>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193422.JPG" alt="PA193422.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;38&nbsp;:</span> Fixation de l'arbre du servomoteur à la paume, vue 2</p>
+</div>
+
+<p>
+De part sa position, le servo du pouce bloque d'accès au port usb de
+l'arduino et gêne légèrement celui du jack.
+</p>
+</div></li>
+
+<li><a id="orgheadline27"></a>Du côté de l'auriculaire<br ><div class="outline-text-5" id="text-3-3-5-2">
+<p>
+Il parait compliqué de reculer le servo pour conserver l'axe de la
+grande bielle. Nous avons donc choisi de l'avancer, pour faire passer
+la bielle de l'autre côté de la croix du servo moteur. Les deux
+surfaces sur lesquelles est fixée le servo ont donc été déplacées de
+6mm et le fond de 3mm (sauf que la différence a été oubliée lors de la
+modification de la pièce, il a donc fallu réusiner le fond de 3mm).
+</p>
+
+<p>
+La pièce HBMotorHolder01 a donc été modifiée avec Blender et
+réimprimée en blanc.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/support_servo_fleche.png" alt="support_servo_fleche.png" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;39&nbsp;:</span> Les modifications effectuées sur le support du servomoteur de l'auriculaire</p>
+</div>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193427.JPG" alt="PA193427.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;40&nbsp;:</span> Il a fallu réusiner le fond qui avait été déplacé de 6mm au lieu des 3 prévus</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193430.JPG" alt="PA193430.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;41&nbsp;:</span> Le servo monté sur son nouveau support</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA193430.JPG" alt="PA193430.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;42&nbsp;:</span> Le nouveau support du servo monté sur la paume</p>
+</div>
+
+<p>
+L'illustration suivante permet de bien voir la différence pour la
+fixation de la bielle de l'auriculaire : à gauche le montage d'origine
+avec le bras à l'intérieur, du côté du servo ; à droite le montage
+avec le servo plus large, le bras est fixé à l'extérieur.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/servo_auriculaire_bielle.jpg" alt="servo_auriculaire_bielle.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;43&nbsp;:</span> Le nouveau support du servo monté sur la paume</p>
+</div>
+
+<p>
+La nouvelle pièce ne s'insère pas entièrement dans l'ouverture de la
+carte électronique, ce qui n'empêche heureusement pas de fermer le
+capot supérieur de la main.
+</p>
+</div></li></ol>
+</div>
+</div>
+
+<div id="outline-container-orgheadline33" class="outline-3">
+<h3 id="orgheadline33"><span class="section-number-3">3.4</span> Montage des servomoteurs</h3>
+<div class="outline-text-3" id="text-3-4">
+</div><div id="outline-container-orgheadline30" class="outline-4">
+<h4 id="orgheadline30"><span class="section-number-4">3.4.1</span> Protection des servomoteurs</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+C'est l'opération décrite à l'étape 8 du tutoriel :
 <a href="http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-11">http://myhumankit.org/tutoriels/main-hackberry-exiii/#step-11</a>.
 </p>
 
 <p>
-Au préalable, enlever le cache du moteur.
+Au préalable, enlever le cache du servomoteur.
 </p>
 
 <p>
@@ -1049,7 +1494,7 @@ brusquement lorsqu'il atteint une une certaine température, qui correspond
 </p>
 
 <p>
-La connexion est réalisée par brasage (voir "<a href="#orgheadline9">Brasure et soudure</a>"), puis
+La connexion est réalisée par brasage (voir "<a href="#orgheadline29">Brasure et soudure</a>"), puis
 elle sera protégée en utilisant un isolant rétractable, qui a la
 particularité de se resserrer en chauffant.
 </p>
@@ -1060,23 +1505,23 @@ doigts. Ensuite, il y a un plus gros moteur pour l'index.
 </p>
 
 <p>
-Les prises-de-vue réalisées au cours du <i>Fabrikarium</i> sont sous
+Les prises de vue réalisées au cours du <i>Fabrikarium</i> sont sous
 "<a href="medias/03_montage_moteurs/01_protection_moteurs">medias/03_montage_moteurs/01_protection_moteurs</a>".
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline11" class="outline-4">
-<h4 id="orgheadline11"><span class="section-number-4">3.3.2</span> Test des moteurs</h4>
-<div class="outline-text-4" id="text-3-3-2">
+<div id="outline-container-orgheadline31" class="outline-4">
+<h4 id="orgheadline31"><span class="section-number-4">3.4.2</span> Test des servomoteurs</h4>
+<div class="outline-text-4" id="text-3-4-2">
 <p>
-Après modification, chacun des moteurs sera testé après branchement du
-processeur Arduino pour s'assurer qu'il répond aux commandes.
+Après modification, chacun des servomoteurs sera testé après branchement du
+microcontrôleur Arduino pour s'assurer qu'il répond aux commandes.
 </p>
 
 <p>
 Ces essais sont réalisés au moyen de l'environnement de développement
 (IDE) Arduino. Dans l'application, il y a un menu spécifique pour tester
-un servo-moteur: le processeur commande le moteur qui y est branché, il
+un servomoteur: le processeur commande le moteur qui y est branché, il
 mène le moteur tout le long de sa course dans un sens, puis dans l'autre.
 </p>
 
@@ -1086,11 +1531,11 @@ fin, mais l'IDE Arduino permet de faire ça, très simplement.
 </p>
 </div>
 </div>
-<div id="outline-container-orgheadline12" class="outline-4">
-<h4 id="orgheadline12"><span class="section-number-4">3.3.3</span> Installation des moteurs</h4>
-<div class="outline-text-4" id="text-3-3-3">
+<div id="outline-container-orgheadline32" class="outline-4">
+<h4 id="orgheadline32"><span class="section-number-4">3.4.3</span> Installation des servomoteurs</h4>
+<div class="outline-text-4" id="text-3-4-3">
 <p>
-Les moteurs sont logés dans leur emplacement dans la main.
+Les servomoteurs sont logés dans leur emplacement dans la main.
 </p>
 
 <p>
@@ -1107,7 +1552,7 @@ Ce sont les opérations décrites aux étapes:
 
 <p>
 Avant de les installer, il faut qu'ils soient configurés en butée. Pour
-cela, tourner le moteur sens anti-horaire jsuqu'à la butée et mettre le
+cela, tourner le moteur sens antihoraire jusqu'à la butée et mettre le
 moteur dans son emplacement. Attention, il y a risque de casse si la butée
 ne correspond pas à la fin de course.
 </p>
@@ -1119,18 +1564,22 @@ Les clichés pris au cours du <i>Fabrikarium</i> sont sous
 </div>
 </div>
 </div>
-<div id="outline-container-orgheadline24" class="outline-3">
-<h3 id="orgheadline24"><span class="section-number-3">3.4</span> Réalisation des circuits électriques</h3>
-<div class="outline-text-3" id="text-3-4">
-</div><div id="outline-container-orgheadline16" class="outline-4">
-<h4 id="orgheadline16"><span class="section-number-4">3.4.1</span> Alimentation</h4>
-<div class="outline-text-4" id="text-3-4-1">
+</div>
+
+<div id="outline-container-orgheadline51" class="outline-2">
+<h2 id="orgheadline51"><span class="section-number-2">4</span> Réalisation et modifications de l'électronique</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-orgheadline36" class="outline-3">
+<h3 id="orgheadline36"><span class="section-number-3">4.1</span> Alimentation</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 Le circuit d'alimentation assure l'approvisionnement en électricité des
-composants électriques et électroniques de la <a href="http://www.bionico.org/">Bionicohand</a>.
+composants électriques et électroniques de la <a href="http://www.bionico.org/">Bionicohand</a>. 
 </p>
 </div>
-<ol class="org-ol"><li><a id="orgheadline14"></a>Connectique de la batterie<br ><div class="outline-text-5" id="text-3-4-1-1">
+<div id="outline-container-orgheadline4" class="outline-4">
+<h4 id="orgheadline4"><a id="ID-796fc5ef-74e6-4532-96fc-9f96143dc6ba"></a><span class="section-number-4">4.1.1</span> Connectique de la batterie</h4>
+<div class="outline-text-4" id="text-4-1-1">
 <p>
 La "Bionico Hand" sera alimentée par une batterie de 8.4V, disponible
 dans le commerce avec son chargeur qui se connecte à un port USB.
@@ -1139,8 +1588,8 @@ dans le commerce avec son chargeur qui se connecte à un port USB.
 <p>
 Pour ce faire, il est prévu que la batterie d'alimentation vienne se
 brancher à un circuit imprimé en PCB au moyen d'une prise
-<i>jack</i>. C'est sur ce circuit que viendront se brancher le processeur
-Arduino, les capteurs, et les interrupeurs de commande.
+<i>jack</i>. C'est sur ce circuit que viendront se brancher le microcontrôleur
+Arduino, les capteurs, et les interrupteurs de commande.
 </p>
 
 <p>
@@ -1160,13 +1609,13 @@ La video qui suit explique la réflexion qui a été menée pour aboutir à
 la solution pour le branchement de la batterie.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/01_alimentation/20161020_037.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 
 <p>
@@ -1180,7 +1629,7 @@ extérieur.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/01_alimentation/20161020_043.jpg" alt="20161020_043.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;28&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
+<p><span class="figure-number">Figure&nbsp;44&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
 </div>
 
 
@@ -1188,12 +1637,12 @@ extérieur.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/01_alimentation/20161020_045.jpg" alt="20161020_045.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;29&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
+<p><span class="figure-number">Figure&nbsp;45&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
 </div>
 
 <p>
 A l'aide d'un multimètre, marquer le fil positif en mesurant que la
-résitance est nulle (contact établi) lorsque le multimètre est branché
+résistance est nulle (contact établi) lorsque le multimètre est branché
 sur la broche positive. Souvent, le multimètre émet un <i>beep</i> sonore
 dans cette configuration pour signaler le contact franc.
 </p>
@@ -1208,14 +1657,14 @@ identifier la borne "<b>+</b>" pour y souder le fil positif relié au
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/01_alimentation/20161020_048.jpg" alt="20161020_048.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;30&nbsp;:</span> Repérage des bornes "+" et "-" identifiées sur la batterie</p>
+<p><span class="figure-number">Figure&nbsp;46&nbsp;:</span> Repérage des bornes "+" et "-" identifiées sur la batterie</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/01_alimentation/20161020_046.jpg" alt="20161020_046.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;31&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
+<p><span class="figure-number">Figure&nbsp;47&nbsp;:</span> Test des polarités du fil connecté à la prise <i>jack</i></p>
 </div>
 
 <p>
@@ -1227,13 +1676,13 @@ faudra y souder les fils correspondant reliés à la prise <i>jack</i>:
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/01_alimentation/20161020_049.jpg" alt="20161020_049.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;32&nbsp;:</span> Fils de la prise <i>jack</i> soudés sur les bornes adéquates de la batterie</p>
+<p><span class="figure-number">Figure&nbsp;48&nbsp;:</span> Fils de la prise <i>jack</i> soudés sur les bornes adéquates de la batterie</p>
 </div>
 
 
 <p>
 A l'issue de l'opération, tester que la batterie ainsi équipée
-s'ajuste dans le chargeur et que la charge est effective (la <i>led</i> du
+s'ajuste dans le chargeur et que la charge est effective (la <i>LED</i> du
 chargeur devient rouge pour indiquer que la batterie est en charge,
 pourvu qu'elle n'ait pas été chargée au préalable).
 </p>
@@ -1243,12 +1692,15 @@ Enfin, solidariser les fils sur le côté externe de la batterie.
 </p>
 
 <p>
-L'ensemble des photos et videos se rapportant au branchement de la
+L'ensemble des photos et vidéos se rapportant au branchement de la
 batterie sont disponibles à l'emplacement
 "<a href="medias/04_circuits_electriques/01_alimentation/">medias/04_circuits_electriques/01_alimentation/</a>".
 </p>
-</div></li>
-<li><a id="orgheadline15"></a><a id="ID-1d7e3fb5-49dc-4630-9ce3-e7fc2e452418"></a>Confection d'un régulateur de tension<br ><div class="outline-text-5" id="text-3-4-1-2">
+</div>
+</div>
+<div id="outline-container-orgheadline35" class="outline-4">
+<h4 id="orgheadline35"><a id="ID-1d7e3fb5-49dc-4630-9ce3-e7fc2e452418"></a><span class="section-number-4">4.1.2</span> Confection d'un régulateur de tension</h4>
+<div class="outline-text-4" id="text-4-1-2">
 <p>
 A l'entrée du circuit, c'est une batterie de 8.4V qui sera
 positionnée.
@@ -1283,7 +1735,7 @@ celui qui a été trouvé.
 <p>
 Au cours du <i>Fabrikarium</i>, le régulateur conçu pour la "Bionico Hand"
 a été construit à partir d'un un régulateur linéaire à 5V, de référence
-"7805" et du circuit suivant:
+"7805" et du circuit suivant :
 </p>
 
 <ul class="org-ul">
@@ -1304,14 +1756,14 @@ Le circuit est représenté sur les photos qui suivent.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/02_regulateur_tension/20161020_015.jpg" alt="20161020_015.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;33&nbsp;:</span> Circuit de montage pour le reégulateur de tension 5V - composants</p>
+<p><span class="figure-number">Figure&nbsp;49&nbsp;:</span> Circuit de montage pour le régulateur de tension 5V - composants</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/02_regulateur_tension/20161020_016.jpg" alt="20161020_016.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;34&nbsp;:</span> Circuit de montage pour le reégulateur de tension 5V - connexions</p>
+<p><span class="figure-number">Figure&nbsp;50&nbsp;:</span> Circuit de montage pour le régulateur de tension 5V - connexions</p>
 </div>
 
 
@@ -1320,17 +1772,17 @@ Une video montre le travail de brasure pour souder les composants et
 réaliser le circuit de connexion:
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/02_regulateur_tension/20161020_024.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 Vous trouverez quelques conseils pour obtenir une bonne brasure à la
-section "<a href="#orgheadline9">Brasure et soudure</a>".
+section "<a href="#orgheadline29">Brasure et soudure</a>".
 </p>
 
 <p>
@@ -1348,33 +1800,37 @@ que la tension indique 5V stabilisés à la sortie du circuit.
 </p>
 
 <p>
-L'ensemble des photos et videos disponibles pour la confection du
+L'ensemble des photos et vidéos disponibles pour la confection du
 régulateur de tension sont rassemblées dans le dossier
 "<a href="medias/04_circuits_electriques/02_regulateur_tension/">medias/04_circuits_electriques/02_regulateur_tension/</a>".
 </p>
-</div></li></ol>
+</div>
+</div>
 </div>
 
-<div id="outline-container-orgheadline23" class="outline-4">
-<h4 id="orgheadline23"><span class="section-number-4">3.4.2</span> Montage du circuit intégré</h4>
-<div class="outline-text-4" id="text-3-4-2">
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5"><a id="ID-a9101e3a-3c08-429f-b4b1-100f3416e908"></a><span class="section-number-3">4.2</span> Circuit imprimé : ajout d'un deuxième capteur myoélectrique</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 Le circuit imprimé (PCB) a été conçu pour accueillir les équipements de
-commande et contrôle des moteurs de la <a href="http://www.bionico.org/">Bionicohand</a>, dont le processeur
+commande et contrôle des moteurs de la <a href="http://www.bionico.org/">Bionicohand</a>, dont le microcontrôleur
 Arduino, ainsi que le circuit d'alimentation pour la fourniture en
 énergie.
 </p>
 
 <p>
 Le schéma du PCB a été revu par rapport au projet <a href="http://exiii-hackberry.com/">exiii HACKberry</a> pour
-permettre l'installation d'un capteur supplémentaire. Il en découle une
-utilisation différente des bornes du processeur Arduino, d'où un <a href="#orgheadline17">nouvel
-adressage à prévoir entre le processeur et le circuit</a>.
+permettre l'installation d'un capteur supplémentaire. Il en découle
+une utilisation différente des bornes du microcontrôleur Arduino, d'où
+un <a href="#orgheadline37">nouvel adressage à prévoir entre le microcontrôleur et le circuit</a>.
 </p>
 </div>
-<ol class="org-ol"><li><a id="orgheadline18"></a>Branchement des éléments du circuit imprimé<br ><div class="outline-text-5" id="text-3-4-2-1">
+
+<div id="outline-container-orgheadline38" class="outline-4">
+<h4 id="orgheadline38"><span class="section-number-4">4.2.1</span> Branchement des éléments du circuit imprimé</h4>
+<div class="outline-text-4" id="text-4-2-1">
 <p>
-Comme indiqué dans la rubrique "<a href="#orgheadline9">brasure et soudure</a>", les éléments à fixer
+Comme indiqué dans la rubrique "<a href="#orgheadline29">brasure et soudure</a>", les éléments à fixer
 au circuit imprimé le seront en commençant par les plus petits.
 </p>
 
@@ -1385,21 +1841,21 @@ Human Kit - étape 16</a>.
 
 <p>
 La première photo présente le circuit PCB et les composants à assembler,
-que nous avons ici pour le <i>Fabrikarium</i>:
+que nous avons ici pour le /Fabrikarium/ :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_290.jpg" alt="20161019_290.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;35&nbsp;:</span> Eléments à assembler au circuit imprimé PCB</p>
+<p><span class="figure-number">Figure&nbsp;51&nbsp;:</span> Éléments à assembler au circuit imprimé PCB</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_310.jpg" alt="20161019_310.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;36&nbsp;:</span> Poste à souder</p>
+<p><span class="figure-number">Figure&nbsp;52&nbsp;:</span> Poste à souder</p>
 </div>
 
 
@@ -1416,115 +1872,118 @@ boutons de commande.
 
 
 <ol class="org-ol">
-<li>Installation du bouton on/off:</li>
+<li>Installation du bouton on/off :</li>
 </ol>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_297.jpg" alt="20161019_297.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;37&nbsp;:</span> Présentation de l'interrupteur on/off</p>
+<p><span class="figure-number">Figure&nbsp;53&nbsp;:</span> Présentation de l'interrupteur on/off</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_296.jpg" alt="20161019_296.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;38&nbsp;:</span> Mise-en-place de l'interrupteur on/off</p>
+<p><span class="figure-number">Figure&nbsp;54&nbsp;:</span> Mise en place de l'interrupteur on/off</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_295.jpg" alt="20161019_295.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;39&nbsp;:</span> Interrupteur on/off en place</p>
+<p><span class="figure-number">Figure&nbsp;55&nbsp;:</span> Interrupteur on/off en place</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_298.jpg" alt="20161019_298.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;40&nbsp;:</span> Présentation de la brasure par revers pour l'interrupteur on/off, en le maintenant en place</p>
+<p><span class="figure-number">Figure&nbsp;56&nbsp;:</span> Présentation de la brasure par revers pour l'interrupteur on/off, en le maintenant en place</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_298.jpg" alt="20161019_298.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;41&nbsp;:</span> Brasage de l'interrupteur on/off par revers</p>
+<p><span class="figure-number">Figure&nbsp;57&nbsp;:</span> Brasage de l'interrupteur on/off par revers</p>
 </div>
 
 
 <ol class="org-ol">
-<li>Assemblage des borniers pour la commande des moteurs et pour acceuillir
-le processeur Arduino (selon leur positionnement, ils pourront être
-coupés a posteriori pour disposer d'un meilleur maintien):</li>
+<li>Assemblage des borniers pour la commande des moteurs et pour accueillir
+le microcontrôleur Arduino (selon leur positionnement, ils pourront être
+coupés a posteriori pour disposer d'un meilleur maintien) :</li>
 </ol>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_311.jpg" alt="20161019_311.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;42&nbsp;:</span> Présentation du bornier pour le processeur Arduino sur le circuit</p>
+<p><span class="figure-number">Figure&nbsp;58&nbsp;:</span> Présentation du bornier pour le microcontrôleur Arduino sur le circuit</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_306.jpg" alt="20161019_306.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;43&nbsp;:</span> Brasage du bornier par revers, bien posé sur la table</p>
+<p><span class="figure-number">Figure&nbsp;59&nbsp;:</span> Brasage du bornier par revers, bien posé sur la table</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_325.jpg" alt="20161019_325.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;44&nbsp;:</span> Brasage du bornier par revers, de plus près</p>
+<p><span class="figure-number">Figure&nbsp;60&nbsp;:</span> Brasage du bornier par revers, de plus près</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_312.jpg" alt="20161019_312.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;45&nbsp;:</span> Présentation du bornier pour la commande des moteurs</p>
+<p><span class="figure-number">Figure&nbsp;61&nbsp;:</span> Présentation du bornier pour la commande des moteurs</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161020_054.jpg" alt="20161020_054.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;46&nbsp;:</span> Assemblage complet des borniers et du <i>jack</i> femelle pour l'alimentation</p>
+<p><span class="figure-number">Figure&nbsp;62&nbsp;:</span> Assemblage complet des borniers et du <i>jack</i> femelle pour l'alimentation</p>
 </div>
 
 
 <p>
-3.Installation des boutons de commande:
+3.Installation des boutons de commande :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161020_053.jpg" alt="20161020_053.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;47&nbsp;:</span> Assemblage des boutons de commande pour terminer cette face du PCB</p>
+<p><span class="figure-number">Figure&nbsp;63&nbsp;:</span> Assemblage des boutons de commande pour terminer cette face du PCB</p>
 </div>
 
 
 <p>
-Les photos 9 à 12 du tutoriel My Human Kit concernent le <a href="#orgheadline15">régulateur de
+Les photos 9 à 12 du tutoriel My Human Kit concernent le <a href="#orgheadline35">régulateur de
 tension que nous avons revu au cours du <i>Fabrikarium</i></a>. Nous ne les
 reverrons pas ici.
 </p>
 
 <p>
 Pour visualiser l'ensemble des photos sur le montage du circuit imprimé,
-se rérérer au contenu du dossier
+se référer au contenu du dossier
 <a href="medias/04_circuits_electriques/03_circuit_imprimé_PCB">medias/04_circuits_electriques/03_circuit_imprimé_PCB</a>.
 </p>
-</div></li>
+</div>
+</div>
 
-<li><a id="orgheadline21"></a><a id="ID-b185de0b-b4c6-40cd-be0b-a26b704dd4d6"></a>Deux approches pour la connexion des capteurs<br ><div class="outline-text-5" id="text-3-4-2-2">
+<div id="outline-container-orgheadline41" class="outline-4">
+<h4 id="orgheadline41"><a id="ID-b185de0b-b4c6-40cd-be0b-a26b704dd4d6"></a><span class="section-number-4">4.2.2</span> Deux approches pour la connexion des capteurs</h4>
+<div class="outline-text-4" id="text-4-2-2">
 <p>
-Dans le projet original, il était prévu une prise <i>mini-jack</i> stereo, qui
+Dans le projet original, il était prévu une prise <i>mini-jack</i> stéréo, qui
 permettait donc de relayer une masse, une tension d'alimentation et un
 signal.
 </p>
@@ -1536,12 +1995,12 @@ commandée électroniquement.
 </p>
 
 <p>
-Pour pouvoir brancher un deuxième capteur, le cicuit imprimé a été repensé
-pour faire sortir les deux signaux de capteur vers le <i>mini-jack</i> stereo,
+Pour pouvoir brancher un deuxième capteur, le circuit imprimé a été repensé
+pour faire sortir les deux signaux de capteur vers le <i>mini-jack</i> stéréo,
 en se passant de l'alimentation qui sera réalisée de manière externe au
 moyen de deux piles Lithium-Ion. Une autre possibilité serait de prévoir
 un <i>mini-jack</i> à 4 connecteurs, comme il en existe pour les branchements
-d'écouteurs avec micro-phone.
+d'écouteurs avec microphone.
 </p>
 
 <p>
@@ -1549,7 +2008,7 @@ Il en résulte deux montages possibles pour les capteurs.
 </p>
 </div>
 
-<ol class="org-ol"><li><a id="orgheadline19"></a>Alimentation externe<br ><div class="outline-text-6" id="text-3-4-2-2-1">
+<ol class="org-ol"><li><a id="orgheadline39"></a>Alimentation externe<br ><div class="outline-text-6" id="text-4-2-2-0-1">
 <p>
 Le premier montage consiste à utiliser une alimentation externe pour les
 capteurs, puisque celle-ci n'est pas piquée sur le circuit principal.
@@ -1559,39 +2018,39 @@ capteurs, puisque celle-ci n'est pas piquée sur le circuit principal.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_303.jpg" alt="20161019_303.jpg" width="30%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;48&nbsp;:</span> Dispositif d'alimentation externe par 2 piles Lithium CR2032 pour le capteur</p>
+<p><span class="figure-number">Figure&nbsp;64&nbsp;:</span> Dispositif d'alimentation externe par 2 piles Lithium CR2032 pour le capteur</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_301.jpg" alt="20161019_301.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;49&nbsp;:</span> Installation du bornier de connexion sur le capteur par brasage</p>
+<p><span class="figure-number">Figure&nbsp;65&nbsp;:</span> Installation du bornier de connexion sur le capteur par brasage</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_314.jpg" alt="20161019_314.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;50&nbsp;:</span> Assemblage du circuit du capteur au circuit d'alimentation externe</p>
+<p><span class="figure-number">Figure&nbsp;66&nbsp;:</span> Assemblage du circuit du capteur au circuit d'alimentation externe</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/04_connectique_capteurs_alim_externe/20161019_314.jpg" alt="20161019_314.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;51&nbsp;:</span> Réalisation de la connectique pour l'ensemble capteur/alimentation</p>
+<p><span class="figure-number">Figure&nbsp;67&nbsp;:</span> Réalisation de la connectique pour l'ensemble capteur/alimentation</p>
 </div>
 </div></li>
 
-<li><a id="orgheadline20"></a>Alimentation sur la carte et circuit de stabilisation<br ><div class="outline-text-6" id="text-3-4-2-2-2">
+<li><a id="orgheadline40"></a>Alimentation sur la carte et circuit de stabilisation<br ><div class="outline-text-6" id="text-4-2-2-0-2">
 <p>
 L'autre approche consiste à utiliser l'alimentation de la carte pour les
 deux capteurs, en utilisant un <i>mini-jack</i> à 4 connecteurs.
 </p>
 
 <p>
-Au cours du <i>Fabrikarium</i>, le <i>mini-jack</i> stereo prévu n'était pas
+Au cours du <i>Fabrikarium</i>, le <i>mini-jack</i> stéréo prévu n'était pas
 disponible de toutes façons. Pour s'en passer, les capteurs ont donc été
 reliés directement au PCB au moyen de fils. Ce qui a également permis de
 tester le branchement à 4 connexions, une masse, une alimentation et deux
@@ -1608,7 +2067,7 @@ chacune avec leur cycle de vie propre.
 <p>
 Les deux capteurs sont connectés l'un à l'autre, pour relayer la tension
 d'alimentation. De plus, un circuit de stabilisation a été monté pour
-filtrer le bruit et transmettre un meilleur signal au processeur Arduino
+filtrer le bruit et transmettre un meilleur signal au microcontrôleur Arduino
 pour le traitement de l'information.
 </p>
 
@@ -1616,14 +2075,14 @@ pour le traitement de l'information.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/05_connectique_capteurs_seuls_stabilises/20161021_016.jpg" alt="20161021_016.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;52&nbsp;:</span> Vue des deux capteurs connectés l'un à l'autre pour partager la même alimentation</p>
+<p><span class="figure-number">Figure&nbsp;68&nbsp;:</span> Vue des deux capteurs connectés l'un à l'autre pour partager la même alimentation</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/05_connectique_capteurs_seuls_stabilises/20161021_017.jpg" alt="20161021_017.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;53&nbsp;:</span> Schéma du circuit de stabilisation avec grandeurs physiques des composants.</p>
+<p><span class="figure-number">Figure&nbsp;69&nbsp;:</span> Schéma du circuit de stabilisation avec grandeurs physiques des composants.</p>
 </div>
 
 <p>
@@ -1636,11 +2095,14 @@ deux condensateurs 100 mF et 820 µF.
 <p>
 Ce circuit assure une meilleure stabilité dans la tension de sortie, tout
 en réduisant les parasites. Le résultat donne une mesure beaucoup plus
-fine à l'entrée du processeur Arduino, ce qui permet une meilleure boucle
+fine à l'entrée du microcontrôleur Arduino, ce qui permet une meilleure boucle
 de régulation dans la commande de la main.
 </p>
-</div></li></ol></li>
-<li><a id="orgheadline22"></a>Montage des circuits<br ><div class="outline-text-5" id="text-3-4-2-3">
+</div></li></ol>
+</div>
+<div id="outline-container-orgheadline42" class="outline-4">
+<h4 id="orgheadline42"><span class="section-number-4">4.2.3</span> Montage des circuits</h4>
+<div class="outline-text-4" id="text-4-2-3">
 <p>
 Une fois les différents circuits réalisés, il va falloir les connecter
 entre eux et les loger dans le compartiment prévu de la main motorisée.
@@ -1657,41 +2119,41 @@ insertions.
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/06_montage_circuits/20161020_051.jpg" alt="20161020_051.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;54&nbsp;:</span> Insertion du circuit sous la coque et vérification de la mobilité des boutons</p>
+<p><span class="figure-number">Figure&nbsp;70&nbsp;:</span> Insertion du circuit sous la coque et vérification de la mobilité des boutons</p>
 </div>
 
 <p>
 Dans notre cas, nous avons dû réduire la taille du dissipateur de chaleur
 installé sur le régulateur "7805" de notre circuit de régulation: il a
 simplement été replié pour gagner de la place en hauteur (comparez celui
-de droite à celui de gauche, dans sa forme initiale):
+de droite à celui de gauche, dans sa forme initiale) :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/06_montage_circuits/20161020_052.jpg" alt="20161020_052.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;55&nbsp;:</span> Repliement du dissipateur pour loger le circuit dans son emplacement</p>
+<p><span class="figure-number">Figure&nbsp;71&nbsp;:</span> Repliement du dissipateur pour loger le circuit dans son emplacement</p>
 </div>
 
 
 <p>
 Le dissipateur sera ensuite branché au circuit imprimé par brasage, en
-respectant le schéma de connexion présenté ci-dessous:
+respectant le schéma de connexion présenté ci-dessous :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/06_montage_circuits/20161020_056.jpg" alt="20161020_056.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;56&nbsp;:</span> Schéma de branchement du régulateur au circuit imprimé: emplacements sur le circuit</p>
+<p><span class="figure-number">Figure&nbsp;72&nbsp;:</span> Schéma de branchement du régulateur au circuit imprimé: emplacements sur le circuit</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/06_montage_circuits/20161020_057.jpg" alt="20161020_057.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;57&nbsp;:</span> Schéma de branchement du régulateur au circuit imprimé: connexion des fils</p>
+<p><span class="figure-number">Figure&nbsp;73&nbsp;:</span> Schéma de branchement du régulateur au circuit imprimé: connexion des fils</p>
 </div>
 
 
@@ -1702,51 +2164,174 @@ connectique pour la réception des signaux en gris et en orange, une prise
 de masse en bleu et la tension en rouge.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/06_montage_circuits/20161020_082.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 Les branchements et circuits seront isolés à l'aide de toile isolante
-(aussi appelée "<i>chatterton</i>" du nom de son inventeur:
+(aussi appelée "<i>chatterton</i>" du nom de son inventeur :
 <a href="https://fr.wikipedia.org/wiki/Ruban_adh%C3%A9sif#Utilisations_et_types">https://fr.wikipedia.org/wiki/Ruban_adh%C3%A9sif#Utilisations_et_types</a>)
 afin d'éviter un court-circuit en juxtaposant les circuits les uns contre
-les autres:
+les autres :
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/06_montage_circuits/20161020_083.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 La video montre également que 4 fils sont rassemblés et solidarisés pour
 établir la connexion aux deux capteurs, en se passant de la prise
 <i>mini-jack</i> à 4 connecteurs.
 </p>
-</div></li></ol>
 </div>
 </div>
-<div id="outline-container-orgheadline29" class="outline-3">
-<h3 id="orgheadline29"><span class="section-number-3">3.5</span> Tests, calibration, ajustement des commandes et capteurs</h3>
-<div class="outline-text-3" id="text-3-5">
+<div id="outline-container-orgheadline37" class="outline-4">
+<h4 id="orgheadline37"><a id="ID-ddff0242-6a58-4bcd-852e-1e865a3dea7a"></a><span class="section-number-4">4.2.4</span> Ajustement dans l'adressage des bornes du microcontrôleur Arduino</h4>
+<div class="outline-text-4" id="text-4-2-4">
 <p>
-Lorsque les circuits sont mis en place, les moteurs peuvent être installés
+La modification du PCB pour permettre de brancher le nouveau capteur a
+entraîné un nouvel adressage des bornes de l'arduino. Ne disposant pas du
+schéma du nouveau circuit, il a fallu retrouver une par une à quoi les
+bornes étaient reliées.
+</p>
+
+<p>
+Voici la table de correspondance obtenue entre l'adressage Arduino du
+circuit <a href="http://exiii-hackberry.com/">exiii HACKberry</a> original, et celui de la la <a href="http://www.bionico.org/">Bionicohand</a> telle que
+réalisée au /Fabrikarium d'octobre 2016/ :
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">borne</th>
+<th scope="col" class="org-left">ancienne affectation</th>
+<th scope="col" class="org-left">nouvelle affectation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A0</td>
+<td class="org-left">sensorInput0</td>
+<td class="org-left">myo0</td>
+</tr>
+
+<tr>
+<td class="org-left">A3</td>
+<td class="org-left">fingerPin</td>
+<td class="org-left">?</td>
+</tr>
+
+<tr>
+<td class="org-left">A4</td>
+<td class="org-left">thumbPin</td>
+<td class="org-left">fingerPin</td>
+</tr>
+
+<tr>
+<td class="org-left">A5</td>
+<td class="org-left">X</td>
+<td class="org-left">thumbPin</td>
+</tr>
+
+<tr>
+<td class="org-left">A6</td>
+<td class="org-left">calibPin0</td>
+<td class="org-left">myo1</td>
+</tr>
+
+<tr>
+<td class="org-left">7</td>
+<td class="org-left">X</td>
+<td class="org-left">(calibPin0?) reset</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+thumbPin, fingerPin et calibPin0 correspondent aux boutons situés sur
+le dessus de la main. Le nouveau programme arduino ne nécessitant pas
+de calibrage, le bouton de calibrage est affecté à une fonction de
+<i>reset</i>, qui permet de réinitialiser le programme en cas de
+dysfonctionnement.
+</p>
+
+<p>
+Les bornes affectées au contrôle des servomoteurs restent inchangées :
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">borne</th>
+<th scope="col" class="org-left">affectation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">servo index</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">servo middle</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">servo thumb</td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="figure">
+<p><img src="medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg" alt="20161020_085.jpg" width="30%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;74&nbsp;:</span> Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline45" class="outline-4">
+<h4 id="orgheadline45"><span class="section-number-4">4.2.5</span> Tests et calibration</h4>
+<div class="outline-text-4" id="text-4-2-5">
+<p>
+Lorsque les circuits sont mis en place, les servomoteurs peuvent être installés
 et branchés au circuit, puis testés.
 </p>
 </div>
-<div id="outline-container-orgheadline25" class="outline-4">
-<h4 id="orgheadline25"><span class="section-number-4">3.5.1</span> Tests de commande des moteurs</h4>
-<div class="outline-text-4" id="text-3-5-1">
+<ol class="org-ol"><li><a id="orgheadline43"></a>Tests de commande des servomoteurs<br ><div class="outline-text-5" id="text-4-2-5-1">
 <p>
-Les deux videos qui suivent présentent les premiers tests qui ont été
+Les deux vidéos qui suivent présentent les premiers tests qui ont été
 réalisés sur la main motorisée.
 </p>
 
@@ -1758,33 +2343,33 @@ montées, elles présentaient toutes les deux un comportement inadéquat, pas
 100% le même. C'est donc le montage qui a été remis en question.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_080_testsNOK.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_081_testsNOK.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
-Le principe de base est de s'y prendre pas-à-pas pour pister le problème,
+Le principe de base est de s'y prendre pas à pas pour pister le problème,
 les commandes ont été testées une par une à partir d'un programme Arduino
 simplifié.
 </p>
 
 <p>
 De là, il s'est avéré que l'adressage des bornes de l'Arduino dans le
-logiciel n'était pas le même, le circuit a été modifié à ce niveau-là
-également. Donc, il a été nécessaire de procéder à des <a href="#orgheadline17">ajustements dans
-l'adressage des bornes du processeur Arduino</a> pour réceptionner
+logiciel n'était pas le même, le circuit a été modifié à ce niveau là
+également. Donc, il a été nécessaire de procéder à des <a href="#orgheadline37">ajustements dans
+l'adressage des bornes du microcontrôleur Arduino</a> pour réceptionner
 correctement les signaux et piloter les moteurs avec les commandes
 adéquates.
 </p>
@@ -1796,83 +2381,63 @@ résultats présentés dans cette video. Cette fois, le comportement est tout
 </p>
 
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/05_tests_et_calibrations_/01_pilotage_moteur_capteurs_tests/20161020_084_testsOK.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 La différence qui avait été constatée entre les deux mains s'est
 retrouvées dans les tests moteurs, même après bon adressage: dans la
 première main, bien que d'apparence semblable, c'est un moteur différent
-qui a été monté. Il est important de choisir un moteur continu avec
+qui a été monté. Il est important de choisir un servomoteur avec
 consigne de position qui se mettra en mouvement jusqu'à atteindre la
 position voulue, non pas avec une consigne de commande qui se déplacera
 jusqu'à recevoir une autre consigne et nécessite donc un travail permanent
 pour maintenir une position fixe, ce qui affaiblira très vite la batterie.
 </p>
-</div>
-</div>
-<div id="outline-container-orgheadline17" class="outline-4">
-<h4 id="orgheadline17"><a id="ID-ddff0242-6a58-4bcd-852e-1e865a3dea7a"></a><span class="section-number-4">3.5.2</span> Ajustement dans l'adressage des bornes du processeur Arduino</h4>
-<div class="outline-text-4" id="text-3-5-2">
-<p>
-Voici la table de correspondance entre l'adressage Arduino du circuit
-<a href="http://exiii-hackberry.com/">exiii HACKberry</a> original, et celui de la la <a href="http://www.bionico.org/">Bionicohand</a> telle que réalisée
-au <i>Fabrikarium d'octobre 2016</i>:
-</p>
-
-
-<div class="figure">
-<p><img src="medias/05_tests_et_calibrations/02_adressage_arduino/20161020_085.jpg" alt="20161020_085.jpg" width="30%" align="center">
-</p>
-<p><span class="figure-number">Figure&nbsp;58&nbsp;:</span> Correspondance entre l'adressage Arduino du circuit Exiii et du circuit Bionicohand du Fabrikarium 2016</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orgheadline27" class="outline-4">
-<h4 id="orgheadline27"><span class="section-number-4">3.5.3</span> Tests du montage complet</h4>
-<div class="outline-text-4" id="text-3-5-3">
+</div></li>
+<li><a id="orgheadline44"></a>Tests du montage complet<br ><div class="outline-text-5" id="text-4-2-5-2">
 <p>
 Après l'adressage réalisé et les tests de base concluants, il est temps de
-réaliser les tests sur le montage complet:
+réaliser les tests sur le montage complet :
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/05_tests_et_calibrations_/03_tests_montage_complet/20161021_015.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 L'objectif final sera de commander la main entièrement arrimée à la
-prothèse:
+prothèse :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_018.jpg" alt="20161021_018.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;59&nbsp;:</span> Prothèse et main motorisée</p>
+<p><span class="figure-number">Figure&nbsp;75&nbsp;:</span> Prothèse et main motorisée</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_021.jpg" alt="20161021_021.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;60&nbsp;:</span> Test de la main installé sur la prothèse (1)</p>
+<p><span class="figure-number">Figure&nbsp;76&nbsp;:</span> Test de la main installé sur la prothèse (1)</p>
 </div>
 
 
 <div class="figure">
 <p><img src="medias/05_tests_et_calibrations/03_tests_montage_complet/20161021_023.jpg" alt="20161021_023.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;61&nbsp;:</span> Test de la main installé sur la prothèse (2)</p>
+<p><span class="figure-number">Figure&nbsp;77&nbsp;:</span> Test de la main installé sur la prothèse (2)</p>
 </div>
 
 
@@ -1882,44 +2447,16 @@ Vous pouvez consulter les autres photos sur ce thème sous
 </p>
 
 <p>
-La section "<a href="#orgheadline26">Confection d'un support de main (R&amp;D)</a>" décrira comment concevoir une
-prothèse de main et son emboiture à monter soi-même.
+La section "<a href="#orgheadline9">Emboiture : conception d'une prise rapide de poignée</a>" décrira
+comment concevoir une prothèse de main et son Emboiture à monter soi-même.
 </p>
+</div></li></ol>
 </div>
 </div>
-<div id="outline-container-orgheadline28" class="outline-4">
-<h4 id="orgheadline28"><span class="section-number-4">3.5.4</span> Capteur de pression</h4>
-<div class="outline-text-4" id="text-3-5-4">
-<p>
-Sur l'index, un capteur de pression a été positionné afin de mesurer la
-force de pince.
-</p>
 
-<p>
-Grâce à celui-ci, la pression exercée sur la prise-en-main pourra être
-mesurée, ce qui permettra de doser la force exercée sur un objet en
-fonction de la force musculaire exercée.
-</p>
-</div>
-</div>
-</div>
-<div id="outline-container-orgheadline31" class="outline-3">
-<h3 id="orgheadline31"><span class="section-number-3">3.6</span> Support de la main</h3>
-<div class="outline-text-3" id="text-3-6">
-</div><div id="outline-container-orgheadline26" class="outline-4">
-<h4 id="orgheadline26"><a id="ID-41d49b6a-e462-4640-b453-00591c6706e8"></a><span class="section-number-4">3.6.1</span> Confection d'un support de main (R&amp;D)</h4>
-<div class="outline-text-4" id="text-3-6-1">
-<p>
-Un atelier de R&amp;D s'est déroulé pour travailler sur la confection d'une
-prothèse de main à partir de matériaux accessibles: voir
-<a href="medias/10_support_main/01_realisation_prothese">medias/10_support_main/01_realisation_prothese</a> pour toutes les photos
-et videos sur la R&amp;D.
-</p>
-</div>
-</div>
-<div id="outline-container-orgheadline30" class="outline-4">
-<h4 id="orgheadline30"><span class="section-number-4">3.6.2</span> Installation des capteurs sur la prothèse de main</h4>
-<div class="outline-text-4" id="text-3-6-2">
+<div id="outline-container-orgheadline46" class="outline-3">
+<h3 id="orgheadline46"><span class="section-number-3">4.3</span> Installation des capteurs sur la prothèse de main</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 Les capteurs de pression seront installés sur la prothèse ainsi
 confectionnée.
@@ -1927,145 +2464,522 @@ confectionnée.
 
 <p>
 Des boutons-pression seront utilisés pour établir un contact amovible
-entre le bras et le capteur, comme expliqué dans ces deux videos:
+entre le bras et le capteur, comme expliqué dans cette vidéo :
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_038.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
-
-<video controls="controls" width="800" class="video">
-<source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_041.mp4" type="video/mp4">
-<p>
-Your browser does not support the video tag.
-</p>
-
-</video>
-
+</div>
 
 <p>
 Pour que la réalisation soit fonctionnelle, il faut que le capteur soit
 localisé au bon endroit. Dans un premier temps, l'endroit a été localisé à
 partir de la prothèse industrielle pour être marqué par souci de
 fiabilité, sachant que ce qui nous intéresse, c'est la zone musculaire
-active, comme le montre ces deux videos:
+active, comme le montrent ces vidéos :
 </p>
 
-<video controls="controls" width="800" class="video">
+
+<div controls="controls" width="800" class="video">
+<source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_041.mp4" type="video/mp4">
+<p>
+Your browser does not support the video tag.
+</p>
+
+</div>
+
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_040.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_042.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 Ensuite, il faut repérer la zone de contact entre la prothèse et le
-muscle. Une première approche est d'utiliser de la pâte-à-modeler, ce qui
+muscle. Une première approche est d'utiliser de la pâte à modeler, ce qui
 ne s'est pas avéré efficace. La deuxième approche utilise de la peinture
 effaçable, sans danger pour le corps.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_039.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_062.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_061.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
 A partir du marquage réalisé, les boutons-pression et le capteur pourront
-être installés sur la prothèse. Plusieurs videos montrent les
+être installés sur la prothèse. Plusieurs vidéos montrent les
 manipulations réalisées.
 </p>
 
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_058.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_059.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_060.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_063.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_064.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/10_support_main/02_montage_capteurs_prothese/20161020_065.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline33" class="outline-3">
-<h3 id="orgheadline33"><span class="section-number-3">3.7</span> Améliorations</h3>
-<div class="outline-text-3" id="text-3-7">
-</div><div id="outline-container-orgheadline32" class="outline-4">
-<h4 id="orgheadline32"><span class="section-number-4">3.7.1</span> Toucher conducteur pour les <i>smartphones</i></h4>
-<div class="outline-text-4" id="text-3-7-1">
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6"><a id="ID-380943ba-f58e-44f6-847e-7af874e69afe"></a><span class="section-number-3">4.4</span> Filtrage du signal des capteurs myoélectriques</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgheadline47" class="outline-4">
+<h4 id="orgheadline47"><span class="section-number-4">4.4.1</span> Problématique</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+Les <a href="https://www.adafruit.com/product/2699">capteurs musculaire myoélectriques MyoWare</a> que l'on souhaite
+utiliser sont capricieux. L'objectif du filtrage est d'être en mesure
+de détecter certains événements afin qu'ils se traduisent par
+l'actionnement d'un des servomoteur.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/myoware.jpg" alt="myoware.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;78&nbsp;:</span> Le nouveau support du servo monté sur la paume.</p>
+</div>
+
+<p>
+Un travail a été effectué afin de filtrer leur signal de sortie pour le
+rendre plus lisse et que les événements déclencheurs soient bien
+identifiés. Maintenant qu'ils fonctionnent correctement, le signal est
+tout à fait exploitable et permet bien de régler la position de la main
+progressivement et non pas en tout ou rien.
+</p>
+
+<p>
+Certains paramètres restent critiques dans le bon fonctionnement de
+ces capteurs :
+</p>
+
+<ul class="org-ul">
+<li>la position des électrodes sur le muscle</li>
+
+<li>le type de contact avec la peau (patch adhésif, pâte conductrice,
+contact métalliques&#x2026;) et aussi l'humidité de la peau.</li>
+
+<li>la pression exercée sur le capteur, qui doivent être serrés avec une
+bande de scratch.</li>
+</ul>
+
+
+<p>
+Tous ces facteurs font qu'il est difficilement envisageable dans
+l'état actuel d'utiliser ces capteurs à l'intérieur d'une
+emboîture. Les tests réalisés ne sont en effet pas satisfaisants.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA203442.JPG" alt="PA203442.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;79&nbsp;:</span> Montage et test d'un MyoWare sur une emboîture</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline48" class="outline-4">
+<h4 id="orgheadline48"><span class="section-number-4">4.4.2</span> Protocole</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+Le filtrage a été mis au point par essais et erreurs, en testant
+successivement plusieurs techniques. On utilise un utilitaire présent dans
+les versions récentes de l'IDE d'Arduino (versions supérieures à 1.6.6) :
+<i>serialPlotter</i>. Cet utilitaire représente en temps réel des valeurs
+reçues sur le port série avec une échelle verticale qui s'adapte à
+l'évolution du signal (ou des signaux).
+</p>
+
+<p>
+Par défaut, l'exemple <a href="https://www.arduino.cc/en/Tutorial/AnalogReadSerial">AnalogReadSerial</a> permet effectivement de tracer
+directement l'évolution d'un signal analogique, reçu par l'intermédiaire
+du port série.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgheadline49" class="outline-4">
+<h4 id="orgheadline49"><span class="section-number-4">4.4.3</span> Méthode de filtrage</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<p>
+Sur le programme arduino d'origine, une moyenne est appliquée sur une
+certain nombre de valeurs à suivre (une vingtaine), ce qui n'empêche pas
+l'apparition d'une variation brusque entre le premier lot de valeurs et
+celui qui arrivent ensuite. On utilisera plutôt des moyennes (ou des
+médianes) flottantes, c'est-à-dire que ce sont toujours les vingt
+dernières valeurs reçues qui sont prises en compte dans le
+traitement. Chaque nouvelle valeur ne modifiera donc la moyenne qu'à la
+marge et le signal résultant évoluera de façon plus continue.
+</p>
+
+<p>
+<a href="http://playground.arduino.cc/Main/RunningMedian">RunningMedian</a> est une librairie arduino qui permet de réaliser
+simplement des médianes flottantes.
+</p>
+
+<p>
+Finalement, deux médianes flottantes sont utilisées :
+</p>
+
+<ul class="org-ul">
+<li>la médiane courte correspond à un premier filtrage où tous les signaux
+reçus par le capteur sont pris en compte. Elle permet de supprimer les
+bruits et d'obtenir un signal relativement lisse.</li>
+
+<li>la médiane longue est une médiane flottantes des médianes courtes. Il
+s'agit d'obtenir une référence qui évolue en fonction du temps et à
+partir de laquelle on va détecter des changements sur de plus courtes
+échelles de temps.</li>
+</ul>
+
+<p>
+C'est donc à partir des variations de cette différence que nous allons
+détecter des événements correspondant à contraction du muscle
+correspondant.
+</p>
+
+<p>
+Sur la photo suivante, on voit l'évolution des médianes obtenues pour deux
+capteurs musculaires. Le signal lisse correspond à la médiane courte, le
+signal en escalier correspond à la médiane longue.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA203439.JPG" alt="PA203439.JPG" width="70%" align="center">        
+</p>
+<p><span class="figure-number">Figure&nbsp;80&nbsp;:</span> Les médianes courtes et longues pour deux capteurs myoélectriques</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline50" class="outline-4">
+<h4 id="orgheadline50"><span class="section-number-4">4.4.4</span> Réécriture du programme Arduino</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<p>
+Avec la nouvelle procédure de filtrage et l'utilisation de deux capteurs
+myoélectriques apparaît assez vite la nécessité de réécrire le programme
+Arduino à partir de zéro plutôt que d'adapter l'existant.
+</p>
+
+<p>
+Le nouveau code arduino est mis à disposition sur un <a href="https://github.com/MHKit/mhk-exii">dépôt GitHub</a>.
+</p>
+
+<p>
+Il est également disponible dans <a href="https://github.com/MHKit/HACKberry/tree/fabrikarium">la branche fabrikarium d'une copie
+(fork) du dépôt original</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7"><a id="ID-0ef446c9-d3b4-4bea-a8d5-da2c84c59175"></a><span class="section-number-3">4.5</span> Capteur de pression</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Cette partie consiste à ajouter un capteur au bout du pouce afin
+d'avoir un retour d'information "sensible". Ce retour d'information
+permet au porteur de la main d'adapter lui même la pression. Il s'agit
+d'un capteur de pression de type FSR.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213465.JPG" alt="PA213465.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;81&nbsp;:</span> Fixation du capteur de pression sur le pouce</p>
+</div>
+
+
+<p>
+Pour ce test, le retour d'information se fait par un servomoteur en
+contact avec le bras du porteur.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213463.JPG" alt="PA213463.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;82&nbsp;:</span> Schéma du montage du capteur de pression</p>
+</div>
+
+<p>
+On dimensionne ainsi la résistance du circuit : il faut qu'elle soit
+supérieure à la résistance du capteur lorsque celui-ci est chargé. Une
+autre solution est de la remplacer par une résistance variable afin de
+pouvoir la calibrer directement.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9"><a id="ID-41d49b6a-e462-4640-b453-00591c6706e8"></a><span class="section-number-2">5</span> Emboîture : conception d'une prise rapide de poignée</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Un atelier de R&amp;D s'est déroulé pour travailler sur la confection
+d'une prothèse de main à partir de matériaux accessibles : voir
+<a href="medias/10_support_main/01_realisation_prothese">medias/10_support_main/01_realisation_prothese</a> pour toutes les
+photos et vidéos sur la R&amp;D.
+</p>
+
+<p>
+Deux modèles de prise rapide ont été prototypés.
+</p>
+</div>
+
+<div id="outline-container-orgheadline52" class="outline-3">
+<h3 id="orgheadline52"><span class="section-number-3">5.1</span> Objectifs</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+L'objectif est de prototyper un système mécanique qui permet :
+</p>
+
+<ul class="org-ul">
+<li>d'adapter plusieurs types de mains ou d'outils sur une seule
+emboîture,</li>
+
+<li>de pouvoir régler la rotation de la main dans différentes positions,</li>
+
+<li>de bloquer la main ou l'outil dans une position donnée,</li>
+
+<li>d'avoir une base qu'on puisse adapter sur n'importe quelle emboîture,</li>
+
+<li>d'avoir un système le plus fin possible en épaisseur pour raccourcir
+la distance entre l'extrémité du moignon et la base de la main.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgheadline53" class="outline-3">
+<h3 id="orgheadline53"><span class="section-number-3">5.2</span> Solution proposée</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+La solution proposée est un assemblage de deux pièces :
+</p>
+
+<ul class="org-ul">
+<li>au niveau de l'emboîture : adaptation d'un "cueille pomme" avec
+trois pattes thermoformables permettant de se fixer sur n'importe
+quel emboîture,</li>
+
+<li>au niveau de la rotation du poignée : deux pièces crantées
+cylindriques (côté emboîture / côté main) qui s'accouplent dans
+différentes position.</li>
+</ul>
+
+<p>
+Pour un des prototype, le blocage de ces deux pièces est réalisé par
+un système de levier à biellette mais il peut enccore être renforcé et
+optimisé.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/10_support_main/01_realisation_prothese/20161021_033.jpg" alt="20161021_033.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;83&nbsp;:</span> Les deux pièces imprimées avant leur fixation</p>
+</div>
+
+<p>
+Du côté main, il faut prévoir suffisamment d'épaisseur pour visser le
+système. Deux plaques ont été imprimées à cet effet pour la fixation
+d'une des mains réalisées lors du <i>Fabrikarium</i>.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/10_support_main/01_realisation_prothese/20161020_030.jpg" alt="20161020_030.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;84&nbsp;:</span> Deux plaques sont imprimées pour renforcer le poignée</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline54" class="outline-3">
+<h3 id="orgheadline54"><span class="section-number-3">5.3</span> Fabrication</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Les pièces sont été modélisées avec le logiciel Catia, puis imprimées
+en ABS.
+</p>
+
+
+<div class="figure">
+<p><img src="medias/10_support_main/01_realisation_prothese/20161020_007.jpg" alt="20161020_007.jpg" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;85&nbsp;:</span> Les deux pièces imprimées</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline55" class="outline-3">
+<h3 id="orgheadline55"><span class="section-number-3">5.4</span> Les prototypes</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Deux prototypes fonctionnels sont finalement réalisés :
+</p>
+
+<ul class="org-ul">
+<li>le premier, qui a été fixé sur le moignon court de Sylvie, ne
+comporte pas de système de blocage</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213467.JPG" alt="PA213467.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;86&nbsp;:</span> Prototype d'attache rapide sans système de blocage</p>
+</div>
+
+<ul class="org-ul">
+<li>Le second a pu être être adapté sur le moignon long de Nicolas est
+complètement fonctionnel bien que fragile</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213469.JPG" alt="PA213469.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;87&nbsp;:</span> Avec système de blocage</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline56" class="outline-3">
+<h3 id="orgheadline56"><span class="section-number-3">5.5</span> Problèmes rencontrés / améliorations possibles</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Voici la liste des améliorations possibles et envisagées :
+</p>
+
+<ul class="org-ul">
+<li>les pattes du cueille pomme en abs sont difficilement
+thermoformables (le pla n'étant pas envisageable car trop fragile)
+on peut envisager de les réaliser à partir de plaque ou de tube d'un
+plastique plus standard (PVC)</li>
+
+<li>par rapport au fichier : redimensionner le levier de fixation pour
+qu'il soit plus solide</li>
+
+<li>améliorer le système de cran et son ajustage</li>
+
+<li>exploration de la piste d'un mécanisme de réglage conique pour
+augmenter la surface de contact, abandonné car trop compliqué.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213472.JPG" alt="PA213472.JPG" width="70%" align="center">
+</p>
+<p><span class="figure-number">Figure&nbsp;88&nbsp;:</span> couplage conique</p>
+</div>
+
+
+<ul class="org-ul">
+<li>mettre au point un système de réglage et de blocage qui soit déporté
+sur le côté et pas sur le dessus ou autour. La solution a été
+dessinée mais n'a pas pu être testée. En plus des parties solidaires
+de la main et du moignon, une troisième partie mobile (en bleu sur
+le schéma) permettrait de dissocier la fixation du système
+d'indexage en rotation.</li>
+</ul>
+
+
+<div class="figure">
+<p><img src="medias/laurent/PA213470.JPG" alt="PA213470.JPG" width="70%" align="center">   
+</p>
+<p><span class="figure-number">Figure&nbsp;89&nbsp;:</span> Une idée pour un futur prototype</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline57" class="outline-2">
+<h2 id="orgheadline57"><span class="section-number-2">6</span> Améliorations</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-orgheadline8" class="outline-3">
+<h3 id="orgheadline8"><a id="ID-ba6ddd19-d271-4bf3-90f9-f8f2ceb04474"></a><span class="section-number-3">6.1</span> Toucher conducteur pour les <i>smartphones</i></h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 Pour pouvoir utiliser un <i>smartphone</i>, il faut une surface conductrice et
 capacitive. Le corps humain a un effet capacitif pour lequel les écrans
@@ -2081,29 +2995,28 @@ doigt de la main mécanisée.
 </p>
 
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/11_ameliorations/01_peinture_electrique/20161020_083.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline35" class="outline-2">
-<h2 id="orgheadline35"><span class="section-number-2">4</span> Savoir-faire techniques</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-orgheadline58" class="outline-2">
+<h2 id="orgheadline58"><span class="section-number-2">7</span> Savoir-faire techniques</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 Cette rubrique reprend quelques techniques à s'approprier pour devenir un
 parfait bricoleur ou <i>maker</i> de la <a href="http://www.bionico.org/">Bionicohand</a>.
 </p>
 </div>
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9"><a id="ID-f9906297-5bb5-42ea-ac9a-005934edcfec"></a><span class="section-number-3">4.1</span> Brasure et soudure</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-orgheadline29" class="outline-3">
+<h3 id="orgheadline29"><a id="ID-f9906297-5bb5-42ea-ac9a-005934edcfec"></a><span class="section-number-3">7.1</span> Brasure et soudure</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
 Il y a quelques astuces et notions utiles à connaître pour réaliser
 une belle brasure en électronique. Dans le langage courant, le terme
@@ -2128,12 +3041,12 @@ permet d'aller plus loin dans les détails.
 <p>
 Pour ce qui est de la pratique, en électronique, pour souder (assembler)
 un composant sur une carte, il faut toujours commencer par les composants
-les moins hauts, de sorte à ne pas être gènés par la suite pour installer
+les moins hauts, de sorte à ne pas être gênés par la suite pour installer
 les composants les plus petits.
 </p>
 
 <p>
-Les étapes pour la chauffe sont:
+Les étapes pour la chauffe sont :
 </p>
 
 <ul class="org-ul">
@@ -2161,46 +3074,43 @@ En guise d'exemple, se reporter à la video pour la soudure du circuit
 pour le régulateur de tension.
 </p>
 
-<video controls="controls" width="800" class="video">
+<div controls="controls" width="800" class="video">
 <source src="medias/04_circuits_electriques/02_regulateur_tension/20161020_024.mp4" type="video/mp4">
 <p>
 Your browser does not support the video tag.
 </p>
 
-</video>
+</div>
 
 <p>
-En cas de besoin, il est possible de déssouder, en faisant fondre la
+En cas de besoin, il est possible de dessouder, en faisant fondre la
 soudure.
 </p>
 
 <p>
-Pour cela, il faut utiliser une tresse à désouder (en cuivre), qui
+Pour cela, il faut utiliser une tresse à dessouder (en cuivre), qui
 absorbe par capillarité l'étain lorsqu'il est chauffé pour être fondu,
 c'est ce qui illustré à l'image suivante, lors de la connexion des
-branchements au circuit PCB:
+branchements au circuit PCB :
 </p>
 
 
 <div class="figure">
 <p><img src="medias/04_circuits_electriques/03_circuit_imprimé_PCB/20161019_329.jpg" alt="20161019_329.jpg" width="70%" align="center">
 </p>
-<p><span class="figure-number">Figure&nbsp;62&nbsp;:</span> Utilisation de la tresse à désouder</p>
+<p><span class="figure-number">Figure&nbsp;90&nbsp;:</span> Utilisation de la tresse à dessouder</p>
 </div>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgheadline38" class="outline-2">
-<h2 id="orgheadline38"><span class="section-number-2">5</span> Retours d'expérience</h2>
-<div class="outline-text-2" id="text-5">
-</div><div id="outline-container-orgheadline36" class="outline-3">
-<h3 id="orgheadline36"><span class="section-number-3">5.1</span> Généralités</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-orgheadline59" class="outline-2">
+<h2 id="orgheadline59"><span class="section-number-2">8</span> Retours d'expérience: Généralités</h2>
+<div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li><p>
 La documentation telle qu'elle est s'adresse à des connaisseurs, il y a
-besoin d'une documentation pas-à-pas pour la rendre plus accessible.
+besoin d'une documentation pas à pas pour la rendre plus accessible.
 </p>
 
 <p>
@@ -2224,6 +3134,12 @@ humaine. Une piste pour ceux qui n'auraient pas de contacts en vue: se
 renseigner auprès des <a href="https://fr.wikipedia.org/wiki/Fab_lab">Fab labs</a> du coin&#x2026;
 </p></li>
 
+<li>Il est dommage que les participants n'ait pas eu un plus large accès
+à la documentation actuelle. Cela aurait permis d'être plus efficace
+pendant le montage mais surtout de pouvoir faire la critique de la
+documentation actuelle et l'améliorer. Sans instructions de montage,
+les participants se sont beaucoup servi de la main déjà montée.</li>
+
 <li>Pour le montage des pièces conçues en impression 3D, il serait bon
 d'identifier chacune des pièces à monter, en le gravant sur la
 pièce. Puisque ce sera à éviter du côté visible pour des raisons
@@ -2237,32 +3153,11 @@ spécifiques)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgheadline37" class="outline-3">
-<h3 id="orgheadline37"><span class="section-number-3">5.2</span> Technique</h3>
-<div class="outline-text-3" id="text-5-2">
-<ul class="org-ul">
-<li>Envisager de prendre des vis au pas-de-vis plus fin pour induire moins
-de contraintes lors du vissage, car celui-ci peut devenir destructeur en
-regard de la solidité des composants 3D à assembler (entretoises qui
-peuvent se désolidariser de la pièce lors du passage de la vis)</li>
-
-<li>Les axes pour fixer les doigts de la main doivent être de longueur de 14
-mm cm plutôt que de 16mm, autrement ils dépassent s'ils se trouvent en
-butée</li>
-
-<li>Pour le choix des moteurs, veiller à réunir toutes les caractéristiques
-nécessaires: moteur électrique à courant continu, avec position de
-consigne, et de dimensions adéquates pour le logement dans la main
-motorisée</li>
-</ul>
-</div>
-</div>
-</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-11-07 lun.&gt;</span></span></p>
 <p class="author">Auteur: Christophe Schockaert pour Flossmanuals Francophone (CC BY 4.0)</p>
-<p class="date">Created: 2016-11-07 lun. 23:24</p>
+<p class="date">Created: 2016-12-07 mer. 23:51</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.3.3)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
